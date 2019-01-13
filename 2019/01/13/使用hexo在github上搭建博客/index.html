@@ -6,7 +6,7 @@
   <meta name="description" content="测试网站">
   <meta name="keyword" content="test">
   
-    <link rel="shortcut icon" href="/css/images/logo.png">
+    <link rel="shortcut icon" href="/fengdo.github.io/css/images/logo.png">
   
   <title>
     
@@ -16,13 +16,13 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
   <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <link rel="stylesheet" href="/fengdo.github.io/css/style.css">
+<link rel="stylesheet" href="/fengdo.github.io/css/plugins/gitment.css">
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
   <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
+  <script src="/fengdo.github.io/js/qrious.js"></script>
+<script src="/fengdo.github.io/js/gitment.js"></script>
   
   
     <!-- MathJax support START -->
@@ -57,7 +57,7 @@
   <body>
     <header class="header fixed-header">
   <div class="header-container">
-    <a class="home-link" href="/">
+    <a class="home-link" href="/fengdo.github.io/">
       <div class="logo"></div>
       <span>测试</span>
     </a>
@@ -65,31 +65,31 @@
       
         <li class="list-item">
           
-            <a href="/" class="item-link">Home</a>
+            <a href="/fengdo.github.io/" class="item-link">Home</a>
           
         </li>
       
         <li class="list-item">
           
-            <a href="/tags/" class="item-link">Tags</a>
+            <a href="/fengdo.github.io/tags/" class="item-link">Tags</a>
           
         </li>
       
         <li class="list-item">
           
-            <a href="/archives/" class="item-link">Archives</a>
+            <a href="/fengdo.github.io/archives/" class="item-link">Archives</a>
           
         </li>
       
         <li class="list-item">
           
-            <a href="/link/" class="item-link">Link</a>
+            <a href="/fengdo.github.io/link/" class="item-link">Link</a>
           
         </li>
       
         <li class="list-item">
           
-            <a href="/notes/" class="item-link">Notes</a>
+            <a href="/fengdo.github.io/notes/" class="item-link">Notes</a>
           
         </li>
       
@@ -104,31 +104,31 @@
         
           <li class="menu-item">
             
-              <a href="/" class="menu-link">Home</a>
+              <a href="/fengdo.github.io/" class="menu-link">Home</a>
             
           </li>
         
           <li class="menu-item">
             
-              <a href="/tags/" class="menu-link">Tags</a>
+              <a href="/fengdo.github.io/tags/" class="menu-link">Tags</a>
             
           </li>
         
           <li class="menu-item">
             
-              <a href="/archives/" class="menu-link">Archives</a>
+              <a href="/fengdo.github.io/archives/" class="menu-link">Archives</a>
             
           </li>
         
           <li class="menu-item">
             
-              <a href="/link/" class="menu-link">Link</a>
+              <a href="/fengdo.github.io/link/" class="menu-link">Link</a>
             
           </li>
         
           <li class="menu-item">
             
-              <a href="/notes/" class="menu-link">Notes</a>
+              <a href="/fengdo.github.io/notes/" class="menu-link">Notes</a>
             
           </li>
         
@@ -147,48 +147,29 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><ol>
-<li><p>本地安装hexo<br>1.0 安装hexo<br>1.1 创建一个[github的用户名].github.io的根目录<br>1.2 <code>hexo init</code>初始化这个根目录</p>
-</li>
-<li><p>创建仓库<br>在github上创建一个新的仓库，命名为[github的用户名].github.io不生成解释文件</p>
-</li>
-<li><p>配置网站<br>3.0 修改网站信息</p>
-<ul>
-<li>title 网站标题</li>
-<li>subtitle 网站副标题</li>
-<li>keywords 关键字</li>
-<li>author 作者</li>
-<li>language 语言  //zh-cn</li>
-<li>timezone 时区</li>
-</ul>
-<p>3.1 修改网站url</p>
-<ul>
-<li><code>url: https://用户名.github.io</code></li>
-</ul>
-<p>3.2 修改主题</p>
-<ul>
-<li>修改主题前要先把下载好的主题放在<strong>themes</strong>目录下</li>
-<li>回到配置文件，把theme改为主题的名字</li>
-</ul>
-<p>3.3 修改git远程服务关联</p>
-<ul>
-<li>打开_config.yml修改<strong>deploy</strong>下的<code>type: git</code>;</li>
-<li>在type下增加一行<code>repo: 仓库地址 //git@github.com:用户名/用户名.github.io.git</code>;</li>
-<li>再增加一行<code>branch: master</code>;</li>
-</ul>
-</li>
-<li><p>hexo发布到远程<br> 4.0 <code>hexo d -g</code>把本地代码发布的远程<br> 4.1 进入仓库，找到设置，打开githubPage设置分支为主分枝</p>
-</li>
-<li><p>绑定自已的域名<br>5.0 进入仓库-&gt;设置,找到githubPage下面的自定义域名,修改为自己的域名;<br>5.1 进入域名商提供的域名解析服务，添加CNAME解析两条:记录值为github提供的域名二级域名,记录为www;第二条记录值相同，记录为www;</p>
-</li>
-</ol>
+    <section class="markdown-content"><h2 id="本地安装hexo"><a href="#本地安装hexo" class="headerlink" title="本地安装hexo"></a>本地安装hexo</h2><p>  1.0 安装hexo<br>  1.1 创建一个[github的用户名].github.io的根目录<br>  1.2 <code>hexo init</code>初始化这个根目录</p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github上创建一个新的仓库，命名为[github的用户名].github.io不生成解释文件</p>
+<h2 id="配置网站"><a href="#配置网站" class="headerlink" title="配置网站"></a>配置网站</h2><h3 id="修改网站信息"><a href="#修改网站信息" class="headerlink" title="修改网站信息"></a>修改网站信息</h3><pre><code>title 网站标题
+subtitle 网站副标题
+keywords 关键字
+author 作者
+language 语言  //zh-cn
+timezone 时区
+</code></pre><h3 id="修改网站url"><a href="#修改网站url" class="headerlink" title="修改网站url"></a>修改网站url</h3><p>  <code>url: https://用户名.github.io</code></p>
+<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><pre><code>修改主题前要先把下载好的主题放在**themes**目录下
+回到配置文件，把theme改为主题的名字
+</code></pre><h3 id="修改git远程服务关联"><a href="#修改git远程服务关联" class="headerlink" title="修改git远程服务关联"></a>修改git远程服务关联</h3><pre><code>打开\_config.yml修改 **deploy** 下的 `type: git` ;
+在type下增加一行`repo: 仓库地址 //git@github.com:用户名/用户名.github.io.git`;
+再增加一行`branch: master`;
+</code></pre><h2 id="hexo发布到远程"><a href="#hexo发布到远程" class="headerlink" title="hexo发布到远程"></a>hexo发布到远程</h2><p><code>hexo d -g</code>把本地代码发布的远程<br>  进入仓库，找到设置，打开githubPage设置分支为主分枝</p>
+<h2 id="绑定自已的域名"><a href="#绑定自已的域名" class="headerlink" title="绑定自已的域名"></a>绑定自已的域名</h2><p>  进入仓库-&gt;设置,找到githubPage下面的自定义域名,修改为自己的域名;<br>  进入域名商提供的域名解析服务，添加CNAME解析两条:记录值为github提供的域名二级域名,记录为www;第二条记录值相同，记录为www;</p>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#git">
+  <a href="/fengdo.github.io/fengdo.github.io/tags#git">
     <span class="tag-code">git</span>
   </a>
 
@@ -200,7 +181,7 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/01/12/hexo学习/">
+      <a class="nav-left" href="/fengdo.github.io/2019/01/12/hexo学习/">
         <span class="nav-arrow">← </span>
         
           hexo学习
@@ -250,7 +231,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="nav">none</ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地安装hexo"><span class="toc-nav-text">本地安装hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置网站"><span class="toc-nav-text">配置网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站信息"><span class="toc-nav-text">修改网站信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站url"><span class="toc-nav-text">修改网站url</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改主题"><span class="toc-nav-text">修改主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改git远程服务关联"><span class="toc-nav-text">修改git远程服务关联</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo发布到远程"><span class="toc-nav-text">hexo发布到远程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#绑定自已的域名"><span class="toc-nav-text">绑定自已的域名</span></a></li></ol>
     
   </div>
 </aside>
@@ -403,6 +384,6 @@
 </script>
 <!-- Baidu Tongji -->
 
-<script src="/js/script.js"></script>
+<script src="/fengdo.github.io/js/script.js"></script>
   </body>
 </html>

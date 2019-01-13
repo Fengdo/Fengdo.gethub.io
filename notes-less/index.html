@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="笔记站-美好回忆的家园">
+  <meta name="keyword" content="test">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      notes-less | 笔记站
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>笔记站</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/link/" class="item-link">Link</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/notes/" class="item-link">Notes</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/link/" class="menu-link">Link</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/notes/" class="menu-link">Notes</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>notes-less</h2>
+  <!-- <p class="post-date">2019-01-13</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="less手册"><a href="#less手册" class="headerlink" title="less手册"></a>less手册</h1><blockquote>
+<p>自制</p>
+</blockquote>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
+<p>数字类型也能匹配到px类型，因为px类型也有数字</p>
+</blockquote>
+<ul>
+<li>颜色类型</li>
+<li>数字类型</li>
+<li>字符串类型</li>
+<li>布尔类型</li>
+<li>px数据类型</li>
+<li>未匹配类型</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><blockquote>
+<p>变量是用”:”号赋值的</p>
+<p>变量只能充当属性的值，不能独立充当属性</p>
+</blockquote>
+<p>申明与赋值</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@color1:</span>green; 颜色类型</span><br><span class="line"><span class="variable">@num:</span><span class="number">5</span>; 数字类型</span><br><span class="line"><span class="variable">@string:</span><span class="string">"abcd"</span>; 字符串类型</span><br><span class="line"><span class="variable">@boolean:</span>true; 布尔值类型</span><br><span class="line"><span class="variable">@px:</span><span class="number">10px</span>; <span class="selector-tag">px</span>类型</span><br><span class="line">@<span class="selector-tag">other</span><span class="selector-pseudo">:kljkjsf</span>;未匹配类型，或未知类型</span><br></pre></td></tr></table></figure>
+<p>调用</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>:<span class="variable">@color2</span>;</span><br></pre></td></tr></table></figure>
+<p>保留防止解析</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@name:</span><span class="string">~"(min-width:300px)"</span>;</span><br></pre></td></tr></table></figure>
+<p>变量的作用域</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@var:</span> red;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#page</span> &#123;</span><br><span class="line">  <span class="variable">@var:</span> white;</span><br><span class="line">  <span class="selector-id">#header</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="variable">@var</span>; <span class="comment">// white</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//一级一级向上找</span></span><br></pre></td></tr></table></figure>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><blockquote>
+<p>带括号的函数，调用的都是大括号里面的内容</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">申明：</span><br><span class="line"><span class="selector-class">.wh</span>()&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wh</span>(<span class="variable">@width</span>,<span class="variable">@height</span>)&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="variable">@width</span>;</span><br><span class="line">	<span class="attribute">height</span>:<span class="variable">@height</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">调用：</span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    <span class="selector-class">.wh</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//有括号的都是保留的一组属性。不调用是不会解析的</span></span><br></pre></td></tr></table></figure>
+<h2 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h2><h3 id="增加与删除"><a href="#增加与删除" class="headerlink" title="增加与删除"></a>增加与删除</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">增加单位</span><br><span class="line"><span class="selector-tag">unit</span>(<span class="variable">@param</span>,px);</span><br><span class="line"></span><br><span class="line">去掉单位</span><br><span class="line"><span class="selector-tag">unit</span>(<span class="number">10px</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="获取单位"><a href="#获取单位" class="headerlink" title="获取单位"></a>获取单位</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">get-unit</span>(<span class="number">10px</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="字符串拼接"><a href="#字符串拼接" class="headerlink" title="字符串拼接"></a>字符串拼接</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.url</span>(<span class="variable">@img</span>)&#123;</span><br><span class="line">	<span class="attribute">background</span>: url(<span class="string">"@&#123;img&#125;/abc.png"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">	<span class="selector-class">.url</span>(myimg);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//输出 </span></span><br><span class="line"><span class="comment">// background:myimg/abc.png</span></span><br></pre></td></tr></table></figure>
+<h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">isstring</span>(<span class="variable">@param</span>)</span><br><span class="line"><span class="selector-tag">isnumber</span>(<span class="variable">@param</span>)</span><br><span class="line"><span class="selector-tag">isboolean</span>(<span class="variable">@param</span>)</span><br><span class="line"><span class="selector-tag">ispixel</span>(<span class="variable">@param</span>)</span><br><span class="line"><span class="selector-tag">iscolor</span>(<span class="variable">@param</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h3><p>if ((表达式),选项1,选项2)</p>
+<blockquote>
+<p>用于判断单个属性</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用逻辑值来进行判断</span></span><br><span class="line"><span class="selector-tag">if</span>(<span class="variable">@color</span>,green,black); </span><br><span class="line"></span><br><span class="line"><span class="comment">//等号判断</span></span><br><span class="line"><span class="selector-tag">if</span>((<span class="variable">@color</span>=brown),green,black);</span><br><span class="line"></span><br><span class="line"><span class="comment">//逻辑与，与，非判断</span></span><br><span class="line"><span class="selector-tag">if</span>((true) and (<span class="number">2</span>&gt;<span class="number">1</span>),green,black);</span><br><span class="line"><span class="selector-tag">if</span>((true) or (<span class="number">2</span>&gt;<span class="number">1</span>),green,black);</span><br><span class="line"><span class="selector-tag">if</span>(not (true),green,black);</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">if</span>((true),green,black);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@param</span>)&#123;</span><br><span class="line">    <span class="attribute">background</span>:if(iscolor(<span class="variable">@param</span>),green)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">    <span class="selector-class">.mixin</span>(green);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">数学判断</span><br><span class="line"><span class="selector-tag">if</span>((<span class="number">2</span>&gt;<span class="number">1</span>),green,black);</span><br><span class="line"></span><br><span class="line">颜色判断</span><br><span class="line"><span class="selector-tag">if</span>((iscolor(<span class="variable">@some</span>)), darken(<span class="variable">@some</span>, <span class="number">10%</span>), black);</span><br><span class="line"></span><br><span class="line">像素<span class="selector-tag">px</span>判断</span><br><span class="line"><span class="selector-tag">ispixel</span>(<span class="number">#ff0</span>);     <span class="comment">// false</span></span><br><span class="line"><span class="selector-tag">ispixel</span>(<span class="number">56px</span>);     <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">逻辑与、或、非</span><br><span class="line"><span class="selector-tag">if</span>(not (true), foo, bar);</span><br><span class="line"><span class="selector-tag">if</span>((true) and (<span class="number">2</span> &gt; <span class="number">1</span>), foo, bar);</span><br><span class="line"><span class="selector-tag">if</span>((false) or (isstring(<span class="string">"boo!"</span>)), foo, bar);</span><br><span class="line"></span><br><span class="line">判断布尔值</span><br><span class="line">@<span class="selector-tag">bg</span>: <span class="selector-tag">black</span>;</span><br><span class="line">@<span class="selector-tag">bg-light</span>: <span class="selector-tag">boolean</span>(luma(<span class="variable">@bg</span>) &gt; <span class="number">50%</span>);</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="variable">@bg</span>; </span><br><span class="line">  <span class="attribute">color</span>: if(<span class="variable">@bg-light</span>, black, white);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="when判断"><a href="#when判断" class="headerlink" title="when判断"></a>when判断</h3><blockquote>
+<p>when用来判断一组属性</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@param</span>) <span class="keyword">when</span> (isstring(<span class="variable">@param</span>))&#123;</span><br><span class="line">	<span class="attribute">cotent</span>:<span class="variable">@param</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@param</span>) <span class="keyword">when</span> (isnumber(<span class="variable">@param</span>))&#123;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="variable">@param</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@param</span>) <span class="keyword">when</span> (ispixel(<span class="variable">@param</span>))&#123;</span><br><span class="line">	<span class="attribute">width</span>:<span class="variable">@param</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@param</span>) <span class="keyword">when</span> (isboolean(<span class="variable">@param</span>))&#123;</span><br><span class="line">	<span class="attribute">abc</span>:<span class="variable">@param</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@param</span>) <span class="keyword">when</span> (default()) &#123;</span><br><span class="line">	<span class="attribute">cotent</span>:<span class="string">"没有人匹配我"</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@param</span>) <span class="keyword">when</span> (iscolor(<span class="variable">@param</span>))&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="variable">@param</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin</span>(<span class="number">10px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="default判断"><a href="#default判断" class="headerlink" title="default判断"></a>default判断</h3><blockquote>
+<p>default用来设置的一个默认的值,当匹配不到时不会报错</p>
+<p>作用：保护</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//为传入的参数匹配不到时，设置一个默认值</span></span><br><span class="line"><span class="selector-class">.mixin</span>() <span class="keyword">when</span> (default()) &#123;</span><br><span class="line">	<span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="number">1</span>)&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">1000px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="number">2</span>)&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">2000px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mixin</span>();</span><br><span class="line"><span class="comment">//输出100px;</span></span><br><span class="line"><span class="selector-class">.mixin</span>(sfsf);</span><br><span class="line"><span class="comment">//输出100px;</span></span><br></pre></td></tr></table></figure>
+<h3 id="not-default判断"><a href="#not-default判断" class="headerlink" title="not default判断"></a>not default判断</h3><blockquote>
+<p>not default是为匹配到的属性，再增加额外的属性。</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当匹配到了再增加一个属性，如果匹配不到就不显示</span></span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="variable">@value</span>) <span class="keyword">when</span> <span class="keyword">not</span>(default())&#123;<span class="attribute">padding</span>: (<span class="variable">@value</span> / <span class="number">5</span>)&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div-1</span> &#123;</span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="number">100px</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div-2</span> &#123;</span><br><span class="line"><span class="comment">/* ... */</span></span><br><span class="line"><span class="selector-class">.mixin</span>(<span class="number">100%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>总结：default和not default不要同时调用,它们的作用只是为了防止报错</p>
+</blockquote>
+<h2 id="混入"><a href="#混入" class="headerlink" title="混入"></a>混入</h2><blockquote>
+<p>把一组或多组属性混入到另一组对象中</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="attribute">width</span>:<span class="number">100%</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">background</span>:gray;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.head</span>&#123;</span><br><span class="line">	<span class="selector-class">.mixin</span>();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mixin</span>()&#123;</span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line"></span><br><span class="line">	<span class="attribute">max-width</span>:<span class="number">800px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><blockquote>
+<p>嵌套的作用是减少写一些重复的关系的内容</p>
+</blockquote>
+<p>&amp;代表本身</p>
+<p>&amp;&gt;.abc{}   //当前下的.abc{}</p>
+<p>&amp;-child{}  //名字横杠拼接</p>
+<p>&amp;child{}  //名字拼接</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrap</span>&#123;</span><br><span class="line">	<span class="attribute">margin</span>:<span class="number">0</span> auto;</span><br><span class="line">	<span class="attribute">max-width</span>:<span class="number">900px</span>;</span><br><span class="line">	<span class="selector-class">.clearfix</span>();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//页头部分</span></span><br><span class="line">	<span class="selector-tag">&amp;</span>&gt;<span class="selector-class">.header-iteam</span>&#123;</span><br><span class="line">		<span class="attribute">background</span>: if((<span class="number">2</span>&gt;<span class="number">1</span>),black,green);</span><br><span class="line"></span><br><span class="line">		<span class="selector-class">.header</span>&#123;</span><br><span class="line">			<span class="attribute">height</span>:<span class="number">50px</span>;</span><br><span class="line">			<span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">			<span class="attribute">name</span>:<span class="variable">@name</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//内容部分</span></span><br><span class="line">	<span class="selector-tag">&amp;</span>&gt;<span class="selector-class">.content</span>&#123;</span><br><span class="line">		<span class="attribute">height</span>:<span class="number">300px</span>;</span><br><span class="line">		<span class="attribute">background</span>:fadeout(<span class="variable">@header-bg</span>,<span class="number">40%</span>);</span><br><span class="line">		<span class="attribute">border</span>:<span class="number">1px</span> solid <span class="variable">@content-bg</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//页脚部分</span></span><br><span class="line">	<span class="selector-tag">&amp;</span>&gt;<span class="selector-class">.footer</span>&#123;</span><br><span class="line">		<span class="attribute">height</span>:<span class="number">30px</span>;</span><br><span class="line">		<span class="attribute">border</span>:<span class="number">1px</span> solid lightblue;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="冒泡-响应式"><a href="#冒泡-响应式" class="headerlink" title="冒泡(响应式)"></a>冒泡(响应式)</h2><blockquote>
+<p>从上到下，从小到大</p>
+<p>嵌套的会用and连接</p>
+</blockquote>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@sm:</span><span class="number">375px</span>;</span><br><span class="line"><span class="variable">@md:</span><span class="number">768px</span>;</span><br><span class="line"><span class="variable">@lg:</span><span class="number">1200px</span>;</span><br><span class="line"><span class="selector-tag">header</span>&#123;</span><br><span class="line">	<span class="keyword">@media</span>(<span class="attribute">max-width</span>:<span class="variable">@sm</span>)&#123;</span><br><span class="line">		<span class="attribute">background</span>: green;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">@media</span>(<span class="attribute">min-width</span>:<span class="variable">@sm</span>)&#123;</span><br><span class="line">		<span class="keyword">@media</span>(<span class="attribute">max-width</span>: <span class="variable">@md</span>)&#123;</span><br><span class="line">			<span class="attribute">background</span>: blue;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">@media</span>(<span class="attribute">min-width</span>:<span class="variable">@md</span>)&#123;</span><br><span class="line">		<span class="keyword">@media</span>(<span class="attribute">max-width</span>: <span class="variable">@lg</span>)&#123;</span><br><span class="line">			<span class="attribute">background</span>: orange;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">@media</span>(<span class="attribute">min-width</span>:<span class="variable">@lg</span>)&#123;</span><br><span class="line">		<span class="attribute">background</span>: red;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><h3 id="颜色转换"><a href="#颜色转换" class="headerlink" title="颜色转换"></a>颜色转换</h3><p>color(orange); //#ffa500<br>rgb(90, 129, 32) //#5a8120</p>
+<h3 id="颜色混合"><a href="#颜色混合" class="headerlink" title="颜色混合"></a>颜色混合</h3><h4 id="两种颜色混合"><a href="#两种颜色混合" class="headerlink" title="两种颜色混合"></a>两种颜色混合</h4><p>mix(green,red,20%)<br>mix(green,red)</p>
+<p>20%是混合比例，可选</p>
+<h4 id="与白色混合"><a href="#与白色混合" class="headerlink" title="与白色混合"></a>与白色混合</h4><p>tint(green,80%);</p>
+<h4 id="与黑色混合"><a href="#与黑色混合" class="headerlink" title="与黑色混合"></a>与黑色混合</h4><p>shade(green,30%);</p>
+<h3 id="饱和度"><a href="#饱和度" class="headerlink" title="饱和度"></a>饱和度</h3><p>增加饱和度<br>saturate(hsl(90, 80%, 50%), 20%)</p>
+<p>减少饱和度<br>desaturate(hsl(90, 80%, 50%), 20%)</p>
+<h3 id="透明度"><a href="#透明度" class="headerlink" title="透明度"></a>透明度</h3><p>降低透明度使其不透明</p>
+<p>fadein(hsla(90, 90%, 50%, 0.5), 10%)</p>
+<p>增加透明度使其透明<br>fadeout(hsla(90, 90%, 50%, 0.5), 10%)</p>
+<h3 id="减淡与加深"><a href="#减淡与加深" class="headerlink" title="减淡与加深"></a>减淡与加深</h3><p>减淡<br>lighten(hsl(90, 80%, 50%), 20%)</p>
+<p>加深<br>darken(hsl(90, 80%, 50%), 20%)</p>
+<h2 id="数学运算"><a href="#数学运算" class="headerlink" title="数学运算"></a>数学运算</h2><h3 id="百分比"><a href="#百分比" class="headerlink" title="百分比"></a>百分比</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">percentage</span>(<span class="number">0.5</span>) <span class="comment">//50%</span></span><br></pre></td></tr></table></figure>
+<h3 id="常见数学函数"><a href="#常见数学函数" class="headerlink" title="常见数学函数"></a>常见数学函数</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">向上取整</span><br><span class="line"><span class="selector-tag">ceil</span>(<span class="number">2.4</span>) <span class="comment">//3</span></span><br><span class="line"></span><br><span class="line">向下取整</span><br><span class="line"><span class="selector-tag">floor</span>(<span class="number">2.4</span>); <span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">四舍五入</span><br><span class="line"><span class="selector-tag">round</span>(<span class="number">1.67</span>) <span class="comment">//2</span></span><br><span class="line"><span class="selector-tag">round</span>(<span class="number">1.67</span>, <span class="number">1</span>) <span class="comment">//1.7 保留一位小数</span></span><br><span class="line"></span><br><span class="line">开方</span><br><span class="line"><span class="selector-tag">sqrt</span>(<span class="number">25cm</span>)</span><br><span class="line"></span><br><span class="line">绝对值 </span><br><span class="line"><span class="selector-tag">abs</span>(<span class="number">25cm</span>)</span><br><span class="line"></span><br><span class="line">最小值 </span><br><span class="line"><span class="selector-tag">min</span>(<span class="number">3px</span>, <span class="number">42px</span>, <span class="number">1px</span>, <span class="number">16px</span>);</span><br><span class="line"></span><br><span class="line">最大值</span><br><span class="line"><span class="selector-tag">max</span>(<span class="number">3%</span>, <span class="number">42%</span>, <span class="number">1%</span>, <span class="number">16%</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="循环（网格）"><a href="#循环（网格）" class="headerlink" title="循环（网格）"></a>循环（网格）</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">each</span>(range(<span class="number">4</span>), &#123;</span><br><span class="line">  <span class="selector-class">.col-</span><span class="variable">@&#123;value&#125;</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: (<span class="variable">@value</span> * <span class="number">50px</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//图片尺寸</span></span><br><span class="line"><span class="selector-tag">image-size</span>(<span class="string">"file.png"</span>);  <span class="comment">//10px 10px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">image-width</span>(<span class="string">"file.png"</span>);</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">image-height</span>(<span class="string">"file.png"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不输出到css</span></span><br><span class="line"><span class="comment">/**/</span>输出到<span class="selector-tag">css</span></span><br></pre></td></tr></table></figure>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">"library"</span>; <span class="comment">// library.less</span></span><br><span class="line"><span class="comment">//less文件可以省略后辍</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@import</span> <span class="string">"typo.css"</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>初始化  </p>
+<p>代码块  </p>
+<p>栅格系统</p>
+<p>响应式@media</p>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+    <!-- NAV END -->
+    <!-- 打赏 START 
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+
+    
+      <!-- No Comment -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#less手册"><span class="toc-nav-text">less手册</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据类型"><span class="toc-nav-text">数据类型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#变量"><span class="toc-nav-text">变量</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#函数"><span class="toc-nav-text">函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#单位"><span class="toc-nav-text">单位</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#增加与删除"><span class="toc-nav-text">增加与删除</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获取单位"><span class="toc-nav-text">获取单位</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#字符串"><span class="toc-nav-text">字符串</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#字符串拼接"><span class="toc-nav-text">字符串拼接</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#判断"><span class="toc-nav-text">判断</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#if判断"><span class="toc-nav-text">if判断</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#when判断"><span class="toc-nav-text">when判断</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#default判断"><span class="toc-nav-text">default判断</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#not-default判断"><span class="toc-nav-text">not default判断</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#混入"><span class="toc-nav-text">混入</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#嵌套"><span class="toc-nav-text">嵌套</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#冒泡-响应式"><span class="toc-nav-text">冒泡(响应式)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#颜色"><span class="toc-nav-text">颜色</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#颜色转换"><span class="toc-nav-text">颜色转换</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#颜色混合"><span class="toc-nav-text">颜色混合</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#两种颜色混合"><span class="toc-nav-text">两种颜色混合</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#与白色混合"><span class="toc-nav-text">与白色混合</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#与黑色混合"><span class="toc-nav-text">与黑色混合</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#饱和度"><span class="toc-nav-text">饱和度</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#透明度"><span class="toc-nav-text">透明度</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#减淡与加深"><span class="toc-nav-text">减淡与加深</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数学运算"><span class="toc-nav-text">数学运算</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#百分比"><span class="toc-nav-text">百分比</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#常见数学函数"><span class="toc-nav-text">常见数学函数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#循环（网格）"><span class="toc-nav-text">循环（网格）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#图片"><span class="toc-nav-text">图片</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#注释"><span class="toc-nav-text">注释</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#引用"><span class="toc-nav-text">引用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#总结"><span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://fengdo.github.io/notes-less/index.html';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+
+
+    // gitment
+    var gitmentConfig = "";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "notes-less",
+        owner: "",
+        repo: "",
+        oauth: {
+          client_id: "",
+          client_secret: ""
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+<script>
+  var disqus_shortname = '';
+  
+  var disqus_url = 'https://fengdo.github.io/notes-less/index.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'https://unpkg.com/embed-js@5.0.3/umd/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

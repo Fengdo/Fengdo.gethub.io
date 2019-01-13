@@ -146,30 +146,27 @@
     <section class="markdown-content"><h2 id="关于hexo"><a href="#关于hexo" class="headerlink" title="关于hexo"></a>关于hexo</h2><blockquote>
 <p>快速、简洁且高效的博客框架<br>支持markdown语法</p>
 </blockquote>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
-<li><p>准备工作</p>
-<blockquote>
-<p>安装前要先安装以下两个</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><blockquote>
+<p>安装hexo前要先安装:</p>
 </blockquote>
 <ol>
 <li>node.js</li>
 <li>Git</li>
 </ol>
-</li>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="显示hexo的版本"><a href="#显示hexo的版本" class="headerlink" title="显示hexo的版本"></a>显示hexo的版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><ol>
 <li>hexo init 根目录</li>
 <li>cd 根目录</li>
 <li>npm install</li>
 </ol>
-<p>初始化完成后会生成以下目录与文件结构</p>
+<blockquote>
+<p>初始化完成后会生成以下文件和目录</p>
+</blockquote>
 <ol>
 <li>_config.yml:网站配置文件</li>
 <li>package.json:程序应用信息</li>
-<li>scaffolds:模板文件夹  //生成的文章md文件所包函的内容</li>
+<li>scaffolds:模板文件夹  //生成的文章md文件所包函的内容,比如page页面和post页面的头部内容</li>
 <li>source:资源存放文件夹</li>
 <li>themes:主题文件夹</li>
 </ol>
@@ -178,16 +175,21 @@
 <li>subtitle 副标题</li>
 <li>description 网站描述</li>
 <li>author 作者</li>
-<li>language 语言 //zh-cn</li>
-<li>timezone 时区</li>
-<li>url 域名</li>
-<li>root 根目录 /blog/</li>
-<li>permalink 文章永久链接格式  //:year/:month/:day/:title/</li>
+<li>language 语言 //zh</li>
+<li>timezone 时区 //默认为本地电脑的时间</li>
+<li>url 域名 //远程绑定的域名</li>
+<li>root 根目录 / //子目录要修改成子目录的目录名;例如：/blog/</li>
+<li>permalink 文章永久链接格式  例如: :year/:month/:day/:title/</li>
 <li>permalink_defaults 永久链接默认值</li>
 </ol>
-<h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &lt;oagetitle&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="生成静态页面文件"><a href="#生成静态页面文件" class="headerlink" title="生成静态页面文件"></a>生成静态页面文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate //简写:hexo g</span><br></pre></td></tr></table></figure>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;新的页面&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;新的文章&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="发表草稿"><a href="#发表草稿" class="headerlink" title="发表草稿"></a>发表草稿</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="生成静态的文件"><a href="#生成静态的文件" class="headerlink" title="生成静态的文件"></a>生成静态的文件</h2><blockquote>
+<p>比如：css,html等</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate //简写:hexo g</span><br></pre></td></tr></table></figure>
 <ul>
 <li>可选指令<ul>
 <li>-d 文件生成后立即部署网站</li>
@@ -195,8 +197,10 @@
 </ul>
 </li>
 </ul>
-<h2 id="发表草稿"><a href="#发表草稿" class="headerlink" title="发表草稿"></a>发表草稿</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="本地服务器"><a href="#本地服务器" class="headerlink" title="本地服务器"></a>本地服务器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="本地服务器"><a href="#本地服务器" class="headerlink" title="本地服务器"></a>本地服务器</h2><blockquote>
+<p>本地服务器用于在发布前本地预览和修改代码</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 <ul>
 <li>可选指令<ol>
 <li>-p 重设端口</li>
@@ -205,7 +209,7 @@
 </ol>
 </li>
 </ul>
-<h2 id="远程布署"><a href="#远程布署" class="headerlink" title="远程布署"></a>远程布署</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="发布到远程"><a href="#发布到远程" class="headerlink" title="发布到远程"></a>发布到远程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy  //简写:hexo d</span><br></pre></td></tr></table></figure>
 <ul>
 <li>可选指令<ol>
 <li>-g 部署前先生成静态文件</li>
@@ -222,7 +226,6 @@
 <h2 id="迁移内容"><a href="#迁移内容" class="headerlink" title="迁移内容"></a>迁移内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo migrate &lt;type&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="清理缓存"><a href="#清理缓存" class="headerlink" title="清理缓存"></a>清理缓存</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 <h2 id="列出网站资料"><a href="#列出网站资料" class="headerlink" title="列出网站资料"></a>列出网站资料</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo list &lt;type&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="显示hexo的版本"><a href="#显示hexo的版本" class="headerlink" title="显示hexo的版本"></a>显示hexo的版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>清理缓存，生成静态文件然后发布到远程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo d -g</span><br></pre></td></tr></table></figure></p>
 </section>
     <!-- Tags START -->
@@ -291,7 +294,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#关于hexo"><span class="toc-nav-text">关于hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装"><span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#初始化"><span class="toc-nav-text">初始化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#网站配置"><span class="toc-nav-text">网站配置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建文章"><span class="toc-nav-text">创建文章</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建页面"><span class="toc-nav-text">创建页面</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#生成静态页面文件"><span class="toc-nav-text">生成静态页面文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#发表草稿"><span class="toc-nav-text">发表草稿</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地服务器"><span class="toc-nav-text">本地服务器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#远程布署"><span class="toc-nav-text">远程布署</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#渲染文件"><span class="toc-nav-text">渲染文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#迁移内容"><span class="toc-nav-text">迁移内容</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#清理缓存"><span class="toc-nav-text">清理缓存</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#列出网站资料"><span class="toc-nav-text">列出网站资料</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#显示hexo的版本"><span class="toc-nav-text">显示hexo的版本</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用命令"><span class="toc-nav-text">常用命令</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#关于hexo"><span class="toc-nav-text">关于hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装"><span class="toc-nav-text">安装</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#准备工作"><span class="toc-nav-text">准备工作</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#安装-1"><span class="toc-nav-text">安装</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#显示hexo的版本"><span class="toc-nav-text">显示hexo的版本</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#初始化"><span class="toc-nav-text">初始化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#网站配置"><span class="toc-nav-text">网站配置</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建"><span class="toc-nav-text">创建</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建页面"><span class="toc-nav-text">创建页面</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建文章"><span class="toc-nav-text">创建文章</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#发表草稿"><span class="toc-nav-text">发表草稿</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#生成静态的文件"><span class="toc-nav-text">生成静态的文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地服务器"><span class="toc-nav-text">本地服务器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#发布到远程"><span class="toc-nav-text">发布到远程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#渲染文件"><span class="toc-nav-text">渲染文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#迁移内容"><span class="toc-nav-text">迁移内容</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#清理缓存"><span class="toc-nav-text">清理缓存</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#列出网站资料"><span class="toc-nav-text">列出网站资料</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用命令"><span class="toc-nav-text">常用命令</span></a></li></ol>
     
   </div>
 </aside>

@@ -504,8 +504,8 @@ h2.article-head {
 .article-summary pre,
 .markdown-content code,
 .article-summary code {
-  font-family: 'Roboto Mono', Monaco, courier, monospace;
-  font-size: 13px;
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  font-size: 14px;
 }
 @media screen and (max-width: 480px) {
   .markdown-content pre,
@@ -529,7 +529,7 @@ h2.article-head {
 .markdown-content p code,
 .article-summary p code {
   background-color: #f8f8f8;
-  color: #e96900;
+  color: #ff1493;
   padding: 3px 5px;
   margin: 0 2px;
   border-radius: 2px;
@@ -546,9 +546,9 @@ h2.article-head {
 .markdown-content h3,
 .article-summary h3 {
   margin: 1em 0;
-  font-size: 1.3em;
+  font-size: 1.1em;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #e5e5e5;
+/*border-bottom: 1px solid color-border*/
 }
 .markdown-content h4,
 .article-summary h4 {

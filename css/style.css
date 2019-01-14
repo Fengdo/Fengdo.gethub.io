@@ -359,7 +359,8 @@ h2.article-head {
   }
 }
 .logo {
-/*background: url(logo-url)*/
+  display: none;
+  background: url("images/logo.png");
   background-size: contain;
   width: 40px;
   height: 40px;
@@ -548,6 +549,7 @@ h2.article-head {
   margin: 1em 0;
   font-size: 1.1em;
   padding-bottom: 0.3em;
+  color: #a52a2a;
 /*border-bottom: 1px solid color-border*/
 }
 .markdown-content h4,
@@ -1008,6 +1010,28 @@ h2.article-head {
 }
 .nav-container .nav-arrow {
   color: #34495e;
+}
+#note .post-article .markdown-content ul {
+  margin: 0;
+  padding: 4%;
+  list-style-type: none;
+  font-size: 0;
+}
+#note .post-article .markdown-content li {
+  display: inline-block;
+  margin: 1% 2.5%;
+  box-sizing: border-box;
+  width: 20%;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #ededed !important;
+}
+#note .post-article .markdown-content a {
+  display: block;
+  font-size: 1.4em;
+}
+#note .post-article .markdown-content a:hover {
+  color: #f00 !important;
 }
 @-moz-keyframes shine {
   0%, 100% {

@@ -10,7 +10,7 @@
   
   <title>
     
-      note-jq | 笔记站
+      jq笔记 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -73,12 +73,6 @@
       
         <li class="list-item">
           
-            <a href="/archives/" class="item-link">Archives</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
             <a href="/link/" class="item-link">Link</a>
           
         </li>
@@ -86,6 +80,12 @@
         <li class="list-item">
           
             <a href="/notes/" class="item-link">Notes</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
           
         </li>
       
@@ -112,12 +112,6 @@
         
           <li class="menu-item">
             
-              <a href="/archives/" class="menu-link">Archives</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
               <a href="/link/" class="menu-link">Link</a>
             
           </li>
@@ -128,13 +122,19 @@
             
           </li>
         
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
       </ul>
     </div>
   </div>
 </header>
 
     <div id="article-banner">
-  <h2>note-jq</h2>
+  <h2>jq笔记</h2>
   <!-- <p class="post-date">2019-01-13</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -586,7 +586,6 @@
   
     <aside class="catalog-container">
   <div class="toc-main">
-    <strong class="toc-title">Catalog</strong>
     
       <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Jquery"><span class="toc-nav-text">Jquery</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#大纲"><span class="toc-nav-text">大纲</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#代码规范"><span class="toc-nav-text">代码规范</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#了解三个环境"><span class="toc-nav-text">了解三个环境</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#版本选择"><span class="toc-nav-text">版本选择</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Jq与js对象"><span class="toc-nav-text">Jq与js对象</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#对象转换"><span class="toc-nav-text">对象转换</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#防止冲突"><span class="toc-nav-text">防止冲突</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#引入jquery"><span class="toc-nav-text">引入jquery</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#入口函数"><span class="toc-nav-text">入口函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#注意"><span class="toc-nav-text">注意</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#加载机制"><span class="toc-nav-text">加载机制</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用插件"><span class="toc-nav-text">常用插件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#JQ选择器"><span class="toc-nav-text">JQ选择器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基本选择器"><span class="toc-nav-text">基本选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#层次选择器"><span class="toc-nav-text">层次选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#过滤选择器"><span class="toc-nav-text">过滤选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#内容过滤选择器"><span class="toc-nav-text">内容过滤选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#可见性过滤选择器"><span class="toc-nav-text">可见性过滤选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#属性过滤选择器"><span class="toc-nav-text">属性过滤选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#子元素过滤选择器"><span class="toc-nav-text">子元素过滤选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#表单选择器"><span class="toc-nav-text">表单选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#表单属性过滤"><span class="toc-nav-text">表单属性过滤</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#判断是否存在"><span class="toc-nav-text">判断是否存在</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#判断是否含有指定的class"><span class="toc-nav-text">判断是否含有指定的class</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#find-和filter"><span class="toc-nav-text">find()和filter()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Dom操作"><span class="toc-nav-text">Dom操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查找节点"><span class="toc-nav-text">查找节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建元素节点"><span class="toc-nav-text">创建元素节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建文本节点"><span class="toc-nav-text">创建文本节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建属性节点"><span class="toc-nav-text">创建属性节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#插入节点"><span class="toc-nav-text">插入节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除节点"><span class="toc-nav-text">删除节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#复制节点"><span class="toc-nav-text">复制节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#替换节点"><span class="toc-nav-text">替换节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#包裹节点"><span class="toc-nav-text">包裹节点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#属性操作"><span class="toc-nav-text">属性操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获取属性节点"><span class="toc-nav-text">获取属性节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置单个属性"><span class="toc-nav-text">设置单个属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置多个属性"><span class="toc-nav-text">设置多个属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除属性"><span class="toc-nav-text">删除属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#样式的操作"><span class="toc-nav-text">样式的操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获取样式"><span class="toc-nav-text">获取样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置样式"><span class="toc-nav-text">设置样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#增加样式"><span class="toc-nav-text">增加样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#移除单个样式"><span class="toc-nav-text">移除单个样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#移队多个样式"><span class="toc-nav-text">移队多个样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#切换样式"><span class="toc-nav-text">切换样式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#设置获取HTML、文本和值"><span class="toc-nav-text">设置获取HTML、文本和值</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#val-在表单上的运用"><span class="toc-nav-text">val()在表单上的运用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#下拉框"><span class="toc-nav-text">下拉框</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#下拉列表"><span class="toc-nav-text">下拉列表</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#单选框"><span class="toc-nav-text">单选框</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#复选框"><span class="toc-nav-text">复选框</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#遍历节点"><span class="toc-nav-text">遍历节点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#遍历子节点"><span class="toc-nav-text">遍历子节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Css-Dom操作"><span class="toc-nav-text">Css-Dom操作</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#事件与动画"><span class="toc-nav-text">事件与动画</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#事件"><span class="toc-nav-text">事件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#事件绑定"><span class="toc-nav-text">事件绑定</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一次性事件"><span class="toc-nav-text">一次性事件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#事件解除"><span class="toc-nav-text">事件解除</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#事件的命名空间"><span class="toc-nav-text">事件的命名空间</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#事件对象的方法和属性"><span class="toc-nav-text">事件对象的方法和属性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#事件对象的方法"><span class="toc-nav-text">事件对象的方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#阻止事件冒泡"><span class="toc-nav-text">阻止事件冒泡</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#阻止默认行为"><span class="toc-nav-text">阻止默认行为</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#事件的捕获"><span class="toc-nav-text">事件的捕获</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#事件对象的几个属性"><span class="toc-nav-text">事件对象的几个属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#模拟事件-触发"><span class="toc-nav-text">模拟事件(触发)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#动画"><span class="toc-nav-text">动画</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基本动画"><span class="toc-nav-text">基本动画</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#自定义动画"><span class="toc-nav-text">自定义动画</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#累加动画和累减动画"><span class="toc-nav-text">累加动画和累减动画</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#多重动画"><span class="toc-nav-text">多重动画</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#停止动画"><span class="toc-nav-text">停止动画</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#判断动画状态"><span class="toc-nav-text">判断动画状态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#延时动画"><span class="toc-nav-text">延时动画</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#其它动画"><span class="toc-nav-text">其它动画</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#表格应用"><span class="toc-nav-text">表格应用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#复习表格相关标签"><span class="toc-nav-text">复习表格相关标签</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#表格的隔行变色"><span class="toc-nav-text">表格的隔行变色</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#表格的高亮"><span class="toc-nav-text">表格的高亮</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#单选框表格"><span class="toc-nav-text">单选框表格</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#复选框表格"><span class="toc-nav-text">复选框表格</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#表格的展开与收缩"><span class="toc-nav-text">表格的展开与收缩</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#表格内容的筛选"><span class="toc-nav-text">表格内容的筛选</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#表单"><span class="toc-nav-text">表单</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#表单的组成"><span class="toc-nav-text">表单的组成</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#复选框-1"><span class="toc-nav-text">复选框</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#复选框的全选"><span class="toc-nav-text">复选框的全选</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#复选框的不选"><span class="toc-nav-text">复选框的不选</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#复选框的反选"><span class="toc-nav-text">复选框的反选</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#复选框中的val-方法和prop-方法"><span class="toc-nav-text">复选框中的val()方法和prop()方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#select双击互相添加子元素"><span class="toc-nav-text">select双击互相添加子元素</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#jquery下的ajax运用"><span class="toc-nav-text">jquery下的ajax运用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#load-方法"><span class="toc-nav-text">load()方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#get-和-post"><span class="toc-nav-text">$.get()和$.post()</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#get"><span class="toc-nav-text">$.get()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#post与get的区别"><span class="toc-nav-text">post与get的区别</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#getScript动态加载"><span class="toc-nav-text">$.getScript动态加载</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#getJSON-记住JSON是大写的"><span class="toc-nav-text">$.getJSON(记住JSON是大写的)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ajax"><span class="toc-nav-text">$.ajax()</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#序列化元素"><span class="toc-nav-text">序列化元素</span></a></li></ol></li></ol>
     
@@ -650,7 +649,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "note-jq",
+        id: "jq笔记",
         owner: "",
         repo: "",
         oauth: {
@@ -694,8 +693,6 @@
     <footer class="app-footer">
   <p class="copyright">
     &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
   </p>
 </footer>
 

@@ -73,12 +73,6 @@
       
         <li class="list-item">
           
-            <a href="/archives/" class="item-link">Archives</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
             <a href="/link/" class="item-link">Link</a>
           
         </li>
@@ -86,6 +80,12 @@
         <li class="list-item">
           
             <a href="/notes/" class="item-link">Notes</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
           
         </li>
       
@@ -112,12 +112,6 @@
         
           <li class="menu-item">
             
-              <a href="/archives/" class="menu-link">Archives</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
               <a href="/link/" class="menu-link">Link</a>
             
           </li>
@@ -125,6 +119,12 @@
           <li class="menu-item">
             
               <a href="/notes/" class="menu-link">Notes</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
             
           </li>
         
@@ -151,12 +151,20 @@
 <h3 id="修改git远程服务关联"><a href="#修改git远程服务关联" class="headerlink" title="修改git远程服务关联"></a>修改git远程服务关联</h3><p>打开<code>_config.yml</code>修改<code>deploy</code>下的<code>type: git</code>;<br>在type下增加一行<code>repo: 仓库地址 //git@github.com:用户名/用户名.github.io.git</code>;<br>再增加一行<code>branch: master</code>;</p>
 <h2 id="hexo发布到远程"><a href="#hexo发布到远程" class="headerlink" title="hexo发布到远程"></a>hexo发布到远程</h2><p><code>hexo d -g</code>把本地代码发布的远程<br>进入仓库，找到设置，打开<code>githubPage</code>设置分支为主分枝</p>
 <h2 id="绑定自已的域名"><a href="#绑定自已的域名" class="headerlink" title="绑定自已的域名"></a>绑定自已的域名</h2><p>进入仓库-&gt;设置,找到<code>githubPage</code>下面的自定义域名,修改为自己的域名;<br>进入域名商提供的域名解析服务，添加<code>CNAME解析两条</code>:记录值为<code>github提供的域名二级域名</code>,<code>记录为@</code>;第二条记录值相同，<code>记录为www</code>;</p>
+<h2 id="增加CNAME文件"><a href="#增加CNAME文件" class="headerlink" title="增加CNAME文件"></a>增加CNAME文件</h2><blockquote>
+<p>不增加CNAME文件会导致每次发布页面时就要重新绑定自定义域名</p>
+</blockquote>
+<p>在根目录的source目录下新建一个CNAME文件，没有后辍，然后把你的自定义域名写在里面</p>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
+  <a href="/tags#hexo">
+    <span class="tag-code">hexo</span>
+  </a>
+
   <a href="/tags#git">
     <span class="tag-code">git</span>
   </a>
@@ -209,9 +217,8 @@
   
     <aside class="catalog-container">
   <div class="toc-main">
-    <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地安装hexo"><span class="toc-nav-text">本地安装hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置网站"><span class="toc-nav-text">配置网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站信息"><span class="toc-nav-text">修改网站信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站url"><span class="toc-nav-text">修改网站url</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改主题"><span class="toc-nav-text">修改主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改git远程服务关联"><span class="toc-nav-text">修改git远程服务关联</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo发布到远程"><span class="toc-nav-text">hexo发布到远程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#绑定自已的域名"><span class="toc-nav-text">绑定自已的域名</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地安装hexo"><span class="toc-nav-text">本地安装hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置网站"><span class="toc-nav-text">配置网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站信息"><span class="toc-nav-text">修改网站信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站url"><span class="toc-nav-text">修改网站url</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改主题"><span class="toc-nav-text">修改主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改git远程服务关联"><span class="toc-nav-text">修改git远程服务关联</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo发布到远程"><span class="toc-nav-text">hexo发布到远程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#绑定自已的域名"><span class="toc-nav-text">绑定自已的域名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#增加CNAME文件"><span class="toc-nav-text">增加CNAME文件</span></a></li></ol>
     
   </div>
 </aside>
@@ -317,8 +324,6 @@
     <footer class="app-footer">
   <p class="copyright">
     &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
-    <br>
-    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
   </p>
 </footer>
 

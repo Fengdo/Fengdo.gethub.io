@@ -140,21 +140,23 @@
 <main class="app-body" id="note">
 	<article class="post-article">
 		<section class="markdown-content"><ul>
-<li><p><a href="/notes-js">js笔记</a></p>
+<li><p><a href="/notes-js">js笔记</a> <em>未整理</em></p>
 </li>
-<li><p><a href="/notes-jq">jq笔记</a></p>
+<li><p><a href="/notes-jq">jq笔记</a><em>未整理</em></p>
 </li>
-<li><p><a href="/notes-less">less笔记</a></p>
+<li><p><a href="/notes-less">less笔记</a><em>未整理</em></p>
 </li>
-<li><p><a href="/notes-css">css笔记</a></p>
+<li><p><a href="/notes-css">css笔记</a><em>未整理</em></p>
 </li>
-<li><p><a href="/notes-layout">css布局</a></p>
+<li><p><a href="/notes-layout">css布局</a><em>整理中</em></p>
 </li>
-<li><p><a href="/notes-git">git笔记</a></p>
+<li><p><a href="/notes-git">git笔记</a> <em>已整理</em></p>
 </li>
-<li><p><a href="/notes-mysql">mysql笔记</a></p>
+<li><p><a href="/notes-mysql">mysql笔记</a><em>未整理</em></p>
 </li>
-<li><p><a href="/notes-php">php笔记</a></p>
+<li><p><a href="/notes-php">php笔记</a> <em>未整理</em></p>
+</li>
+<li><p><a href="/notes-hexo">hexo笔记</a> <em>已整理</em></p>
 </li>
 </ul>
 </section>
@@ -179,6 +181,44 @@
                           "text-align":"center",
                         });
     });
+</script>
+
+<script>
+  var note =document.getElementById("note");
+  var em = note.getElementsByTagName("em");
+
+  for(var i=0;i<em.length;i++){
+    var a = em[i].parentNode.getElementsByTagName("a")[0];
+    var li = a.parentNode.parentNode;
+
+    em[i].innerText = "[" + em[i].innerText +"]";
+    a.appendChild(em[i]);
+    
+    if(em[i].innerText=="[未整理]"){
+        a.setAttribute("disable",true);
+        a.className = "disable";
+        a.removeAttribute("href");
+        li.style.background = "#ededed";
+
+    }else if(em[i].innerText=="[整理中]"){
+        a.className = "working";
+        li.onmouseover = function(){
+          this.style.borderColor = "orange";
+        }
+        li.onmouseout = function(){
+          this.style.borderColor = "#ededed";
+        }
+    }else if(em[i].innerText=="[已整理]"){
+         li.onmouseover = function(){
+           this.style.borderColor = "#42b983";
+         }
+         li.onmouseout = function(){
+           this.style.borderColor = "#ededed";
+         }     
+    }
+
+  }
+
 </script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>

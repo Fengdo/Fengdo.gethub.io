@@ -1020,18 +1020,31 @@ h2.article-head {
 #note .post-article .markdown-content li {
   display: inline-block;
   margin: 1% 2.5%;
+  padding: 12px 5px;
   box-sizing: border-box;
   width: 20%;
   font-size: 12px;
   text-align: center;
-  border: 1px solid #ededed !important;
+  border: 1px solid #ededed;
 }
 #note .post-article .markdown-content a {
   display: block;
   font-size: 1.4em;
 }
-#note .post-article .markdown-content a:hover {
-  color: #f00 !important;
+#note .post-article .markdown-content a em {
+  margin-left: 5px;
+  font-style: normal;
+  font-size: 12px;
+  color: #808080;
+}
+.disable {
+  color: #7f8c8d;
+}
+.disable:hover {
+  cursor: not-allowed;
+}
+.working {
+  color: #ffa500;
 }
 @-moz-keyframes shine {
   0%, 100% {

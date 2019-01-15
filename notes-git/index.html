@@ -143,8 +143,8 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>分布式版本管理器</p>
-<h2 id="git服务器"><a href="#git服务器" class="headerlink" title="git服务器"></a>git服务器</h2><p>git本地服务器与远程服务器</p>
+    <section class="markdown-content"><h2 id="git作用"><a href="#git作用" class="headerlink" title="git作用"></a>git作用</h2><p>分布式版本管理器 [ <strong>管理文件版本</strong> ]</p>
+<h2 id="git服务器"><a href="#git服务器" class="headerlink" title="git服务器"></a>git服务器</h2><p>git有本地服务器与远程服务器之分</p>
 <ul>
 <li><p>git本地服务器：是搭建在本地的git环境(安装在本地的git);</p>
 <p>​             所有的git add 与git commit提交都是在本地服务器完成的;</p>
@@ -153,116 +153,93 @@
 <p>​            git push就是把本地信息推送到远程服务器上。</p>
 </li>
 </ul>
-<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><ul>
-<li><p>windows</p>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>git有三个版本windows、linux、Mac,这里我只写了两个</p>
+<ul>
+<li><p>windows版本</p>
 <p>去<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网</a>下载</p>
 </li>
-<li><p>Linux</p>
+<li><p>Linux <code>yum install -y git</code></p>
 </li>
 </ul>
-<p><code>yum install -y git</code></p>
-<h2 id="配置用户"><a href="#配置用户" class="headerlink" title="配置用户"></a>配置用户</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">### 设置用户名和邮箱</span><br><span class="line">git config  --global user.name &quot;Your name&quot;;</span><br><span class="line">git config --global user.email &quot;Your email&quot;;</span><br><span class="line"></span><br><span class="line">### 设置颜色高亮</span><br><span class="line">git config --global color.ui true</span><br></pre></td></tr></table></figure>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><ul>
+<h2 id="配置用户"><a href="#配置用户" class="headerlink" title="配置用户"></a>配置用户</h2><p>第一次使用时要先配置用户名和邮箱</p>
+<h3 id="设置用户名和邮箱"><a href="#设置用户名和邮箱" class="headerlink" title="设置用户名和邮箱"></a>设置用户名和邮箱</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config  --global user.name &quot;Your name&quot;;</span><br><span class="line">git config --global user.email &quot;Your email&quot;;</span><br></pre></td></tr></table></figure>
+<h3 id="设置颜色高亮"><a href="#设置颜色高亮" class="headerlink" title="设置颜色高亮"></a>设置颜色高亮</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global color.ui true</span><br></pre></td></tr></table></figure>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>创建仓库就是一个创建一个仓库根目录的过程</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><ul>
 <li>鼠标右键新建一个目录</li>
 <li>Linux命令mkdir创建目录</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">linux基本命令</span><br><span class="line">ls 查看当前目录下的文件  </span><br><span class="line">ls -a 查看当前目录下的文件包函隐藏文件</span><br><span class="line">pwd 查看当前路径</span><br><span class="line">touch abc.txt 创建文件</span><br><span class="line">rm -rf 删除目录/文件</span><br><span class="line">cat abc.txt 管道查看文件</span><br><span class="line">vim abc.txt 用vim打开文件</span><br><span class="line">echo &quot;# 学习git&quot;&gt;&gt;README.md 管道写入文件，有就写入，没有就创建</span><br></pre></td></tr></table></figure>
+<h3 id="额外"><a href="#额外" class="headerlink" title="额外"></a>额外</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">linux基本命令</span><br><span class="line">ls 查看当前目录下的文件  </span><br><span class="line">ls -a 查看当前目录下的文件包函隐藏文件</span><br><span class="line">pwd 查看当前路径</span><br><span class="line">touch abc.txt 创建文件</span><br><span class="line">rm -rf 删除目录/文件</span><br><span class="line">cat abc.txt 管道查看文件</span><br><span class="line">vim abc.txt 用vim打开文件</span><br><span class="line">echo &quot;# 学习git&quot;&gt;&gt;README.md 管道写入文件，有就写入，没有就创建</span><br></pre></td></tr></table></figure>
 <h2 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h2><p>创建好仓库后,需要先进入仓库<code>git init</code>初始化仓库,也就是让git监控这个目录;</p>
-<h2 id="添加与提交"><a href="#添加与提交" class="headerlink" title="添加与提交"></a>添加与提交</h2><p>提交与执行都是在本地服务器完成的，就是把信息丢到本地仓库。<br><code>git add ...</code> 添加<br><code>git add -A/--all</code>  添加所有的变化<br><code>git add -u</code>  添加被修改和被删除的文件，不包括新文件<br><code>git add .</code> 添加新文件和被修改的文件，不包括被删除的文件<br><code>git commit -m &quot;版本1&quot;</code> 提交<br>-m是指：message</p>
-<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><ul>
-<li><p>查看状态<br><code>git status</code></p>
-</li>
-<li><p>查看修改的内容<br><code>git diff readme.txt</code></p>
-</li>
-<li><p>查看版本<br><code>git log</code><br><code>git log --pretty=oneline</code> 排成一行显示<br><code>git log --graph --pretty=oneline --abbrev-commit</code> 排成一行，简化ID,并显示合并相关的信息</p>
-</li>
-<li><p>查看历史版本操作记录</p>
-</li>
-</ul>
-<p><code>git reflog</code></p>
+<h2 id="添加与提交"><a href="#添加与提交" class="headerlink" title="添加与提交"></a>添加与提交</h2><p>提交与执行都是在本地服务器完成的，就是把信息丢到本地仓库。<br><code>git add ...</code> 添加<br><code>git add -A/--all</code>  添加所有的变化<br><code>git add -u</code>  添加被修改和被删除的文件，不包括新文件<br><code>git add .</code> 添加新文件和被修改的文件，不包括被删除的文件<br><code>git commit -m &quot;版本1&quot;</code> 提交;-m是指：message</p>
+<h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><h3 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<h3 id="查看修改的内容"><a href="#查看修改的内容" class="headerlink" title="查看修改的内容"></a>查看修改的内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff readme.txt</span><br></pre></td></tr></table></figure>
+<h3 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+<p><code>git log --pretty=oneline</code> 排成一行显示<br><code>git log --graph --pretty=oneline --abbrev-commit</code> 排成一行，简化ID,并显示合并相关的信息</p>
+<h3 id="查看历史版本操作记录"><a href="#查看历史版本操作记录" class="headerlink" title="查看历史版本操作记录"></a>查看历史版本操作记录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+<h3 id="查看远程服务器信息"><a href="#查看远程服务器信息" class="headerlink" title="查看远程服务器信息"></a>查看远程服务器信息</h3><p><code>git remote</code> 查看远程服务器的信息<br>输出的内容是服务器的名字;<br>如果没有指定，远程服务器的名字默认为:origin;</p>
+<p><code>git remote -v</code> 详细查看服务器的信息<br>如果有push(推送)权限,就会显示连接的远程服务器freth和push的url</p>
+<h2 id="版本操作"><a href="#版本操作" class="headerlink" title="版本操作"></a>版本操作</h2><h3 id="回退一个版本"><a href="#回退一个版本" class="headerlink" title="回退一个版本"></a>回退一个版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard HEAD^</span><br></pre></td></tr></table></figure>
+<h3 id="回退到指定版本"><a href="#回退到指定版本" class="headerlink" title="回退到指定版本"></a>回退到指定版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 版本号/版本ID</span><br></pre></td></tr></table></figure>
+<p>版本号可以用git reflog或者git log查看</p>
+<h2 id="撤消操作"><a href="#撤消操作" class="headerlink" title="撤消操作"></a>撤消操作</h2><h3 id="撤消修改"><a href="#撤消修改" class="headerlink" title="撤消修改"></a>撤消修改</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- readme.txt</span><br></pre></td></tr></table></figure>
+<p>针对修改了,却没有添加(git add)到分枝的操作</p>
+<h3 id="撤消添加"><a href="#撤消添加" class="headerlink" title="撤消添加"></a>撤消添加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset HEAD -- readme.txt</span><br></pre></td></tr></table></figure>
+<p>撤消添加(git add)到分枝的操作</p>
+<h2 id="远程服务器"><a href="#远程服务器" class="headerlink" title="远程服务器"></a>远程服务器</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>生成两个文件一个是id_rsa(私钥)和id_rsa.pub(公钥)<br>首次连接github要生成秘钥，并且要在github帐号添加相关的公钥</p>
+<h3 id="添加远程关联"><a href="#添加远程关联" class="headerlink" title="添加远程关联"></a>添加远程关联</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:Fengdo/learnGit.git</span><br><span class="line">git remote add myServer git@gitee.com:Fengdo/learnGit.git</span><br></pre></td></tr></table></figure>
 <ul>
-<li>查看远程服务器信息</li>
+<li>让本地与远程仓库关联起来，实现本地与远程仓库同步。</li>
+<li>git 可以同时关联多个远程服务器，并可以选择性的提交数据到指定服务器</li>
+<li>添加关联时，可以给服务器取个名字。比如：origin和myServer就是自定义的名字<ul>
+<li>remote是服务器的意思;</li>
+<li>origin是服务器的名字;</li>
 </ul>
-<p><code>git remote</code> 查看远程服务器的信息<br>输出的内容是服务器的名字;<br>如果没有指定，远程服务器的名字默认为:origin;<br><code>git remote -v</code> 详细查看服务器的信息<br>如果有push(推送)权限,就会显示连接的远程服务器freth和push的url</p>
-<h2 id="版本操作"><a href="#版本操作" class="headerlink" title="版本操作"></a>版本操作</h2><ul>
-<li>回退一个版本</li>
+</li>
 </ul>
-<p><code>git reset --hard HEAD^</code></p>
+<h3 id="推送到远程"><a href="#推送到远程" class="headerlink" title="推送到远程"></a>推送到远程</h3><p><code>git push -u origin master</code>  把主分枝推送到origin服务器<br><code>git push gitee dev</code> 把dev分枝推送到gitee服务器</p>
+<p>首次推送要加-u,后续的不用<br>origin是指服务器的名字<br>master是指主分枝</p>
+<h3 id="克隆项目"><a href="#克隆项目" class="headerlink" title="克隆项目"></a>克隆项目</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:Fengdo/learnGit.git</span><br></pre></td></tr></table></figure>
+<h3 id="克隆别人的项目进行开发"><a href="#克隆别人的项目进行开发" class="headerlink" title="克隆别人的项目进行开发"></a>克隆别人的项目进行开发</h3><p>先克隆，后取消别人的远程关联url。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin //删除关联</span><br><span class="line">git remote add myServer git@github:Fengdo/myProgram.git //增加自己的关联服务器</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改克隆项目url"><a href="#修改克隆项目url" class="headerlink" title="修改克隆项目url"></a>修改克隆项目url</h3><p>进入隐藏目录.git修改config文件的url</p>
+<h3 id="推送-push"><a href="#推送-push" class="headerlink" title="推送(push)"></a>推送(push)</h3><p><code>git push origin master</code>推送==主分枝==到服务器<br><code>git push origin &lt;分支名称&gt;</code>推送==指定分枝==到服务器</p>
+<h3 id="删除远程github关联"><a href="#删除远程github关联" class="headerlink" title="删除远程github关联"></a>删除远程github关联</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><h3 id="了解分支"><a href="#了解分支" class="headerlink" title="了解分支"></a>了解分支</h3><p>主分支与其它分支</p>
 <ul>
-<li>回退到指定版本<br><code>git reset --hard 版本号/版本ID</code><br>版本号可以用git reflog或者git log查看</li>
+<li>指针指向</li>
+<li>master指向：主分支</li>
+<li>dev指向：其它分支</li>
+<li>HEAD指向：当前分支<br>==注意==：如果把HEAD指向dev，那么dev所指向的分支就是当前的分支。这并不影响主要分支的内容。</li>
 </ul>
-<h2 id="撤消操作"><a href="#撤消操作" class="headerlink" title="撤消操作"></a>撤消操作</h2><ul>
-<li>撤消修改<br><code>git checkout -- readme.txt</code><br>针对修改了,却没有添加(git add)到分枝的操作</li>
-<li>撤消添加<br><code>git reset HEAD -- readme.txt</code><br>撤消添加(git add)到分枝的操作</li>
-</ul>
-<h2 id="远程服务器"><a href="#远程服务器" class="headerlink" title="远程服务器"></a>远程服务器</h2><ul>
-<li><p>生成秘钥<br><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code><br>生成两个文件一个是id_rsa(私钥)和id_rsa.pub(公钥)<br>首次连接github要生成秘钥，并且要在github帐号添加相关的公钥</p>
-</li>
-<li><p>添加关联远程仓库<br><code>git remote add origin git@github.com:Fengdo/learnGit.git</code><br><code>git remote add myServer git@gitee.com:Fengdo/learnGit.git</code><br>让本地与远程仓库关联起来，实现本地与远程仓库同步。<br>git 可以同时关联多个远程服务器，并可以选择性的提交数据到指定服务器<br>添加关联时，可以给服务器取个名字。比如：origin和myServer就是自定义的名字<br>remote是服务器的意思;<br>origin是服务器的名字;</p>
-</li>
-<li><p>推送到远程仓库<br><code>git push -u origin master</code>  把主分枝推送到origin服务器<br><code>git push gitee dev</code> 把dev分枝推送到gitee服务器<br>首次推送要加-u,后续的不用<br>origin是指服务器的名字<br>master是指主分枝</p>
-</li>
-<li><p>克隆项目<br><code>git clone git@github.com:Fengdo/learnGit.git</code></p>
-</li>
-<li><p>克隆别人的项目进行开发<br>先克隆，后取消别人的远程关联url。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin //删除关联</span><br><span class="line">git remote add myServer git@github:Fengdo/myProgram.git //增加自己的关联服务器</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改克隆项目url<br>进入隐藏目录.git修改config文件的url</p>
-</li>
-<li><p>推送(push)</p>
-<p><code>git push origin master</code>推送==主分枝==到服务器</p>
-<p><code>git push origin &lt;分支名称&gt;</code>推送==指定分枝==到服务器</p>
-</li>
-<li><p>删除远程github关联<br><code>git remote rm origin</code></p>
-</li>
-</ul>
-<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><ul>
-<li><p>了解分支<br>主分支与其它分支</p>
-</li>
-<li><p>指针指向<br>master指向：主分支<br>dev指向：其它分支<br>HEAD指向：当前分支</p>
-<p>==注意==：如果把HEAD指向dev，那么dev所指向的分支就是当前的分支。这并不影响主要分支的内容。</p>
-</li>
-<li><p>察看分支<br><code>git branch</code><br>列出所有分支而且当前分支前面会标一个<code>*</code>号。</p>
-</li>
-<li><p>切换分支<br><code>git checkout &lt;name&gt;</code>   切换到主分支</p>
-</li>
-<li><p>创建分支<br><code>git branch &lt;name&gt;</code><br>增加一个dev指向</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//创建分支</span><br><span class="line">git branch &lt;name&gt;</span><br><span class="line"></span><br><span class="line">//创建一个分支，并切换到这个分支</span><br><span class="line">git checkout -b &lt;name&gt;  </span><br><span class="line"></span><br><span class="line">相当于</span><br><span class="line">$ git branch &lt;name&gt;  //创建一个分支</span><br><span class="line">$ git checkout &lt;name&gt; //切换分支</span><br></pre></td></tr></table></figure>
+<h3 id="察看分支"><a href="#察看分支" class="headerlink" title="察看分支"></a>察看分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<p>列出所有分支而且当前分支前面会标一个<code>*</code>号。</p>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><p><code>git checkout &lt;name&gt;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master //切换到主分支</span><br><span class="line">git checkout v0.1 //切换到其它分支</span><br></pre></td></tr></table></figure></p>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch &lt;name&gt;</span><br></pre></td></tr></table></figure>
+<p>创建分支就是增加一个dev指向</p>
+<h3 id="创建一个分支，并切换到这个分支"><a href="#创建一个分支，并切换到这个分支" class="headerlink" title="创建一个分支，并切换到这个分支"></a>创建一个分支，并切换到这个分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b &lt;name&gt;</span><br></pre></td></tr></table></figure>
+<p>相当于<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch &lt;name&gt;  //创建一个分支</span><br><span class="line">$ git checkout &lt;name&gt; //切换分支</span><br></pre></td></tr></table></figure></p>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;name&gt; //合并指定分支到当前分支</span><br></pre></td></tr></table></figure>
+<p>例如：把v2.0分支合并到v1.0分支<br>步骤:</p>
+<ol>
+<li><code>checkout v1.0</code> 切换到v1.0分枝</li>
+<li><code>git merge v2.0</code> 把v2.0合并到v1.0</li>
+</ol>
+<p>合并到主分支<br>就把master指向dev提交的内容</p>
 <ul>
-<li>合并分支</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;name&gt; //合并指定分支到当前分支</span><br></pre></td></tr></table></figure>
-<p>把master指向dev提交的内容</p>
-<ul>
-<li>合并分支模式<br>Fast-forward模式，删除分支后会丢失分支信息<br>禁用Fast-forward模式，<code>git merge --no-ff -m &quot;merge with no-ff&quot; dev</code><br>–no-ff 参数表示禁用Fast-forward<br>-m表示message</li>
-<li>解决冲突<br>当分支存在冲突时，要先手动解决冲突，然后重新提交<br>当冲突时，合并的内容冲突部分会被<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD  =======  &gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标出<br><code>git log --graph</code>可以查看分支合并图</li>
+<li><p>合并分支模式<br>Fast-forward模式，删除分支后会丢失分支信息<br>禁用Fast-forward模式，<code>git merge --no-ff -m &quot;merge with no-ff&quot; dev</code><br>–no-ff 参数表示禁用Fast-forward<br>-m表示message</p>
+</li>
+<li><p>解决冲突<br>当分支存在冲突时，要先手动解决冲突，然后重新提交<br>当冲突时，合并的内容冲突部分会被<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD  =======  &gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标出<br><code>git log --graph</code>可以查看分支合并图</p>
+</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONFLICT (content): Merge conflict in README.md</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
-<ul>
-<li>删除分支</li>
-</ul>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p>删除分支就是删除dev的指向</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d &lt;name&gt; //删除其它分支非主分支</span><br></pre></td></tr></table></figure>
-<p>删除dev的指向</p>
-<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ul>
-<li>创建标签</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git tag &lt;tagname&gt; 为当前分枝创建标签</span><br><span class="line"></span><br><span class="line">git tag &lt;tagname&gt; ID` 为指定ID创建标签</span><br><span class="line"></span><br><span class="line">git tag -a &lt;tagname&gt; -m &quot;...&quot; ID 创建带说明的标签</span><br></pre></td></tr></table></figure>
-<ul>
-<li>查看标签</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag 查看所有标签</span><br><span class="line">git show &lt;tagname&gt; 查看指定标签的内容</span><br></pre></td></tr></table></figure>
-<ul>
-<li>删除标签</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">删除本地标签</span><br><span class="line">git tag -d &lt;tagname&gt;</span><br><span class="line"></span><br><span class="line">删除远程标签内容</span><br><span class="line">删除远程标签前，先删除本地打错的标签</span><br><span class="line">git push origin :refs/tags/v0.9</span><br></pre></td></tr></table></figure>
-<ul>
-<li>推送标签内容到远程服务器</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;tagname&gt;</span><br><span class="line"></span><br><span class="line">git push origin --tags` 推送所有的标签到远程</span><br></pre></td></tr></table></figure>
-<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>设置别名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.st status</span><br></pre></td></tr></table></figure>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><h3 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag &lt;tagname&gt; 为当前分枝创建标签</span><br><span class="line">git tag &lt;tagname&gt; ID` 为指定ID创建标签</span><br><span class="line">git tag -a &lt;tagname&gt; -m &quot;...&quot; ID 创建带说明的标签</span><br></pre></td></tr></table></figure>
+<h3 id="查看标签"><a href="#查看标签" class="headerlink" title="查看标签"></a>查看标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag 查看所有标签</span><br><span class="line">git show &lt;tagname&gt; 查看指定标签的内容</span><br></pre></td></tr></table></figure>
+<h3 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">删除本地标签</span><br><span class="line">git tag -d &lt;tagname&gt;</span><br><span class="line"></span><br><span class="line">删除远程标签内容</span><br><span class="line">删除远程标签前，先删除本地打错的标签</span><br><span class="line">git push origin :refs/tags/v0.9</span><br></pre></td></tr></table></figure>
+<h3 id="推送标签内容到远程服务器"><a href="#推送标签内容到远程服务器" class="headerlink" title="推送标签内容到远程服务器"></a>推送标签内容到远程服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;tagname&gt;</span><br><span class="line">git push origin --tags` 推送所有的标签到远程</span><br></pre></td></tr></table></figure>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><h3 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global alias.st status</span><br></pre></td></tr></table></figure>
 </section>
     <!-- Tags START -->
     
@@ -300,7 +277,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#作用"><span class="toc-nav-text">作用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#git服务器"><span class="toc-nav-text">git服务器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装git"><span class="toc-nav-text">安装git</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置用户"><span class="toc-nav-text">配置用户</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#初始化仓库"><span class="toc-nav-text">初始化仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#添加与提交"><span class="toc-nav-text">添加与提交</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#查看"><span class="toc-nav-text">查看</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#版本操作"><span class="toc-nav-text">版本操作</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#撤消操作"><span class="toc-nav-text">撤消操作</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#远程服务器"><span class="toc-nav-text">远程服务器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#分支"><span class="toc-nav-text">分支</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#标签"><span class="toc-nav-text">标签</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其它"><span class="toc-nav-text">其它</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#git作用"><span class="toc-nav-text">git作用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#git服务器"><span class="toc-nav-text">git服务器</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装git"><span class="toc-nav-text">安装git</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置用户"><span class="toc-nav-text">配置用户</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置用户名和邮箱"><span class="toc-nav-text">设置用户名和邮箱</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置颜色高亮"><span class="toc-nav-text">设置颜色高亮</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#方法"><span class="toc-nav-text">方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#额外"><span class="toc-nav-text">额外</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#初始化仓库"><span class="toc-nav-text">初始化仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#添加与提交"><span class="toc-nav-text">添加与提交</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#查看"><span class="toc-nav-text">查看</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看状态"><span class="toc-nav-text">查看状态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看修改的内容"><span class="toc-nav-text">查看修改的内容</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看版本"><span class="toc-nav-text">查看版本</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看历史版本操作记录"><span class="toc-nav-text">查看历史版本操作记录</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看远程服务器信息"><span class="toc-nav-text">查看远程服务器信息</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#版本操作"><span class="toc-nav-text">版本操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#回退一个版本"><span class="toc-nav-text">回退一个版本</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#回退到指定版本"><span class="toc-nav-text">回退到指定版本</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#撤消操作"><span class="toc-nav-text">撤消操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#撤消修改"><span class="toc-nav-text">撤消修改</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#撤消添加"><span class="toc-nav-text">撤消添加</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#远程服务器"><span class="toc-nav-text">远程服务器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#生成秘钥"><span class="toc-nav-text">生成秘钥</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#添加远程关联"><span class="toc-nav-text">添加远程关联</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#推送到远程"><span class="toc-nav-text">推送到远程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#克隆项目"><span class="toc-nav-text">克隆项目</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#克隆别人的项目进行开发"><span class="toc-nav-text">克隆别人的项目进行开发</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改克隆项目url"><span class="toc-nav-text">修改克隆项目url</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#推送-push"><span class="toc-nav-text">推送(push)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除远程github关联"><span class="toc-nav-text">删除远程github关联</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#分支"><span class="toc-nav-text">分支</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#了解分支"><span class="toc-nav-text">了解分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#察看分支"><span class="toc-nav-text">察看分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#切换分支"><span class="toc-nav-text">切换分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建分支"><span class="toc-nav-text">创建分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建一个分支，并切换到这个分支"><span class="toc-nav-text">创建一个分支，并切换到这个分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#合并分支"><span class="toc-nav-text">合并分支</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除分支"><span class="toc-nav-text">删除分支</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#标签"><span class="toc-nav-text">标签</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建标签"><span class="toc-nav-text">创建标签</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看标签"><span class="toc-nav-text">查看标签</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除标签"><span class="toc-nav-text">删除标签</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#推送标签内容到远程服务器"><span class="toc-nav-text">推送标签内容到远程服务器</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其它"><span class="toc-nav-text">其它</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#设置别名"><span class="toc-nav-text">设置别名</span></a></li></ol></li></ol>
     
   </div>
 </aside>

@@ -170,7 +170,8 @@
 
   for(var i=0;i<em.length;i++){
     var a = em[i].parentNode.getElementsByTagName("a")[0];
-    var li = a.parentNode.parentNode;
+    var parent = em[i].parentNode.parentNode;
+    var li = a.parentNode;
 
     em[i].innerText = "[" + em[i].innerText +"]";
     a.appendChild(em[i]);
@@ -179,10 +180,7 @@
         a.setAttribute("disable",true);
         a.className = "disable";
         a.removeAttribute("href");
-        li.onmouseover = function(){
-          alert("abc");
-          this.style.background = "#ededed";
-        }
+        em[i].parentNode.parentNode.style.background = "#ededed";
 
     }else if(em[i].innerText=="[整理中]"){
         a.className = "working";

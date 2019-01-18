@@ -165,18 +165,6 @@
 </script>
 
 <script>
-    $().ready(function(){
-      $("#note ul").before('<div id="h2-title">记录学过的内容，备查</div>');
-      $("#h2-title").css({
-                          "padding":"15px",
-                          "color":"orange",
-                          "font-size":16,
-                          "text-align":"center",
-                        });
-    });
-</script>
-
-<script>
   var note =document.getElementById("note");
   var em = note.getElementsByTagName("em");
 
@@ -191,7 +179,10 @@
         a.setAttribute("disable",true);
         a.className = "disable";
         a.removeAttribute("href");
-        li.style.background = "#ededed";
+        li.onmouseover = function(){
+          alert("abc");
+          this.style.background = "#ededed";
+        }
 
     }else if(em[i].innerText=="[整理中]"){
         a.className = "working";
@@ -208,6 +199,8 @@
          li.onmouseout = function(){
            this.style.borderColor = "#ededed";
          }     
+    }else{
+      li.style.background = "white";
     }
 
   }

@@ -601,6 +601,7 @@ h2.article-head {
 }
 .markdown-content figure,
 .article-summary figure {
+  max-width: 760px;
   background: #f8f8f8;
   padding: 0 10px;
   border-radius: 2px;

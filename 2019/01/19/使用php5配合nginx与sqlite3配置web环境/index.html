@@ -10,7 +10,7 @@
   
   <title>
     
-      使用hexo在github上搭建博客 | 笔记站
+      使用php5配合nginx与sqlite3配置web环境 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,8 +134,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>使用hexo在github上搭建博客</h2>
-  <!-- <p class="post-date">2019-01-13</p> -->
+  <h2>使用php5配合nginx与sqlite3配置web环境</h2>
+  <!-- <p class="post-date">2019-01-19</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -143,30 +143,39 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="本地安装hexo"><a href="#本地安装hexo" class="headerlink" title="本地安装hexo"></a>本地安装hexo</h2><p>  1.0 安装hexo<br>  1.1 创建一个[github的用户名].github.io的根目录<br>  1.2 <code>hexo init</code>初始化这个根目录</p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github上创建一个新的仓库，命名为<code>[github的用户名].github.io</code>不生成解释文件</p>
-<h2 id="配置网站"><a href="#配置网站" class="headerlink" title="配置网站"></a>配置网站</h2><h3 id="修改网站信息"><a href="#修改网站信息" class="headerlink" title="修改网站信息"></a>修改网站信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title 网站标题</span><br><span class="line">subtitle 网站副标题</span><br><span class="line">keywords 关键字</span><br><span class="line">author 作者</span><br><span class="line">language 语言  //zh</span><br><span class="line">timezone 时区</span><br></pre></td></tr></table></figure>
-<h3 id="修改网站url"><a href="#修改网站url" class="headerlink" title="修改网站url"></a>修改网站url</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: https://用户名.github.io</span><br></pre></td></tr></table></figure>
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>修改主题前要先把下载好的主题放在<code>themes</code>目录下<br>回到配置文件，把<code>theme</code>改为主题的名字</p>
-<h3 id="修改git远程服务关联"><a href="#修改git远程服务关联" class="headerlink" title="修改git远程服务关联"></a>修改git远程服务关联</h3><p>打开<code>_config.yml</code>修改<code>deploy</code>下的<code>type: git</code>;<br>在type下增加一行<code>repo: 仓库地址 //git@github.com:用户名/用户名.github.io.git</code>;<br>再增加一行<code>branch: master</code>;</p>
-<h2 id="hexo发布到远程"><a href="#hexo发布到远程" class="headerlink" title="hexo发布到远程"></a>hexo发布到远程</h2><p><code>hexo d -g</code>把本地代码发布的远程<br>进入仓库，找到设置，打开<code>githubPage</code>设置分支为主分枝</p>
-<h2 id="绑定自已的域名"><a href="#绑定自已的域名" class="headerlink" title="绑定自已的域名"></a>绑定自已的域名</h2><p>进入仓库-&gt;设置,找到<code>githubPage</code>下面的自定义域名,修改为自己的域名;<br>进入域名商提供的域名解析服务，添加<code>CNAME解析两条</code>:记录值为<code>github提供的域名二级域名</code>,<code>记录为@</code>;第二条记录值相同，<code>记录为www</code>;</p>
-<h2 id="增加CNAME文件"><a href="#增加CNAME文件" class="headerlink" title="增加CNAME文件"></a>增加CNAME文件</h2><blockquote>
-<p>不增加CNAME文件会导致每次发布页面时就要重新绑定自定义域名</p>
-</blockquote>
-<p>在根目录的source目录下新建一个CNAME文件，没有后辍，然后把你的自定义域名写在里面</p>
-</section>
+    <section class="markdown-content"><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作:"></a>准备工作:</h2><ul>
+<li>服务器配置：1核 512M 10G小内存服务器</li>
+<li>服务器系统:debain7_64</li>
+<li>域名添加A解析</li>
+<li>准备网站cms（这里我用typecho）</li>
+</ul>
+<h2 id="更新源"><a href="#更新源" class="headerlink" title="更新源:"></a>更新源:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get update -y</span><br></pre></td></tr></table></figure>
+<h2 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install ngix -y</span><br></pre></td></tr></table></figure>
+<h2 id="安装php-fpm"><a href="#安装php-fpm" class="headerlink" title="安装php-fpm"></a>安装php-fpm</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install php5-fpm -y</span><br></pre></td></tr></table></figure>
+<h2 id="安装sqlite数据库"><a href="#安装sqlite数据库" class="headerlink" title="安装sqlite数据库"></a>安装sqlite数据库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install php5-sqlite sqlite sqlite3 -y</span><br></pre></td></tr></table></figure>
+<h2 id="安装-wget工具"><a href="#安装-wget工具" class="headerlink" title="安装 wget工具"></a>安装 wget工具</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install wget -y</span><br></pre></td></tr></table></figure>
+<h2 id="配置Nginx前的准备工作"><a href="#配置Nginx前的准备工作" class="headerlink" title="配置Nginx前的准备工作"></a>配置Nginx前的准备工作</h2><p>在配置前先准备:重写规则文件(这里我用typecho的)和path-info文件<br>使用sftp工具把它们放在/etc/nginx/目录下面</p>
+<h2 id="创建Nginx配置文件"><a href="#创建Nginx配置文件" class="headerlink" title="创建Nginx配置文件"></a>创建Nginx配置文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/nginx/sites-enabled/test.com.conf</span><br></pre></td></tr></table></figure>
+<p>配置内容如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">server</span></span><br><span class="line">    &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name test.top www.test.top;</span><br><span class="line">        index index.html index.htm index.php default.html default.htm default.php;</span><br><span class="line">        root  /var/www/test.top;</span><br><span class="line">        </span><br><span class="line">        include typecho.conf;</span><br><span class="line">        location ~ .*\.php(\/.*)*$</span><br><span class="line">        &#123;</span><br><span class="line">        fastcgi_pass unix:/var/run/php5-fpm.sock;</span><br><span class="line">        fastcgi_index index.php;</span><br><span class="line">        include fastcgi_params;</span><br><span class="line">        include pathinfo.conf;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="创建网站根目录"><a href="#创建网站根目录" class="headerlink" title="创建网站根目录"></a>创建网站根目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /var/www/test.com</span><br></pre></td></tr></table></figure>
+<p>重启Nginx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/nginx restart</span><br></pre></td></tr></table></figure>
+<h2 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /var/www/test.com</span><br><span class="line">wget http://typecho.org/downloads/1.1-17.10.30-release.tar.gz</span><br><span class="line">tar -xvf ./1.1-17.10.30-release.tar.gz</span><br><span class="line">mv build/* .</span><br><span class="line">rm -rf 1.1-17.10.30-release.tar.gz build</span><br></pre></td></tr></table></figure>
+<p>设置www目录的权限，否则无法安装文件无法读写数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 /var/www</span><br></pre></td></tr></table></figure>
+<h2 id="访问解析好的域名-进入安装界面"><a href="#访问解析好的域名-进入安装界面" class="headerlink" title="访问解析好的域名,进入安装界面"></a>访问解析好的域名,进入安装界面</h2></section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#git">
-    <span class="tag-code">git</span>
+  <a href="/tags#typecho">
+    <span class="tag-code">typecho</span>
   </a>
 
-  <a href="/tags#hexo">
-    <span class="tag-code">hexo</span>
+  <a href="/tags#sqlite">
+    <span class="tag-code">sqlite</span>
   </a>
 
       </div>
@@ -177,17 +186,17 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/01/12/hexo学习/">
+      <a class="nav-left" href="/2019/01/13/使用hexo在github上搭建博客/">
         <span class="nav-arrow">← </span>
         
-          hexo学习
+          使用hexo在github上搭建博客
         
       </a>
     
     
-      <a class="nav-right" href="/2019/01/19/使用php5配合nginx与sqlite3配置web环境/">
+      <a class="nav-right" href="/2019/01/19/使用lnmp安装web服务器环境/">
         
-          使用php5配合nginx与sqlite3配置web环境
+          使用lnmp安装web服务器环境
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -225,7 +234,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地安装hexo"><span class="toc-nav-text">本地安装hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置网站"><span class="toc-nav-text">配置网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站信息"><span class="toc-nav-text">修改网站信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站url"><span class="toc-nav-text">修改网站url</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改主题"><span class="toc-nav-text">修改主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改git远程服务关联"><span class="toc-nav-text">修改git远程服务关联</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo发布到远程"><span class="toc-nav-text">hexo发布到远程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#绑定自已的域名"><span class="toc-nav-text">绑定自已的域名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#增加CNAME文件"><span class="toc-nav-text">增加CNAME文件</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#准备工作"><span class="toc-nav-text">准备工作:</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#更新源"><span class="toc-nav-text">更新源:</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装Nginx"><span class="toc-nav-text">安装Nginx</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装php-fpm"><span class="toc-nav-text">安装php-fpm</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装sqlite数据库"><span class="toc-nav-text">安装sqlite数据库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装-wget工具"><span class="toc-nav-text">安装 wget工具</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置Nginx前的准备工作"><span class="toc-nav-text">配置Nginx前的准备工作</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建Nginx配置文件"><span class="toc-nav-text">创建Nginx配置文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建网站根目录"><span class="toc-nav-text">创建网站根目录</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#部署网站"><span class="toc-nav-text">部署网站</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#访问解析好的域名-进入安装界面"><span class="toc-nav-text">访问解析好的域名,进入安装界面</span></a></li></ol>
     
   </div>
 </aside>
@@ -235,7 +244,7 @@
 
 <script>
   (function () {
-    var url = 'https://fengdo.github.io/2019/01/13/使用hexo在github上搭建博客/';
+    var url = 'https://fengdo.github.io/2019/01/19/使用php5配合nginx与sqlite3配置web环境/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -287,7 +296,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "使用hexo在github上搭建博客",
+        id: "使用php5配合nginx与sqlite3配置web环境",
         owner: "",
         repo: "",
         oauth: {
@@ -315,7 +324,7 @@
 <script>
   var disqus_shortname = '';
   
-  var disqus_url = 'https://fengdo.github.io/2019/01/13/使用hexo在github上搭建博客/';
+  var disqus_url = 'https://fengdo.github.io/2019/01/19/使用php5配合nginx与sqlite3配置web环境/';
   
   (function(){
     var dsq = document.createElement('script');

@@ -10,7 +10,7 @@
   
   <title>
     
-      使用hexo在github上搭建博客 | 笔记站
+      linux笔记 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,8 +134,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>使用hexo在github上搭建博客</h2>
-  <!-- <p class="post-date">2019-01-13</p> -->
+  <h2>linux笔记</h2>
+  <!-- <p class="post-date">2019-01-19</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -143,57 +143,117 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="本地安装hexo"><a href="#本地安装hexo" class="headerlink" title="本地安装hexo"></a>本地安装hexo</h2><p>  1.0 安装hexo<br>  1.1 创建一个[github的用户名].github.io的根目录<br>  1.2 <code>hexo init</code>初始化这个根目录</p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github上创建一个新的仓库，命名为<code>[github的用户名].github.io</code>不生成解释文件</p>
-<h2 id="配置网站"><a href="#配置网站" class="headerlink" title="配置网站"></a>配置网站</h2><h3 id="修改网站信息"><a href="#修改网站信息" class="headerlink" title="修改网站信息"></a>修改网站信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title 网站标题</span><br><span class="line">subtitle 网站副标题</span><br><span class="line">keywords 关键字</span><br><span class="line">author 作者</span><br><span class="line">language 语言  //zh</span><br><span class="line">timezone 时区</span><br></pre></td></tr></table></figure>
-<h3 id="修改网站url"><a href="#修改网站url" class="headerlink" title="修改网站url"></a>修改网站url</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: https://用户名.github.io</span><br></pre></td></tr></table></figure>
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>修改主题前要先把下载好的主题放在<code>themes</code>目录下<br>回到配置文件，把<code>theme</code>改为主题的名字</p>
-<h3 id="修改git远程服务关联"><a href="#修改git远程服务关联" class="headerlink" title="修改git远程服务关联"></a>修改git远程服务关联</h3><p>打开<code>_config.yml</code>修改<code>deploy</code>下的<code>type: git</code>;<br>在type下增加一行<code>repo: 仓库地址 //git@github.com:用户名/用户名.github.io.git</code>;<br>再增加一行<code>branch: master</code>;</p>
-<h2 id="hexo发布到远程"><a href="#hexo发布到远程" class="headerlink" title="hexo发布到远程"></a>hexo发布到远程</h2><p><code>hexo d -g</code>把本地代码发布的远程<br>进入仓库，找到设置，打开<code>githubPage</code>设置分支为主分枝</p>
-<h2 id="绑定自已的域名"><a href="#绑定自已的域名" class="headerlink" title="绑定自已的域名"></a>绑定自已的域名</h2><p>进入仓库-&gt;设置,找到<code>githubPage</code>下面的自定义域名,修改为自己的域名;<br>进入域名商提供的域名解析服务，添加<code>CNAME解析两条</code>:记录值为<code>github提供的域名二级域名</code>,<code>记录为@</code>;第二条记录值相同，<code>记录为www</code>;</p>
-<h2 id="增加CNAME文件"><a href="#增加CNAME文件" class="headerlink" title="增加CNAME文件"></a>增加CNAME文件</h2><blockquote>
-<p>不增加CNAME文件会导致每次发布页面时就要重新绑定自定义域名</p>
-</blockquote>
-<p>在根目录的source目录下新建一个CNAME文件，没有后辍，然后把你的自定义域名写在里面</p>
+    <section class="markdown-content"><h2 id="yum命令"><a href="#yum命令" class="headerlink" title="yum命令"></a>yum命令</h2><ol>
+<li>列出所有可更新的软件清单命令：yum check-update</li>
+<li>更新所有软件命令：yum update</li>
+<li>仅安装指定的软件命令：yum install &lt;package_name&gt;</li>
+<li>仅更新指定的软件命令：yum update &lt;package_name&gt;</li>
+<li>列出所有可安裝的软件清单命令：yum list</li>
+<li>删除软件包命令：yum remove &lt;package_name&gt;</li>
+<li>查找软件包 命令：yum search <keyword></keyword></li>
+<li>清除缓存命令:</li>
+<li>clean packages: 清除缓存目录下的软件包</li>
+</ol>
+<p>yum clean headers: 清除缓存目录下的 headers<br>yum clean oldheaders: 清除缓存目录下旧的 headers<br>yum clean, yum clean all (= yum clean packages; yum clean oldheaders) :清除缓存目录下的软件包及旧的headers</p>
+<h2 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h2><p>tar</p>
+<ul>
+<li>-c: 建立压缩档案</li>
+<li>-x：解压</li>
+<li>-t：查看内容</li>
+<li>-r：向压缩归档文件末尾追加文件</li>
+<li>-u：更新原压缩包中的文件</li>
+</ul>
+<p>这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。</p>
+<ul>
+<li>-z：有gzip属性的</li>
+<li>-j：有bz2属性的</li>
+<li>-Z：有compress属性的</li>
+<li>-v：显示所有过程</li>
+<li>-O：将文件解开到标准输出</li>
+</ul>
+<p>下面的参数-f是必须的</p>
+<ul>
+<li>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</li>
+</ul>
+<ol>
+<li>tar -cf all.tar *.jpg<br>这条命令是将所有.jpg的文件打成一个名为all.tar的包。-c是表示产生新的包，-f指定包的文件名。</li>
+<li>tar -rf all.tar *.gif<br>这条命令是将所有.gif的文件增加到all.tar的包里面去。-r是表示增加文件的意思。</li>
+<li>tar -uf all.tar logo.gif<br>这条命令是更新原来tar包all.tar中logo.gif文件，-u是表示更新文件的意思。</li>
+<li>tar -tf all.tar<br>这条命令是列出all.tar包中所有文件，-t是列出文件的意思</li>
+<li>tar -xf all.tar<br>这条命令是解出all.tar包中所有文件，-x是解开的意思</li>
+</ol>
+<h3 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h3><ol>
+<li>tar –cvf jpg.tar *.jpg 将目录里所有jpg文件打包成tar.jpg</li>
+<li>tar –czf jpg.tar.gz *.jpg 将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，</li>
+</ol>
+<h3 id="命名为jpg-tar-gz"><a href="#命名为jpg-tar-gz" class="headerlink" title="命名为jpg.tar.gz"></a>命名为jpg.tar.gz</h3><ol>
+<li>tar –cjf jpg.tar.bz2 *.jpg 将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2</li>
+<li>tar –cZf jpg.tar.Z *.jpg 将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z</li>
+<li>rar a jpg.rar *.jpg rar格式的压缩，需要先下载rar for linux</li>
+<li>zip jpg.zip *.jpg zip格式的压缩，需要先下载zip for linux</li>
+</ol>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><ol>
+<li>tar –xvf file.tar 解压 tar包</li>
+<li>tar -xzvf file.tar.gz 解压tar.gz</li>
+<li>tar -xjvf file.tar.bz2 解压 tar.bz2</li>
+<li>tar –xZvf file.tar.Z 解压tar.Z</li>
+<li>unrar e file.rar 解压rar</li>
+<li>unzip file.zip 解压zip</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><em>.tar 用 tar –xvf 解压
+</em>.gz 用 gzip -d或者gunzip 解压<br><em>.tar.gz和</em>.tgz 用 tar –xzf 解压<br><em>.bz2 用 bzip2 -d或者用bunzip2 解压
+</em>.tar.bz2用tar –xjf 解压<br><em>.Z 用 uncompress 解压
+</em>.tar.Z 用tar –xZf 解压<br><em>.rar 用 unrar e解压
+</em>.zip 用 unzip 解压</p>
+<p>linux下最常用的打包程序就是tar了，使用tar程序打出来的包我们常称为tar包，tar包文件的命令通常都是以.tar结尾的。生成tar包后，就可以用其它的程序来进行压缩。</p>
+<p>1．命令格式：</p>
+<p>tar必要参数[文件]</p>
+<p>2．命令功能：</p>
+<p>用来压缩和解压文件。tar本身不具有压缩功能。他是调用压缩功能实现的</p>
+<p>3．命令参数：</p>
+<p>必要参数有如下：</p>
+<p>-A 新增压缩文件到已存在的压缩</p>
+<p>-B 设置区块大小</p>
+<p>-c 建立新的压缩文件</p>
+<p>-d 记录文件的差别</p>
+<p>-r 添加文件到已经压缩的文件</p>
+<p>-u 添加改变了和现有的文件到已经存在的压缩文件</p>
+<p>-x 从压缩的文件中提取文件</p>
+<p>-t 显示压缩文件的内容</p>
+<p>-z 支持gzip解压文件</p>
+<p>-j 支持bzip2解压文件</p>
+<p>-Z 支持compress解压文件</p>
+<p>-v 显示操作过程</p>
+<p>-l 文件系统边界设置</p>
+<p>-k 保留原有文件不覆盖</p>
+<p>-m 保留文件不被覆盖</p>
+<p>-W 确认压缩文件的正确性</p>
+<p>可选参数如下：</p>
+<p>-b 设置区块数目</p>
+<p>-C 切换到指定目录</p>
+<p>-f 指定压缩文件</p>
+<p>–help 显示帮助信息</p>
+<p>–version 显示版本信息</p>
+<p>4．常见解压/压缩命令</p>
+<p>tar<br>解包：tar xvf FileName.tar<br>打包：tar cvf FileName.tar DirName<br>（注：tar是打包，不是压缩！）</p>
+<p>.gz<br>解压1：gunzip FileName.gz<br>解压2：gzip -d FileName.gz<br>压缩：gzip FileName<br>.tar.gz 和 .tgz<br>解压：tar zxvf FileName.tar.gz<br>压缩：tar zcvf FileName.tar.gz DirName</p>
+<p>.bz2<br>解压1：bzip2 -d FileName.bz2<br>解压2：bunzip2 FileName.bz2<br>压缩： bzip2 -z FileName</p>
+<p>.tar.bz2<br>解压：tar jxvf FileName.tar.bz2<br>压缩：tar jcvf FileName.tar.bz2 DirName</p>
+<p>.bz<br>解压1：bzip2 -d FileName.bz<br>解压2：bunzip2 FileName.bz<br>压缩：未知<br>.tar.bz<br>解压：tar jxvf FileName.tar.bz<br>压缩：未知</p>
+<p>.Z<br>解压：uncompress FileName.Z<br>压缩：compress FileName<br>.tar.Z<br>解压：tar Zxvf FileName.tar.Z<br>压缩：tar Zcvf FileName.tar.Z DirName<br>.zip<br>解压：unzip FileName.zip<br>压缩：zip FileName.zip DirName</p>
+<p>.rar<br>解压：rar x FileName.rar<br>压缩：rar a FileName.rar DirName</p>
+<p>5．使用实例</p>
+<p>实例1：将文件全部打包成tar包</p>
+<p>命令：</p>
+<p>tar -cvf log.tar log2012.log</p>
+<p>tar -zcvf log.tar.gz log2012.log</p>
+<p>tar -jcvf log.tar.bz2 log2012.log</p>
 </section>
     <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/tags#git">
-    <span class="tag-code">git</span>
-  </a>
-
-  <a href="/tags#hexo">
-    <span class="tag-code">hexo</span>
-  </a>
-
-      </div>
     
     <!-- Tags END -->
     <!-- NAV START -->
     
-  <div class="nav-container">
-    <!-- reverse left and right to put prev and next in a more logic postition -->
-    
-      <a class="nav-left" href="/2019/01/12/hexo学习/">
-        <span class="nav-arrow">← </span>
-        
-          hexo学习
-        
-      </a>
-    
-    
-      <a class="nav-right" href="/2019/01/19/使用php5配合nginx与sqlite3配置web环境/">
-        
-          使用php5配合nginx与sqlite3配置web环境
-        
-        <span class="nav-arrow"> →</span>
-      </a>
-    
-  </div>
-
     <!-- NAV END -->
     <!-- 打赏 START 
     
@@ -225,7 +285,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地安装hexo"><span class="toc-nav-text">本地安装hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置网站"><span class="toc-nav-text">配置网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站信息"><span class="toc-nav-text">修改网站信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站url"><span class="toc-nav-text">修改网站url</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改主题"><span class="toc-nav-text">修改主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改git远程服务关联"><span class="toc-nav-text">修改git远程服务关联</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo发布到远程"><span class="toc-nav-text">hexo发布到远程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#绑定自已的域名"><span class="toc-nav-text">绑定自已的域名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#增加CNAME文件"><span class="toc-nav-text">增加CNAME文件</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#yum命令"><span class="toc-nav-text">yum命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#tar命令"><span class="toc-nav-text">tar命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#压缩"><span class="toc-nav-text">压缩</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#命名为jpg-tar-gz"><span class="toc-nav-text">命名为jpg.tar.gz</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解压"><span class="toc-nav-text">解压</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#总结"><span class="toc-nav-text">总结</span></a></li></ol></li></ol>
     
   </div>
 </aside>
@@ -235,7 +295,7 @@
 
 <script>
   (function () {
-    var url = 'https://fengdo.github.io/2019/01/13/使用hexo在github上搭建博客/';
+    var url = 'https://fengdo.github.io/notes-linux/index.html';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -287,7 +347,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "使用hexo在github上搭建博客",
+        id: "linux笔记",
         owner: "",
         repo: "",
         oauth: {
@@ -315,7 +375,7 @@
 <script>
   var disqus_shortname = '';
   
-  var disqus_url = 'https://fengdo.github.io/2019/01/13/使用hexo在github上搭建博客/';
+  var disqus_url = 'https://fengdo.github.io/notes-linux/index.html';
   
   (function(){
     var dsq = document.createElement('script');

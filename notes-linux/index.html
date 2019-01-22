@@ -144,7 +144,22 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="yum命令"><a href="#yum命令" class="headerlink" title="yum命令"></a>yum命令</h2><ol>
+    <section class="markdown-content"><h2 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h2><p>切换目录</p>
+<ul>
+<li>进入指定目录 <code>cd dir</code></li>
+<li>进入绝对目录 <code>cd /dir/abc</code></li>
+<li>进入上一级目录(相对) <code>cd ..</code></li>
+<li>进入上上级目录(相对) <code>cd ../../</code></li>
+<li>进入根目录[root] <code>cd ~</code></li>
+<li>进入上一次访问的目录 <code>cd -</code></li>
+</ul>
+<h2 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h2><p>输出路径到屏幕</p>
+<h2 id="echo的用法"><a href="#echo的用法" class="headerlink" title="echo的用法"></a>echo的用法</h2><ul>
+<li>输出到屏幕: <code>echo hello world!</code>; 输出的结果为: hello world;</li>
+<li>把内容写到文件中:<code>echo &quot;hello A&quot; &gt; tmp.txt</code>; 文件不存在则创建，存在就重写(替换掉原来的);</li>
+<li>追加到文件中: <code>echo &quot;hello B&quot; &gt;&gt; tmp.txt</code>; 不替换文本，只是在后面追加内容</li>
+</ul>
+<h2 id="yum命令"><a href="#yum命令" class="headerlink" title="yum命令"></a>yum命令</h2><ol>
 <li>列出所有可更新的软件清单命令：yum check-update</li>
 <li>更新所有软件命令：yum update</li>
 <li>仅安装指定的软件命令：yum install &lt;package_name&gt;</li>
@@ -286,7 +301,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#yum命令"><span class="toc-nav-text">yum命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#tar命令"><span class="toc-nav-text">tar命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#压缩"><span class="toc-nav-text">压缩</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#命名为jpg-tar-gz"><span class="toc-nav-text">命名为jpg.tar.gz</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解压"><span class="toc-nav-text">解压</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#总结"><span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#cd命令"><span class="toc-nav-text">cd命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#pwd命令"><span class="toc-nav-text">pwd命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#echo的用法"><span class="toc-nav-text">echo的用法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#yum命令"><span class="toc-nav-text">yum命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#tar命令"><span class="toc-nav-text">tar命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#压缩"><span class="toc-nav-text">压缩</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#命名为jpg-tar-gz"><span class="toc-nav-text">命名为jpg.tar.gz</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解压"><span class="toc-nav-text">解压</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#总结"><span class="toc-nav-text">总结</span></a></li></ol></li></ol>
     
   </div>
 </aside>

@@ -10,7 +10,7 @@
   
   <title>
     
-      使用hexo在github上搭建博客 | 笔记站
+      Nodejs基本命令 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,9 +134,9 @@
 </header>
 
     <div id="article-banner">
-  <h2>使用hexo在github上搭建博客</h2>
+  <h2>Nodejs基本命令</h2>
   <!-- <p class="post-date">作者:Feng</p> -->
-  <!-- <p class="post-date">2019-01-13</p> -->
+  <!-- <p class="post-date">2019-01-19</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -144,57 +144,23 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="本地安装hexo"><a href="#本地安装hexo" class="headerlink" title="本地安装hexo"></a>本地安装hexo</h2><p>  1.0 安装hexo<br>  1.1 创建一个[github的用户名].github.io的根目录<br>  1.2 <code>hexo init</code>初始化这个根目录</p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github上创建一个新的仓库，命名为<code>[github的用户名].github.io</code>不生成解释文件</p>
-<h2 id="配置网站"><a href="#配置网站" class="headerlink" title="配置网站"></a>配置网站</h2><h3 id="修改网站信息"><a href="#修改网站信息" class="headerlink" title="修改网站信息"></a>修改网站信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title 网站标题</span><br><span class="line">subtitle 网站副标题</span><br><span class="line">keywords 关键字</span><br><span class="line">author 作者</span><br><span class="line">language 语言  //zh</span><br><span class="line">timezone 时区</span><br></pre></td></tr></table></figure>
-<h3 id="修改网站url"><a href="#修改网站url" class="headerlink" title="修改网站url"></a>修改网站url</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: https://用户名.github.io</span><br></pre></td></tr></table></figure>
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>修改主题前要先把下载好的主题放在<code>themes</code>目录下<br>回到配置文件，把<code>theme</code>改为主题的名字</p>
-<h3 id="修改git远程服务关联"><a href="#修改git远程服务关联" class="headerlink" title="修改git远程服务关联"></a>修改git远程服务关联</h3><p>打开<code>_config.yml</code>修改<code>deploy</code>下的<code>type: git</code>;<br>在type下增加一行<code>repo: 仓库地址 //git@github.com:用户名/用户名.github.io.git</code>;<br>再增加一行<code>branch: master</code>;</p>
-<h2 id="hexo发布到远程"><a href="#hexo发布到远程" class="headerlink" title="hexo发布到远程"></a>hexo发布到远程</h2><p><code>hexo d -g</code>把本地代码发布的远程<br>进入仓库，找到设置，打开<code>githubPage</code>设置分支为主分枝</p>
-<h2 id="绑定自已的域名"><a href="#绑定自已的域名" class="headerlink" title="绑定自已的域名"></a>绑定自已的域名</h2><p>进入仓库-&gt;设置,找到<code>githubPage</code>下面的自定义域名,修改为自己的域名;<br>进入域名商提供的域名解析服务，添加<code>CNAME解析两条</code>:记录值为<code>github提供的域名二级域名</code>,<code>记录为@</code>;第二条记录值相同，<code>记录为www</code>;</p>
-<h2 id="增加CNAME文件"><a href="#增加CNAME文件" class="headerlink" title="增加CNAME文件"></a>增加CNAME文件</h2><blockquote>
-<p>不增加CNAME文件会导致每次发布页面时就要重新绑定自定义域名</p>
-</blockquote>
-<p>在根目录的source目录下新建一个CNAME文件，没有后辍，然后把你的自定义域名写在里面</p>
+    <section class="markdown-content"><h2 id="查看版本号"><a href="#查看版本号" class="headerlink" title="查看版本号"></a>查看版本号</h2><p><code>node -v</code>或者 <code>node --version</code></p>
+<h2 id="运行js文件"><a href="#运行js文件" class="headerlink" title="运行js文件"></a>运行js文件</h2><p><code>node hello.js</code></p>
+<h2 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h2><p><code>npx mkdirp mydir</code></p>
+<h2 id="npm升级"><a href="#npm升级" class="headerlink" title="npm升级"></a>npm升级</h2><p><code>npm -global(-g) install npm</code></p>
+<h2 id="npx是什么？"><a href="#npx是什么？" class="headerlink" title="npx是什么？"></a>npx是什么？</h2><p>npx是一个npm的执行器,npx使用了CLI工具</p>
+<h2 id="node的两个函数-require和exports"><a href="#node的两个函数-require和exports" class="headerlink" title="node的两个函数 require和exports"></a>node的两个函数 require和exports</h2><p>require 入口<br>exports 出口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var hello = require(./hello);</span><br><span class="line">//引用js文件不用加后辍</span><br><span class="line"></span><br><span class="line">var hello = require(./config.json);</span><br><span class="line">//引用其它文件要加后辍</span><br></pre></td></tr></table></figure>
+<h2 id="var-let-const"><a href="#var-let-const" class="headerlink" title="var let const"></a>var let const</h2><p>var 全局变量<br>let 局部变量<br>const 常量</p>
+<h2 id="安装与删除模块"><a href="#安装与删除模块" class="headerlink" title="安装与删除模块"></a>安装与删除模块</h2><h3 id="install"><a href="#install" class="headerlink" title="install"></a>install</h3><p>全局安装: <code>npm install -g &lt;模块名&gt;</code><br>局部安装: <code>npm install --save-dev &lt;模块名&gt;</code></p>
+<h3 id="uninstall"><a href="#uninstall" class="headerlink" title="uninstall"></a>uninstall</h3><h3 id="删除全局模块"><a href="#删除全局模块" class="headerlink" title="删除全局模块"></a>删除全局模块</h3><p><code>npm uninstall -g &lt;模块名&gt;</code> 删除全局模块;</p>
+<h3 id="删除本地模块"><a href="#删除本地模块" class="headerlink" title="删除本地模块"></a>删除本地模块</h3><p><code>npm uninstall &lt;模块名&gt;</code> 删除模块但不删除配置文件的相关信息;<br><code>npm uninstall --save &lt;模块名&gt;</code> 删除模块并删除 <strong>package.json</strong> 下 <strong>dependencies</strong> 下对应的信息;<br><code>npm uninstall -save-dev &lt;模块名&gt;</code> 删除模块并删除 <strong>package.json</strong> 下 <strong>devDependencies</strong> 下对应的信息;</p>
 </section>
     <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/tags#git">
-    <span class="tag-code">git</span>
-  </a>
-
-  <a href="/tags#hexo">
-    <span class="tag-code">hexo</span>
-  </a>
-
-      </div>
     
     <!-- Tags END -->
     <!-- NAV START -->
     
-  <div class="nav-container">
-    <!-- reverse left and right to put prev and next in a more logic postition -->
-    
-      <a class="nav-left" href="/2019/01/12/hexo学习/">
-        <span class="nav-arrow">← </span>
-        
-          hexo学习
-        
-      </a>
-    
-    
-      <a class="nav-right" href="/2019/01/19/使用php5配合nginx与sqlite3配置web环境/">
-        
-          使用php5配合nginx与sqlite3配置web环境
-        
-        <span class="nav-arrow"> →</span>
-      </a>
-    
-  </div>
-
     <!-- NAV END -->
     <!-- 打赏 START 
     
@@ -226,7 +192,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地安装hexo"><span class="toc-nav-text">本地安装hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置网站"><span class="toc-nav-text">配置网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站信息"><span class="toc-nav-text">修改网站信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站url"><span class="toc-nav-text">修改网站url</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改主题"><span class="toc-nav-text">修改主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改git远程服务关联"><span class="toc-nav-text">修改git远程服务关联</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo发布到远程"><span class="toc-nav-text">hexo发布到远程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#绑定自已的域名"><span class="toc-nav-text">绑定自已的域名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#增加CNAME文件"><span class="toc-nav-text">增加CNAME文件</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#查看版本号"><span class="toc-nav-text">查看版本号</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#运行js文件"><span class="toc-nav-text">运行js文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建目录"><span class="toc-nav-text">创建目录</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#npm升级"><span class="toc-nav-text">npm升级</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#npx是什么？"><span class="toc-nav-text">npx是什么？</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#node的两个函数-require和exports"><span class="toc-nav-text">node的两个函数 require和exports</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#var-let-const"><span class="toc-nav-text">var let const</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装与删除模块"><span class="toc-nav-text">安装与删除模块</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#install"><span class="toc-nav-text">install</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#uninstall"><span class="toc-nav-text">uninstall</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除全局模块"><span class="toc-nav-text">删除全局模块</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除本地模块"><span class="toc-nav-text">删除本地模块</span></a></li></ol></li></ol>
     
   </div>
 </aside>
@@ -236,7 +202,7 @@
 
 <script>
   (function () {
-    var url = 'https://fengdo.github.io/2019/01/13/使用hexo在github上搭建博客/';
+    var url = 'https://fengdo.github.io/notes-nodejs/index.html';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -288,7 +254,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "使用hexo在github上搭建博客",
+        id: "Nodejs基本命令",
         owner: "",
         repo: "",
         oauth: {
@@ -316,7 +282,7 @@
 <script>
   var disqus_shortname = '';
   
-  var disqus_url = 'https://fengdo.github.io/2019/01/13/使用hexo在github上搭建博客/';
+  var disqus_url = 'https://fengdo.github.io/notes-nodejs/index.html';
   
   (function(){
     var dsq = document.createElement('script');

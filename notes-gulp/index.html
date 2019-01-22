@@ -10,7 +10,7 @@
   
   <title>
     
-      gulp笔记 | 笔记站
+      Gulp 4.0 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,7 +134,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>gulp笔记</h2>
+  <h2>Gulp 4.0</h2>
+  <!-- <p class="post-date">作者:Feng</p> -->
   <!-- <p class="post-date">2019-01-19</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -143,119 +144,58 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>流程构建工具</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
-<p>安装gulp之前要先安装Node.js</p>
-</blockquote>
-<ol>
-<li><p>全局安装 </p>
-<p><code>npm install --global gulp</code></p>
-<p><code>cnpm install --global gulp(国内镜像)</code></p>
-</li>
-<li><p>局部安装</p>
-<p><code>npm install --save-dev gulp</code></p>
-<p><code>cnpm install --save-dev gulp(国内镜像)</code></p>
-</li>
-<li><p>必需文件gulpfile.js(配置文件)和package.js文件(依赖的插件)</p>
-</li>
-<li><p>cnpm install(安装依赖)</p>
-</li>
-<li><p>重要的两个文件：</p>
-<p>package.js</p>
-<p>gulp.js</p>
-</li>
+    <section class="markdown-content"><p><img src="https://img.shields.io/badge/更新时间:-2019--1--21-brightgreen.svg" alt="更新时间"></p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>gulp升级到4.0,和以前的3.0完全不同了。<br>gulp把安装包从npm中分离到了gulp-cli</p>
+<h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><ul>
+<li>gulp-cli包</li>
+<li>Local version</li>
+</ul>
+<h2 id="gulp版本查询"><a href="#gulp版本查询" class="headerlink" title="gulp版本查询"></a>gulp版本查询</h2><p><code>gulp -v</code> 或者 <code>gulp --version</code><br>使用后，能看到两个版本的信息</p>
+<h2 id="删除gulp"><a href="#删除gulp" class="headerlink" title="删除gulp"></a>删除gulp</h2><p><code>npm rm --global gulp</code></p>
+<h2 id="安装gulp-cli包"><a href="#安装gulp-cli包" class="headerlink" title="安装gulp-cli包"></a>安装gulp-cli包</h2><p><code>npm install --global gulp-cli</code></p>
+<h2 id="gulp的安装步骤："><a href="#gulp的安装步骤：" class="headerlink" title="gulp的安装步骤："></a>gulp的安装步骤：</h2><ol>
+<li>删除旧的gulp版本<code>npm rm --global gulp</code></li>
+<li>查看npm版本<code>npm --version</code>,确保都是最新版本,如果不是就升级<code>npm install -g npm</code>,目前是6.6版本</li>
+<li>查看npx的版本信息<code>npx -v</code></li>
+<li>安装gulp-cli<code>npm install --global gulp-cli</code></li>
+<li>创建项目目录<code>npx mkdirp</code> 项目名</li>
+<li>创建package.json配置文件 <code>npm init</code></li>
+<li>局部安装gulp <code>npm install --save-dev gulp</code></li>
+<li>查看gulp的版本信息<code>gulp -v</code>,应该能看到CLI version 2.0.1和 Local version 4.0.0</li>
+<li>创建gulpfile.js(忽略大小写)文件 <code>touch gulpfile.js</code></li>
 </ol>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="gulp-task"><a href="#gulp-task" class="headerlink" title="gulp task()"></a>gulp task()</h3><p><code>gulp.task(name[, deps], fn)</code></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-</tr>
-<tr>
-<td>deps</td>
-<td>array</td>
-</tr>
-<tr>
-<td>fn</td>
-<td>function</td>
-</tr>
-</tbody>
-</table>
-<p>实例1:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'mytask'</span>, [<span class="string">'array'</span>, <span class="string">'of'</span>, <span class="string">'task'</span>, <span class="string">'names'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 做一些事</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>实例2:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 将你的默认的任务代码放在这</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="gulp-src"><a href="#gulp-src" class="headerlink" title="gulp src()"></a>gulp src()</h3><p><code>gulp.src(globs[, options])</code></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>globs</td>
-<td>string,array</td>
-</tr>
-<tr>
-<td>options</td>
-<td>object</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gulp.src(<span class="string">'client/templates/*.jade'</span>)</span><br><span class="line">  .pipe(jade())</span><br><span class="line">  .pipe(minify())</span><br><span class="line">  .pipe(gulp.dest(<span class="string">'build/minified_templates'</span>));</span><br></pre></td></tr></table></figure>
-<h3 id="gulp-dest"><a href="#gulp-dest" class="headerlink" title="gulp dest()"></a>gulp dest()</h3><p><code>gulp.dest(path[, options])</code></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>path</td>
-<td>string,function</td>
-</tr>
-<tr>
-<td>options</td>
-<td>object</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gulp.src(<span class="string">'./client/templates/*.jade'</span>)</span><br><span class="line">  .pipe(jade())</span><br><span class="line">  .pipe(gulp.dest(<span class="string">'./build/templates'</span>))</span><br><span class="line">  .pipe(minify())</span><br><span class="line">  .pipe(gulp.dest(<span class="string">'./build/minified_templates'</span>));</span><br></pre></td></tr></table></figure>
-<h3 id="gulp-watch"><a href="#gulp-watch" class="headerlink" title="gulp watch()"></a>gulp watch()</h3><p><code>gulp.watch(glob[, opts], tasks)</code></p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>glob</td>
-<td>string,array</td>
-</tr>
-<tr>
-<td>opts</td>
-<td>object</td>
-</tr>
-<tr>
-<td>tasks</td>
-<td>array</td>
-</tr>
-</tbody>
-</table>
-<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2></section>
+<h2 id="文件说明"><a href="#文件说明" class="headerlink" title="文件说明"></a>文件说明</h2><ul>
+<li>package.json npm项目插件依赖的配置文件</li>
+<li>package-lock.json 本地的依赖文件(这个不用管它)</li>
+<li>gulpfile.js 自定义的流程;比如：创建目录树，编辑文件，打包上传</li>
+</ul>
+<h2 id="测试运行"><a href="#测试运行" class="headerlink" title="测试运行"></a>测试运行</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">cb</span>)</span>&#123;</span><br><span class="line">	cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.default = test;</span><br><span class="line"><span class="comment">// 输出的内容为空的</span></span><br></pre></td></tr></table></figure>
+<h2 id="gulpfile-js"><a href="#gulpfile-js" class="headerlink" title="gulpfile.js"></a>gulpfile.js</h2><p>gulpfile.js能包括多个js文件，只需要引入就行了<br>比如：在gulpfile.js个引入 index.js 就能把index.js变成它的一部分和less一样</p>
+<h2 id="任务说明"><a href="#任务说明" class="headerlink" title="任务说明"></a>任务说明</h2><p>每一个gulp任务都是异步执行的，分公有和私有。</p>
+<ul>
+<li>公有  能直接调用的(有exports的)</li>
+<li>私有  相当于局部函数，如果没有设置出口(exports)是不会被调用的</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; series &#125; = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// The `clean` function is not exported so it can be considered a private task.</span></span><br><span class="line"><span class="comment">// It can still be used within the `series()` composition.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clean</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// The `build` function is exported so it is public and can be run with the `gulp` command.</span></span><br><span class="line"><span class="comment">// It can also be used within the `series()` composition.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">build</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.build = build;  <span class="comment">//这里定义了公有的，所以build能被执行</span></span><br><span class="line">exports.default = series(clean, build); <span class="comment">//这里设置了按顺序执行</span></span><br></pre></td></tr></table></figure>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p><code>series()</code>, <code>parallel()</code> , <code>src()</code> , <code>dest()</code></p>
+<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>定义一个常量并引入文件<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123;serise,parallel&#125; = <span class="built_in">require</span>(<span class="string">"gulp"</span>);</span><br><span class="line"><span class="keyword">const</span> &#123;src,dest&#125; = <span class="built_in">require</span>(<span class="string">"gulp"</span>); <span class="comment">//src和dest也要被引入</span></span><br><span class="line"><span class="keyword">const</span> less = <span class="built_in">require</span>(<span class="string">"gulp-less"</span>);</span><br><span class="line"><span class="keyword">const</span> mySrc = <span class="built_in">require</span>(<span class="string">"mysrc.js"</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="series"><a href="#series" class="headerlink" title="series()"></a>series()</h3><p>按顺序执行（异步）</p>
+<h3 id="parallel"><a href="#parallel" class="headerlink" title="parallel()"></a>parallel()</h3><p>同时执行 （同步）</p>
+<h3 id="exports"><a href="#exports" class="headerlink" title="exports"></a>exports</h3><p>定义一个公开的任务，可被外部运行。比如：gulp mytask;</p>
+<h2 id="通常"><a href="#通常" class="headerlink" title="通常"></a>通常</h2><p>通常情况下的任务是这个样子的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const &#123; series, parallel &#125; = require(&apos;gulp&apos;);</span><br><span class="line"></span><br><span class="line">function clean(cb) &#123;</span><br><span class="line">  // body omitted</span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function css(cb) &#123;</span><br><span class="line">  // body omitted</span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function javascript(cb) &#123;</span><br><span class="line">  // body omitted</span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.build = series(clean, parallel(css, javascript));</span><br></pre></td></tr></table></figure>
+<h2 id="条件执行-if"><a href="#条件执行-if" class="headerlink" title="条件执行(if)"></a>条件执行(if)</h2><p>任务可选择条件执行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; series &#125; = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">minify</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">transpile</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">livereload</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV === <span class="string">'production'</span>) &#123;</span><br><span class="line">  exports.build = series(transpile, minify);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  exports.build = series(transpile, livereload);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><p>serise()和parallel()可以进行深层的嵌套</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; series, parallel &#125; = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clean</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cssTranspile</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cssMinify</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jsTranspile</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jsBundle</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jsMinify</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">publish</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// body omitted</span></span><br><span class="line">  cb();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.build = series(</span><br><span class="line">  clean,</span><br><span class="line">  parallel(</span><br><span class="line">    cssTranspile,</span><br><span class="line">    series(jsTranspile, jsBundle)</span><br><span class="line">  ),</span><br><span class="line">  parallel(cssMinify, jsMinify),</span><br><span class="line">  publish</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3 id="src"><a href="#src" class="headerlink" title="src()"></a>src()</h3><h3 id="dest"><a href="#dest" class="headerlink" title="dest()"></a>dest()</h3><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ul>
+<li>gulp-less   //less编译</li>
+<li>gulp-babel  //ECS6转5</li>
+<li>gulp-uglify //压缩js文件</li>
+<li>gulp-rename //文件改名</li>
+<li>gulp-imagemin //压缩图片</li>
+</ul>
+</section>
     <!-- Tags START -->
     
     <!-- Tags END -->
@@ -292,7 +232,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#gulp"><span class="toc-nav-text">gulp</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装"><span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#函数"><span class="toc-nav-text">函数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gulp-task"><span class="toc-nav-text">gulp task()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gulp-src"><span class="toc-nav-text">gulp src()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gulp-dest"><span class="toc-nav-text">gulp dest()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gulp-watch"><span class="toc-nav-text">gulp watch()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插件"><span class="toc-nav-text">插件</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#说明"><span class="toc-nav-text">说明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#组成"><span class="toc-nav-text">组成</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#gulp版本查询"><span class="toc-nav-text">gulp版本查询</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除gulp"><span class="toc-nav-text">删除gulp</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装gulp-cli包"><span class="toc-nav-text">安装gulp-cli包</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#gulp的安装步骤："><span class="toc-nav-text">gulp的安装步骤：</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#文件说明"><span class="toc-nav-text">文件说明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#测试运行"><span class="toc-nav-text">测试运行</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#gulpfile-js"><span class="toc-nav-text">gulpfile.js</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#任务说明"><span class="toc-nav-text">任务说明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#API"><span class="toc-nav-text">API</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#const"><span class="toc-nav-text">const</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#series"><span class="toc-nav-text">series()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#parallel"><span class="toc-nav-text">parallel()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#exports"><span class="toc-nav-text">exports</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#通常"><span class="toc-nav-text">通常</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#条件执行-if"><span class="toc-nav-text">条件执行(if)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#嵌套"><span class="toc-nav-text">嵌套</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#src"><span class="toc-nav-text">src()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#dest"><span class="toc-nav-text">dest()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插件"><span class="toc-nav-text">插件</span></a></li></ol>
     
   </div>
 </aside>
@@ -354,7 +294,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "gulp笔记",
+        id: "Gulp 4.0",
         owner: "",
         repo: "",
         oauth: {

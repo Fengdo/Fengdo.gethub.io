@@ -10,7 +10,7 @@
   
   <title>
     
-      布局 | 笔记站
+      Css布局 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,7 +134,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>布局</h2>
+  <h2>Css布局</h2>
+  <!-- <p class="post-date">作者:Feng</p> -->
   <!-- <p class="post-date">2019-01-14</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -143,34 +144,39 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="三个布局标签"><a href="#三个布局标签" class="headerlink" title="三个布局标签"></a>三个布局标签</h2><blockquote>
-<p>布局的标签只有三个：display,float,position</p>
-</blockquote>
-<h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p>display  [block , inline , inline-block,  visiable, none，list-item,flex]</p>
+    <section class="markdown-content"><p><img src="https://img.shields.io/badge/更新时间:-2019--1--21-brightgreen.svg" alt="更新时间"></p>
+<h2 id="关于布局"><a href="#关于布局" class="headerlink" title="关于布局"></a>关于布局</h2><ul>
+<li>CSS布局一直以来是一个比较 <strong>复杂的问题</strong>，要考虑适应设备的 <strong>兼容性</strong> 和 <strong>不同的显示方式</strong>，所以在不同的情况下选择不同的布局方式很重要。</li>
+<li>要点：从大到小，从左到右</li>
+</ul>
+<h2 id="3个布局标签"><a href="#3个布局标签" class="headerlink" title="3个布局标签"></a>3个布局标签</h2><p>布局的标签只有3个：<code>display,float,position</code></p>
+<h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p><code>display  [block , inline , inline-block,  visiable, none，list-item,flex]</code></p>
 <blockquote>
-<p>每一个元素都有display属性，你可以重写它进行伪造块级或者内联元素</p>
+<p>每一个元素都有display属性，用来控制元素在页面上的的显示方式，你可以重写它进行伪造块级或者内联元素。</p>
 </blockquote>
-<p>block: 块级元素<br>inline: 内联元素<br>visiable: 不显示，隐藏后隐藏会占有空间<br>none: 不显示，隐藏后会完全消失。比如:script标签</p>
-<h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><p>position [static,relative,absolute,fixed]</p>
+<p>显示方式：</p>
+<ul>
+<li>block: 块级元素【特性:默认宽度占满100%，要通过width进行限制】</li>
+<li>inline: 内联元素</li>
+<li>visiable: 不显示，隐藏后隐藏会占有空间</li>
+<li>none: 不显示，隐藏后会完全消失。比如:script标签</li>
+</ul>
+<h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><p><code>position [static,relative,absolute,fixed]</code></p>
+<ul>
+<li>static[默认]</li>
+<li>relative 没有脱离文档流</li>
+<li>absolute 脱离文档流，要有一个相对定位的父级，如果没有相对定位父级，就以body为父级会随着滚动条移动而移动</li>
+<li>fixed 以当前视口定位,它跟relative没关系;fixed手机移动端兼容性不好</li>
+</ul>
+<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><p><code>float [left,right]</code><br>有浮动就一定要有清理，否则会造成布局错乱</p>
+<ul>
+<li>好处:float浮动适用于图文并排</li>
+<li>坏处:浮动会造成高度崩塌</li>
+</ul>
+<h2 id="辅助标签"><a href="#辅助标签" class="headerlink" title="辅助标签"></a>辅助标签</h2><h3 id="clear-清理"><a href="#clear-清理" class="headerlink" title="clear 清理"></a>clear 清理</h3><p><code>clear [left,right,top,bottom,both]</code></p>
 <blockquote>
-<p>relative没有脱离文档流</p>
-</blockquote>
-<p>relative与relative的组合，随着内容的增加内部的relative会被挤出去。</p>
-<blockquote>
-<p>absolute要有一个相对定位的父级，如果没有相对定位父级，就以body为父级会随着滚动条移动而移动</p>
-</blockquote>
-<p>absolute完全失去文档流<br>absolute有top,right,bottom,left属性<br>失去文档流会撑不起骨架的高度<br>失去文档流仍然能设置margin</p>
-<blockquote>
-<p>fixed是针对当前视口定位的，它跟relative没关系<br>fixed手机移动端兼容性不好</p>
-</blockquote>
-<h3 id="float"><a href="#float" class="headerlink" title="float"></a>float</h3><p>float [left,right]</p>
-<blockquote>
-<p>float浮动适用于图文并排</p>
-</blockquote>
-<h2 id="布局辅助标签"><a href="#布局辅助标签" class="headerlink" title="布局辅助标签"></a>布局辅助标签</h2><h3 id="clear-清理"><a href="#clear-清理" class="headerlink" title="clear 清理"></a>clear 清理</h3><blockquote>
 <p>clear专为清理浮动而生</p>
 </blockquote>
-<p>clear [left,right,top,bottom,both]</p>
 <h3 id="overflow-溢出"><a href="#overflow-溢出" class="headerlink" title="overflow 溢出"></a>overflow 溢出</h3><blockquote>
 <p>什么原因造成了溢出？</p>
 </blockquote>
@@ -178,8 +184,9 @@
 <blockquote>
 <p>如何制造溢出？</p>
 </blockquote>
-<p>设置固定高度并且设置overflow:auto;<br>overflow[hiden,auto]<br>hiden: 溢出的隐藏<br>auto: 溢出的部分出现滚动条<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">清理溢出</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">  <span class="attribute">zoom</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="布局方式"><a href="#布局方式" class="headerlink" title="布局方式"></a>布局方式</h2><h3 id="position布局-固定"><a href="#position布局-固定" class="headerlink" title="position布局 (固定)"></a>position布局 (固定)</h3><p>优点：适合固定尺寸的<strong>PC端页面</strong><br>缺点：不适合除PC以外的设备使用</p>
+<p>设置固定高度并且设置overflow:auto;<br>overflow[hiden,auto]<br>hiden: 溢出的隐藏<br>auto: 溢出的部分出现滚动条</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">清理溢出</span><br><span class="line"><span class="selector-class">.clearfix</span> &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">  <span class="attribute">zoom</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="布局方式"><a href="#布局方式" class="headerlink" title="布局方式"></a>布局方式</h2><h3 id="position布局-固定"><a href="#position布局-固定" class="headerlink" title="position布局 (固定)"></a>position布局 (固定)</h3><p>优点：适合固定尺寸的 <strong>PC端页面</strong><br>缺点：不适合除PC以外的设备使用</p>
 <blockquote>
 <p><strong>思路</strong></p>
 <ol>
@@ -220,8 +227,8 @@
 <h3 id="display-flex布局"><a href="#display-flex布局" class="headerlink" title="display:flex布局"></a>display:flex布局</h3><blockquote>
 <p>Flex 是 Flexible Box 的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p>
 </blockquote>
-<p>display:flex  行级<br>display:inline-flex  行内</p>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>设为 Flex 布局以后，本前元素的text-align会失效,子元素的<code>float</code>、<code>clear</code>和<code>vertical-align</code>属性将失效。</p>
+<p>display:flex  行级<br>display:inline-flex  内联</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>设为 Flex 布局以后，本前元素的text-align会失效,子元素的<code>float</code>、<code>clear</code>和<code>vertical-align</code>属性将失效。</p>
 <h4 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h4><p>Chrome 21+<br>Opera 12.1+<br>Firefox 22+<br>Safari 6.1+<br>IE 10+</p>
 <h4 id="六个属性"><a href="#六个属性" class="headerlink" title="六个属性:"></a>六个属性:</h4><ul>
 <li>flex-direction</li>
@@ -231,23 +238,23 @@
 <li>align-items</li>
 <li>align-content</li>
 </ul>
-<h4 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h4><blockquote>
+<h4 id="flex-direction-方向"><a href="#flex-direction-方向" class="headerlink" title="flex-direction[方向]"></a>flex-direction[方向]</h4><blockquote>
 <p>flex-item排列的方向</p>
 </blockquote>
-<p>flex-direction:[row,row-reverse,column,column-reverse]<br>row:从左到右(默认)<br>row-reverse:从右到左<br>column:从上到下<br>column-reverse:从下到上</p>
-<h4 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h4><blockquote>
+<p>flex-direction:[row,row-reverse,column,column-reverse]<br>row:从左到右(<code>默认</code>)<br>row-reverse:从右到左<br>column:从上到下<br>column-reverse:从下到上</p>
+<h4 id="flex-wrap-换行"><a href="#flex-wrap-换行" class="headerlink" title="flex-wrap[换行]"></a>flex-wrap[换行]</h4><blockquote>
 <p>flex-wrap被称为轴线,规定当一行排不下时如何换行</p>
 </blockquote>
-<p>flex-wrap[nowrap,wrap,wrap-reverse]<br>nowrap:不换行(默认)<br>wrap:换行，排在第一行的下面。<br>wrap-reverse:换行，排在第一行的上在;</p>
-<h4 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h4><blockquote>
+<p>flex-wrap[nowrap,wrap,wrap-reverse]<br>nowrap:不换行(<code>默认</code>)<br>wrap:换行，排在第一行的下面。<br>wrap-reverse:换行，排在第一行的上在;</p>
+<h4 id="flex-flow-方向与换行"><a href="#flex-flow-方向与换行" class="headerlink" title="flex-flow[方向与换行]"></a>flex-flow[方向与换行]</h4><blockquote>
 <p>flex-flow是flex-direction和flex-wrap的简写</p>
 </blockquote>
-<p>flex-flow[row wrap]<br>flex-flow[row/wrap]<br>flex-flow:row nowrap;(默认)</p>
-<h4 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h4><blockquote>
-<p>项目在主轴上的对齐方式</p>
+<p>flex-flow[row wrap]<br>flex-flow[row/wrap]<br>flex-flow:row nowrap;(<code>默认</code>从左到右，不换行)</p>
+<h4 id="justify-content-横向"><a href="#justify-content-横向" class="headerlink" title="justify-content[横向]"></a>justify-content[横向]</h4><blockquote>
+<p>项目在主轴上的对齐方式(横向)</p>
 </blockquote>
-<p>justify-content[flex-start,flex-end,center,space-between,space-around]<br>flex-start:左对齐（默认）<br>flex-end:右对齐<br>center:居中<br>space-between:左右对齐<br>space-around:间隔包围,左右间隔平分，中间间隔是两边的两倍</p>
-<h4 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h4><blockquote>
+<p>justify-content[flex-start,flex-end,center,space-between,space-around]<br>flex-start:左对齐（<code>默认</code>）<br>flex-end:右对齐<br>center:居中<br>space-between:左右对齐<br>space-around:间隔包围,左右间隔平分，中间间隔是两边的两倍</p>
+<h4 id="align-items-纵向"><a href="#align-items-纵向" class="headerlink" title="align-items[纵向]"></a>align-items[纵向]</h4><blockquote>
 <p>交叉轴(上下)如何对齐</p>
 </blockquote>
 <p>align-items:[flex-star,flex-end,center,baseline,stretch]<br>flex-start:上对齐<br>flex-end:下对齐<br>center:上下居中<br>baseline:文字基线对齐<br>stretch:如果项目未设置高度或设为auto，将占满整个容器的高度。（默认）</p>
@@ -297,7 +304,7 @@
 <p>a:visited 当访问过超链接后</p>
 <p>a:active 当点击时</p>
 <p>a:focus 当获取光标时</p>
-<p>input,a,button等，默认可以获取焦点的元素会有一个默认的==outline==属性</p>
+<p>input,a,button等，默认可以获取焦点的元素会有一个默认的outline属性</p>
 <h3 id="防止转译"><a href="#防止转译" class="headerlink" title="防止转译"></a>防止转译</h3><p>当在html下，写一些关于html的文本时，通常会被转译成html标签。为了防止转译可使用：</p>
 <ul>
 <li>只把尖括号转换为unicode代码;也就是把”&lt;”转化为&amp;lt,”&gt;”转化为&amp;gt</li>
@@ -340,7 +347,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#三个布局标签"><span class="toc-nav-text">三个布局标签</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#display"><span class="toc-nav-text">display</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#position"><span class="toc-nav-text">position</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float"><span class="toc-nav-text">float</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#布局辅助标签"><span class="toc-nav-text">布局辅助标签</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#clear-清理"><span class="toc-nav-text">clear 清理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#overflow-溢出"><span class="toc-nav-text">overflow 溢出</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#布局方式"><span class="toc-nav-text">布局方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#position布局-固定"><span class="toc-nav-text">position布局 (固定)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float浮动布局（列表）"><span class="toc-nav-text">float浮动布局（列表）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#百分比布局-任何"><span class="toc-nav-text">百分比布局 (任何)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#media布局-响应式"><span class="toc-nav-text">media布局 (响应式)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#inline-block布局（流式）"><span class="toc-nav-text">inline-block布局（流式）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#display-table布局-表格"><span class="toc-nav-text">display:table布局 (表格)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#display-flex布局"><span class="toc-nav-text">display:flex布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#注意"><span class="toc-nav-text">注意</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#兼容"><span class="toc-nav-text">兼容</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#六个属性"><span class="toc-nav-text">六个属性:</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#flex-direction"><span class="toc-nav-text">flex-direction</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#flex-wrap"><span class="toc-nav-text">flex-wrap</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#flex-flow"><span class="toc-nav-text">flex-flow</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#justify-content"><span class="toc-nav-text">justify-content</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#align-items"><span class="toc-nav-text">align-items</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#align-content"><span class="toc-nav-text">align-content</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#六个项目属性"><span class="toc-nav-text">六个项目属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#display-grid布局"><span class="toc-nav-text">display:grid布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#兼容-1"><span class="toc-nav-text">兼容</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#columns布局（css3）"><span class="toc-nav-text">columns布局（css3）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#布局与盒模型"><span class="toc-nav-text">布局与盒模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#box-sizing属性"><span class="toc-nav-text">box-sizing属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#排版"><span class="toc-nav-text">排版</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#a标签的三个属性"><span class="toc-nav-text">a标签的三个属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#防止转译"><span class="toc-nav-text">防止转译</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#关于布局"><span class="toc-nav-text">关于布局</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3个布局标签"><span class="toc-nav-text">3个布局标签</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#display"><span class="toc-nav-text">display</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#position"><span class="toc-nav-text">position</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float"><span class="toc-nav-text">float</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#辅助标签"><span class="toc-nav-text">辅助标签</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#clear-清理"><span class="toc-nav-text">clear 清理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#overflow-溢出"><span class="toc-nav-text">overflow 溢出</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#布局方式"><span class="toc-nav-text">布局方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#position布局-固定"><span class="toc-nav-text">position布局 (固定)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#float浮动布局（列表）"><span class="toc-nav-text">float浮动布局（列表）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#百分比布局-任何"><span class="toc-nav-text">百分比布局 (任何)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#media布局-响应式"><span class="toc-nav-text">media布局 (响应式)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#inline-block布局（流式）"><span class="toc-nav-text">inline-block布局（流式）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#display-table布局-表格"><span class="toc-nav-text">display:table布局 (表格)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#display-flex布局"><span class="toc-nav-text">display:flex布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#注意事项"><span class="toc-nav-text">注意事项</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#兼容"><span class="toc-nav-text">兼容</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#六个属性"><span class="toc-nav-text">六个属性:</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#flex-direction-方向"><span class="toc-nav-text">flex-direction[方向]</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#flex-wrap-换行"><span class="toc-nav-text">flex-wrap[换行]</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#flex-flow-方向与换行"><span class="toc-nav-text">flex-flow[方向与换行]</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#justify-content-横向"><span class="toc-nav-text">justify-content[横向]</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#align-items-纵向"><span class="toc-nav-text">align-items[纵向]</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#align-content"><span class="toc-nav-text">align-content</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#六个项目属性"><span class="toc-nav-text">六个项目属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#display-grid布局"><span class="toc-nav-text">display:grid布局</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#兼容-1"><span class="toc-nav-text">兼容</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#columns布局（css3）"><span class="toc-nav-text">columns布局（css3）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#布局与盒模型"><span class="toc-nav-text">布局与盒模型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#box-sizing属性"><span class="toc-nav-text">box-sizing属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#排版"><span class="toc-nav-text">排版</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#a标签的三个属性"><span class="toc-nav-text">a标签的三个属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#防止转译"><span class="toc-nav-text">防止转译</span></a></li></ol></li></ol>
     
   </div>
 </aside>
@@ -402,7 +409,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "布局",
+        id: "Css布局",
         owner: "",
         repo: "",
         oauth: {

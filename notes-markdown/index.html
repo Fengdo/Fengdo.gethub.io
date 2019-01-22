@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="test">
+  <meta name="keyword" content="test">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Markdown | 笔记站
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>笔记站</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/link/" class="item-link">Link</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/notes/" class="item-link">Notes</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/link/" class="menu-link">Link</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/notes/" class="menu-link">Notes</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Markdown</h2>
+  <!-- <p class="post-date">作者:Feng</p> -->
+  <!-- <p class="post-date">2019-01-21</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p><img src="https://img.shields.io/badge/更新时间:-2019--1--21-brightgreen.svg" alt="更新时间"></p>
+<h2 id="标题-header"><a href="#标题-header" class="headerlink" title="标题[header]"></a>标题[header]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#      一级标题</span><br><span class="line">##     二级标题</span><br><span class="line">###    三级标题</span><br><span class="line">####   四级标题</span><br><span class="line">#####  五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+<h2 id="引用-blockquote"><a href="#引用-blockquote" class="headerlink" title="引用[blockquote]"></a>引用[blockquote]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这里是引用的内容</span><br><span class="line">&gt; 多行引用，可以写多个</span><br></pre></td></tr></table></figure>
+<p>引用的内容里面可以包含其它标签</p>
+<h2 id="列表-list"><a href="#列表-list" class="headerlink" title="列表[list]"></a>列表[list]</h2><h3 id="有序列表-ol"><a href="#有序列表-ol" class="headerlink" title="有序列表 [ol]"></a>有序列表 [ol]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 这里是列表项目一</span><br><span class="line">2. 这里是列表项目二</span><br></pre></td></tr></table></figure>
+<h3 id="无序列表-ul"><a href="#无序列表-ul" class="headerlink" title="无序列表 [ul]"></a>无序列表 [ul]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表写法有三种,我喜欢用&quot;-&quot;</span><br><span class="line">* 这是另一种写法</span><br><span class="line">+ 这是另一种写法</span><br></pre></td></tr></table></figure>
+<h3 id="多级列表-嵌套"><a href="#多级列表-嵌套" class="headerlink" title="多级列表[嵌套]"></a>多级列表[嵌套]</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-  一级无序列表</span><br><span class="line">	- 二级</span><br><span class="line">1. 一级有有序列表</span><br><span class="line">	- 二级</span><br></pre></td></tr></table></figure>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 序号 | 姓名 | 住址 |</span><br><span class="line">|:--|:--:|--:|</span><br><span class="line">| 1 | 张三 | 北京 |</span><br><span class="line">| 2 | 李四 | 上海 |</span><br><span class="line">| 3 | 王五 | 广州 |</span><br></pre></td></tr></table></figure>
+<p>上面例子中的:<br><code>:--</code>   左对齐<br><code>:--:</code> 居中<br><code>--:</code>   右对齐</p>
+<h2 id="线-hr"><a href="#线-hr" class="headerlink" title="线[hr]"></a>线[hr]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">内容</span><br><span class="line"></span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+<h2 id="图片-img"><a href="#图片-img" class="headerlink" title="图片[img]"></a>图片[img]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](图片地址)</span><br></pre></td></tr></table></figure>
+<h2 id="链接-a"><a href="#链接-a" class="headerlink" title="链接 [a]"></a>链接 [a]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我的个人博客](www.lg8.top)</span><br></pre></td></tr></table></figure>
+<h2 id="转译"><a href="#转译" class="headerlink" title="转译"></a>转译</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- \-这是转译列表1</span><br></pre></td></tr></table></figure>
+<p>当碰到要书写markdown内置的符号时，就需要用到转译了</p>
+<h2 id="代码块-pre-figure"><a href="#代码块-pre-figure" class="headerlink" title="代码块 [pre/figure]"></a>代码块 [pre/figure]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[```javascript]</span><br><span class="line"></span><br><span class="line">不需要中括号，这里是为了网页显示</span><br><span class="line">javascript是语言名字</span><br><span class="line"></span><br><span class="line">[```]</span><br></pre></td></tr></table></figure>
+<h2 id="内联代码-code"><a href="#内联代码-code" class="headerlink" title="内联代码 [code]"></a>内联代码 [code]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`这是一个内联代码`</span><br></pre></td></tr></table></figure>
+<h2 id="加粗-strong"><a href="#加粗-strong" class="headerlink" title="加粗 [strong]"></a>加粗 [strong]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">** 加粗 **</span><br></pre></td></tr></table></figure>
+<h2 id="倾斜-em"><a href="#倾斜-em" class="headerlink" title="倾斜 [em]"></a>倾斜 [em]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">** 倾斜 **</span><br></pre></td></tr></table></figure>
+<h2 id="加粗倾斜-strong-gt-em"><a href="#加粗倾斜-strong-gt-em" class="headerlink" title="加粗倾斜 [strong-&gt;em]"></a>加粗倾斜 [strong-&gt;em]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*** 加粗倾斜 ***</span><br></pre></td></tr></table></figure>
+<h2 id="标记-mark"><a href="#标记-mark" class="headerlink" title="标记 [mark]"></a>标记 [mark]</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">== 标记 ==</span><br></pre></td></tr></table></figure>
+<p>后续待增加……</p>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+    <!-- NAV END -->
+    <!-- 打赏 START 
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+
+    
+      <!-- No Comment -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#标题-header"><span class="toc-nav-text">标题[header]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#引用-blockquote"><span class="toc-nav-text">引用[blockquote]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#列表-list"><span class="toc-nav-text">列表[list]</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#有序列表-ol"><span class="toc-nav-text">有序列表 [ol]</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#无序列表-ul"><span class="toc-nav-text">无序列表 [ul]</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#多级列表-嵌套"><span class="toc-nav-text">多级列表[嵌套]</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#表格"><span class="toc-nav-text">表格</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#线-hr"><span class="toc-nav-text">线[hr]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#图片-img"><span class="toc-nav-text">图片[img]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#链接-a"><span class="toc-nav-text">链接 [a]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#转译"><span class="toc-nav-text">转译</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#代码块-pre-figure"><span class="toc-nav-text">代码块 [pre/figure]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#内联代码-code"><span class="toc-nav-text">内联代码 [code]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#加粗-strong"><span class="toc-nav-text">加粗 [strong]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#倾斜-em"><span class="toc-nav-text">倾斜 [em]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#加粗倾斜-strong-gt-em"><span class="toc-nav-text">加粗倾斜 [strong-&gt;em]</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#标记-mark"><span class="toc-nav-text">标记 [mark]</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://fengdo.github.io/notes-markdown/index.html';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+
+
+    // gitment
+    var gitmentConfig = "";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "Markdown",
+        owner: "",
+        repo: "",
+        oauth: {
+          client_id: "",
+          client_secret: ""
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+<script>
+  var disqus_shortname = '';
+  
+  var disqus_url = 'https://fengdo.github.io/notes-markdown/index.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'https://unpkg.com/embed-js@5.0.3/umd/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

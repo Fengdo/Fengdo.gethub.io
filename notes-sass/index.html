@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="test">
+  <meta name="keyword" content="test">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Sass | 笔记站
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>笔记站</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/link/" class="item-link">Link</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/notes/" class="item-link">Notes</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/link/" class="menu-link">Link</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/notes/" class="menu-link">Notes</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>Sass</h2>
+  <!-- <p class="post-date">作者:Feng</p> -->
+  <!-- <p class="post-date">2019-01-22</p> -->
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="文件后辍"><a href="#文件后辍" class="headerlink" title="文件后辍"></a>文件后辍</h2><p>格式:<code>*.scss</code></p>
+<h2 id="文件系统命名"><a href="#文件系统命名" class="headerlink" title="文件系统命名"></a>文件系统命名</h2><h3 id="局部文件"><a href="#局部文件" class="headerlink" title="局部文件"></a>局部文件</h3><p>格式:<code>_header.scss</code><br>如果不希望所有的scss文件都被输出为单独的css文件，可以使用局部文件系统引用。<br>文件名前面加<code>_</code>下划线;</p>
+<h3 id="全局文件"><a href="#全局文件" class="headerlink" title="全局文件"></a>全局文件</h3><p>会被处理成为单独的css文件</p>
+<h2 id="引入-引用"><a href="#引入-引用" class="headerlink" title="引入(引用)"></a>引入(引用)</h2><p>格式:<code>@import &lt;文件名&gt;</code><br>能在任意的地方引入文件，比如：style.scss的开头和结尾.<br>引入局部文件时可以不带下划线：比如：引用<code>_menu.scss</code>时可以直接用<code>@import &quot;menu&quot;;</code></p>
+<h3 id="引入scss"><a href="#引入scss" class="headerlink" title="引入scss"></a>引入scss</h3><p><code>@import header</code><br>引用scss可以省略后辍</p>
+<h3 id="引入css"><a href="#引入css" class="headerlink" title="引入css"></a>引入css</h3><p><code>@import xx.css</code><br>这种方式的引用,sass会把它当作css的import加载,并不会额外的处理。建议把css的后辍名直接改为scss然后再引用</p>
+<h3 id="中途引入"><a href="#中途引入" class="headerlink" title="中途引入"></a>中途引入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.content&#123;</span><br><span class="line">	@import &quot;menu&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h3><p>头部引入公用部分比如:<code>init.scss</code>,<code>reset.scss</code>,<code>menu.scss</code>等，尾部引用私有(不公用的)的部分<code>post.scss</code>,<code>page.scss</code>等</p>
+<h2 id="四种输出方式-输出"><a href="#四种输出方式-输出" class="headerlink" title="四种输出方式(输出)"></a>四种输出方式(输出)</h2><ul>
+<li>嵌套输出方式 nested</li>
+<li>展开输出方式 expanded(常用)</li>
+<li>紧凑输出方式 compact(压缩成一行行)</li>
+<li>压缩输出方式 compressed(所有代码压缩成一行)</li>
+</ul>
+<h3 id="gulp-sass处理"><a href="#gulp-sass处理" class="headerlink" title="gulp-sass处理"></a>gulp-sass处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 编译sass</span><br><span class="line">function mySass (cd) &#123;</span><br><span class="line">	return src(init.sass)</span><br><span class="line">		.pipe(sass(&#123;outputStyle:&quot;expanded&quot;&#125;).on(&quot;error&quot;,sass.logError))</span><br><span class="line">		.pipe(dest(init.css));</span><br><span class="line">	cd();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>一共有8种数据类型</p>
+<ul>
+<li>数字 numbers (e.g. 1.2, 13, 10px)</li>
+<li>字符串 strings of text, with and without quotes (e.g. “foo”, ‘bar’, baz)</li>
+<li>颜色 colors (e.g. blue, #04a3f9, rgba(255, 0, 0, 0.5))</li>
+<li>布尔值 booleans (e.g. true, false)</li>
+<li>空 nulls (e.g. null)</li>
+<li>列表 lists of values, separated by spaces or commas (e.g. 1.5em 1em 0 2em, Helvetica, Arial, sans-serif)</li>
+<li>映射 maps from one value to another (e.g. (key1: value1, key2: value2))</li>
+<li>函数 function references</li>
+</ul>
+<h3 id="数字类型"><a href="#数字类型" class="headerlink" title="数字类型"></a>数字类型</h3><p>数字类型可以是<code>纯数字</code>、<code>小数</code>、以<code>px</code>为单位的像素</p>
+<h4 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h4><ul>
+<li>percentage(0.3) 把一个无符号的数字转换成百分比</li>
+<li>round(0.73) 四舍五入到整数</li>
+<li>ceil(1.3) 向上取整到整数</li>
+<li>floor(1.3) 向下取整到整数</li>
+<li>abs(-1.2) 相反数</li>
+<li>min(3,2,0) 最小值</li>
+<li>max(3,2,0) 最大值</li>
+<li>random() 随机数</li>
+</ul>
+<h3 id="字符串-解析"><a href="#字符串-解析" class="headerlink" title="字符串(解析)"></a>字符串(解析)</h3><p>字符串可以带引号和不带引号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$mb:(max-width:375px);</span><br><span class="line">$ipad:(min-width:376px) and (max-width:768px);</span><br></pre></td></tr></table></figure></p>
+<h4 id="普通字符串"><a href="#普通字符串" class="headerlink" title="普通字符串"></a>普通字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$string:&quot;./image/background1.png&quot;;</span><br></pre></td></tr></table></figure>
+<h4 id="空格分割的字符串"><a href="#空格分割的字符串" class="headerlink" title="空格分割的字符串"></a>空格分割的字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$string:.abc .cde .efg;</span><br></pre></td></tr></table></figure>
+<h4 id="逗号分割的字符串"><a href="#逗号分割的字符串" class="headerlink" title="逗号分割的字符串"></a>逗号分割的字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$string:&quot;.abc&quot;,&quot;.cde&quot;,&quot;.efg&quot;;</span><br></pre></td></tr></table></figure>
+<h4 id="分组的空格逗号字符串"><a href="#分组的空格逗号字符串" class="headerlink" title="分组的空格逗号字符串"></a>分组的空格逗号字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$string:(.ab .bc),(.cd .de);</span><br></pre></td></tr></table></figure>
+<h4 id="常用函数-1"><a href="#常用函数-1" class="headerlink" title="常用函数"></a>常用函数</h4><ul>
+<li>unquote($string) 去引号</li>
+<li>quote($string) 添加引号</li>
+<li>to-upper-case($string) 大写</li>
+<li>to-lower-case($string) 小写</li>
+</ul>
+<h3 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h3><p>颜色可以是rgb,rgba,保留的颜色，16进制的颜色</p>
+<h4 id="颜色查询"><a href="#颜色查询" class="headerlink" title="颜色查询"></a>颜色查询</h4><p><a href="https://github.com/sass/sass/blob/stable/lib/sass/script/value/color.rb#L28-L180" target="_blank" rel="noopener">保留颜色查询</a></p>
+<h4 id="常用函数-2"><a href="#常用函数-2" class="headerlink" title="常用函数"></a>常用函数</h4><ul>
+<li>hsl(120deg, 100%, 50%);</li>
+<li>rgba(255,124,100,0.2);</li>
+<li>颜色加深:darken(green,20%);</li>
+<li>颜色减淡:lighten(green,10%);</li>
+<li>取红色:red($color) 取$color的红色成分，结果是数字</li>
+<li>取绿色：green($color) 取$color中绿色的含量，结果是数字</li>
+<li>取蓝色：blue($color) 取$color中蓝色的含量，结果是数字</li>
+<li>混合两种颜色:mix($color1,$color2,[weight])</li>
+<li>alpha($color)/opacity($color)</li>
+</ul>
+<h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><p><code>true,false</code>真和假常用于if/@if判断<br>支持<code>and</code>,<code>or</code>,<code>not</code></p>
+<h3 id="空"><a href="#空" class="headerlink" title="空"></a>空</h3><p>nulls</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表的值可以用空格或者逗号分开，主要用来each循环</p>
+<h4 id="普通列表"><a href="#普通列表" class="headerlink" title="普通列表"></a>普通列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//同时赋值</span><br><span class="line">$list:header,section,footer,aside;</span><br><span class="line">#&#123;$list&#125;&#123;</span><br><span class="line">	margin:0 auto;</span><br><span class="line">	font-size: 10px;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="分组列表"><a href="#分组列表" class="headerlink" title="分组列表"></a>分组列表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//分组列表</span><br><span class="line">$list:(feng,10px),(abc,20px);</span><br><span class="line">@each $x,$y in $list&#123;</span><br><span class="line">	.#&#123;$x&#125;&#123;</span><br><span class="line">		font-size:$y;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h3><p>格式:<code>(索引:值，索引:值)</code><br>映射要用小括号括起来<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$map:(size-primary:15px,size-default:20px);</span><br><span class="line">@each $index,$value in $map&#123;</span><br><span class="line">	.#&#123;$index&#125;&#123;</span><br><span class="line">		font-size: $value;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
+<li>unit(10px) 返回带引号的单位</li>
+<li>type-of($value) 返回数据类型</li>
+<li>unitless($number) 无单位返回真</li>
+<li>comparable($number1,$number2)</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>格式: <code>$bg-color:blue</code><br>注意: 用 <code>$</code> 申明变量，用 <code>:</code> 赋值</p>
+<h3 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h3><p>全局变量能在任何地方被引用，前提是<strong>被引入了</strong>配置文件</p>
+<h3 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h3><p>局部变量的<strong>优先级高</strong>于全局变量,也就是说同名时局部变量会覆盖全局变量的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">  $font-size: 18px;</span><br><span class="line">  font-size: $font-size;</span><br><span class="line">  color:$header-color;</span><br><span class="line">  small&#123;font-size:$font-size/2&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><p>局部变量高于全局变量<br>相同名称变量，局部变量的值<strong>后者覆盖前者</strong> 的值</p>
+<h3 id="不区分下划线和中划线"><a href="#不区分下划线和中划线" class="headerlink" title="不区分下划线和中划线"></a>不区分下划线和中划线</h3><p>变量的命名<strong>不区分</strong> <code>_</code> (<strong>下划线</strong>)与<code>-</code>(<strong>中划线</strong>),<strong>可以混用</strong>.但是其它的区分，比如css的id,class等</p>
+<h3 id="变量能引用其它变量"><a href="#变量能引用其它变量" class="headerlink" title="变量能引用其它变量"></a>变量能引用其它变量</h3><p><strong>变量能引用其它变量</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$bg-gray:gray;</span><br><span class="line">$border:1px solid $bg-gray;</span><br></pre></td></tr></table></figure></p>
+<h3 id="变量的默认值-默认"><a href="#变量的默认值-默认" class="headerlink" title="变量的默认值(默认)"></a>变量的默认值(默认)</h3><p>变量可以设置一个默认的值，如果没有赋值就会为默认值,<strong>只针对变量</strong>,对class,id不起作用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@color-default: red !default;</span><br></pre></td></tr></table></figure></p>
+<h2 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h2><p>作用:解决写重复的内容</p>
+<h3 id="后代嵌套"><a href="#后代嵌套" class="headerlink" title="后代嵌套"></a>后代嵌套</h3><p>把后代的class直接写在父级下。<br>注意:不要滥用嵌套生成多余的css</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#content &#123;</span><br><span class="line">  article &#123;</span><br><span class="line">    h1 &#123; color: #333 &#125;</span><br><span class="line">    p &#123; margin-bottom: 1.4em &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  #content aside &#123; background-color: #EEE &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="群组嵌套"><a href="#群组嵌套" class="headerlink" title="群组嵌套"></a>群组嵌套</h3><p>抽出父元素与子元素进行一对一嵌套</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.content&#123;</span><br><span class="line">	h1,h2,h3&#123;</span><br><span class="line">		font-size: 15px;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.content,.footer&#123;</span><br><span class="line">	a&#123;</span><br><span class="line">		color: #333;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="组合嵌套"><a href="#组合嵌套" class="headerlink" title="组合嵌套"></a>组合嵌套</h3><p><code>+ &gt; ~</code>针对的是子元素或者兄弟元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.content&#123;</span><br><span class="line">	&gt;ul li&#123;</span><br><span class="line">		font-size: 15px;</span><br><span class="line">	&#125;</span><br><span class="line">	+a&#123;</span><br><span class="line">		color: red;</span><br><span class="line">	&#125;</span><br><span class="line">	~p&#123;</span><br><span class="line">		background: green;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="amp-父级"><a href="#amp-父级" class="headerlink" title="&amp;父级"></a>&amp;父级</h3><p>“&amp;”符号代表父级.sass处理&amp;符号时，会直接用父级的class替换,用来解决伪类和class命名、子代嵌套的问题<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span>&#123;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">	&amp;:hover&#123;</span><br><span class="line">		<span class="selector-tag">color</span><span class="selector-pseudo">:red</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	&amp;<span class="selector-tag">-header</span>&#123;</span><br><span class="line">		<span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	&amp;&gt;<span class="selector-tag">ul</span>&#123;</span><br><span class="line">		<span class="attribute">list-style-type</span>: none;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">//输出结果</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content-header</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span> &gt; <span class="selector-tag">ul</span> &#123;</span><br><span class="line">  <span class="attribute">list-style-type</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="嵌套属性"><a href="#嵌套属性" class="headerlink" title="嵌套属性"></a>嵌套属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.funky &#123;</span><br><span class="line">  font: &#123;</span><br><span class="line">    family: fantasy;</span><br><span class="line">    size: 30em;</span><br><span class="line">    weight: bold;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mixin与-include-混合器"><a href="#mixin与-include-混合器" class="headerlink" title="@mixin与@include(混合器)"></a>@mixin与@include(混合器)</h2><h3 id="混合器传参"><a href="#混合器传参" class="headerlink" title="混合器传参"></a>混合器传参</h3><h3 id="混合器默认参数"><a href="#混合器默认参数" class="headerlink" title="混合器默认参数"></a>混合器默认参数</h3><h3 id="混合器选择性传参"><a href="#混合器选择性传参" class="headerlink" title="混合器选择性传参"></a>混合器选择性传参</h3><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>注释有两种方法：</p>
+<ol>
+<li><p>单行注释<br>不输出到css的样式表</p>
+</li>
+<li><p>多行注释<br>输出到css的样式表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">/* This comment is</span><br><span class="line"> * several lines long.</span><br><span class="line"> * since it uses the CSS comment syntax,</span><br><span class="line"> * it will appear in the CSS output. */</span><br><span class="line">body &#123;</span><br><span class="line">  color: black; &#125;</span><br><span class="line"></span><br><span class="line">a &#123;</span><br><span class="line">  color: green; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>版权申明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$version: &quot;1.2.3&quot;;</span><br><span class="line">/* This CSS is generated by My Snazzy Framework version #&#123;$version&#125;. */</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="extend-继承"><a href="#extend-继承" class="headerlink" title="@extend(继承%)"></a>@extend(继承%)</h2><p>继承所有的特性，包括子元素的<br>继承是重复选择器，而不是属性<br>继承适合写公共的部分，但是不生成额外的class,一般来说很少会改动.比如:container,但是又不生成container的class</p>
+<h3 id="专门用来继承的类"><a href="#专门用来继承的类" class="headerlink" title="专门用来继承的类"></a>专门用来继承的类</h3><p>使用<code>%</code>可以申明一个专门用来继承的类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">// 外容器</span><br><span class="line">%container&#123;</span><br><span class="line">	max-width: 1200px;</span><br><span class="line">	margin:&#123;</span><br><span class="line">		left:auto;</span><br><span class="line">		right:auto;</span><br><span class="line">	&#125;;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 头</span><br><span class="line">#header&#123;</span><br><span class="line">	@extend %container;</span><br><span class="line">	h1&#123;</span><br><span class="line">		font-size: 20px;</span><br><span class="line">		color:darkslategrey;</span><br><span class="line">		text-align: center;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 主要部分</span><br><span class="line">main&#123;</span><br><span class="line">	@extend %container;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="其它继承的类"><a href="#其它继承的类" class="headerlink" title="其它继承的类"></a>其它继承的类</h3><p>如果不使用<code>%</code>,也可以选择其它的选择器进行继承</p>
+<h2 id="if与-if"><a href="#if与-if" class="headerlink" title="if与@if"></a>if与@if</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">$current:100;</span><br><span class="line">$default:400;</span><br><span class="line"></span><br><span class="line">.content&#123;</span><br><span class="line">	width:if($current&gt;$default,100px,200px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.sidebar&#123;</span><br><span class="line">	@if $current&gt;$default&#123;</span><br><span class="line">		width: 200px;</span><br><span class="line">		height:300px;</span><br><span class="line">		background: green</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.footer&#123;</span><br><span class="line">	@if $current == 100&#123;</span><br><span class="line">		background: red;</span><br><span class="line">	&#125; @else if $current == 200&#123;</span><br><span class="line">		background: green;</span><br><span class="line"></span><br><span class="line">	&#125;@else if $current == 300 &#123;</span><br><span class="line">		background: gray;</span><br><span class="line"></span><br><span class="line">	&#125;@else &#123;</span><br><span class="line">		background:blue;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p>循环至少两个</p>
+<h3 id="for"><a href="#for" class="headerlink" title="@for"></a>@for</h3><p>格式: <code>@for $i(current index) from start(index) through end(index) {...}</code></p>
+<ul>
+<li>$i当前的索引</li>
+<li>start 索引的开始位置</li>
+<li>end 索引的结束位置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@for $i from 1 through 3 &#123;</span><br><span class="line">  .item-#&#123;$i&#125; &#123; width: 2em * $i; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="each"><a href="#each" class="headerlink" title="@each"></a>@each</h3><p>@each有三种用法，而且它与列表有密切联系</p>
+<ul>
+<li>一个变量</li>
+<li>两个变量：键对值</li>
+<li>多个变量</li>
+</ul>
+<blockquote>
+<p>#{$header}字符串解析</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//一个变量</span><br><span class="line">$list:header,section,footer,aside;</span><br><span class="line">@each $x in $list&#123;</span><br><span class="line">	#&#123;$x&#125;&#123;</span><br><span class="line">		background:url(&quot;./images/#&#123;$x&#125;.png&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//两个变量</span><br><span class="line">@each $index,$value in (h4:15px,h5:13px,h6:12px,a:11px,p:10px,li:12px)&#123;</span><br><span class="line">	#&#123;$index&#125;&#123;</span><br><span class="line">		font-size: $value;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//三个变量</span><br><span class="line">@each $x,$y,$z in (feng,10px,red),(jon,20px,green),(cat,30px,blue)&#123;</span><br><span class="line">	.#&#123;$x&#125;&#123;</span><br><span class="line">		font-size:$y;</span><br><span class="line">		color:$z;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="while"><a href="#while" class="headerlink" title="@while"></a>@while</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$i: 6;</span><br><span class="line">@while $i &gt; 0 &#123;</span><br><span class="line">  .item-#&#123;$i&#125; &#123; width: 2em * $i; &#125;</span><br><span class="line">  $i: $i - 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="media"><a href="#media" class="headerlink" title="@media"></a>@media</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$mb:(max-width:375px);</span><br><span class="line">$ipad:(min-width:376px) and (max-width:768px);</span><br><span class="line">.container&#123;</span><br><span class="line">	width:1200px;</span><br><span class="line">	color:#333;</span><br><span class="line">	@media #&#123;$mb&#125;&#123;</span><br><span class="line">		max-width: 300px;</span><br><span class="line">		background:orange;</span><br><span class="line">		a&#123;color:red;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	@media #&#123;$ipad&#125;&#123;</span><br><span class="line">		max-width: 768px;</span><br><span class="line">		background: pink;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="name-字符串转译"><a href="#name-字符串转译" class="headerlink" title="#{$name}字符串转译"></a>#{$name}字符串转译</h2><p>一般用作名称或者图片字符串的转译</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$name:abc;</span><br><span class="line">#&#123;$name&#125;&#123;</span><br><span class="line">	font-size:10px;</span><br><span class="line">	background-image:url(&quot;./images/#&#123;$name&#125;.png&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="相关学习网站"><a href="#相关学习网站" class="headerlink" title="相关学习网站"></a>相关学习网站</h2><p><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#nested_properties" target="_blank" rel="noopener">sass-lang</a><br><a href="https://www.sass.hk/" target="_blank" rel="noopener">中文基础教程</a></p>
+<h2 id="npm更换淘宝源"><a href="#npm更换淘宝源" class="headerlink" title="npm更换淘宝源"></a>npm更换淘宝源</h2><p>npm install xxx –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+    <!-- NAV END -->
+    <!-- 打赏 START 
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+
+    
+      <!-- No Comment -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#文件后辍"><span class="toc-nav-text">文件后辍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#文件系统命名"><span class="toc-nav-text">文件系统命名</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#局部文件"><span class="toc-nav-text">局部文件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#全局文件"><span class="toc-nav-text">全局文件</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#引入-引用"><span class="toc-nav-text">引入(引用)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#引入scss"><span class="toc-nav-text">引入scss</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#引入css"><span class="toc-nav-text">引入css</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#中途引入"><span class="toc-nav-text">中途引入</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技巧"><span class="toc-nav-text">技巧</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#四种输出方式-输出"><span class="toc-nav-text">四种输出方式(输出)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#gulp-sass处理"><span class="toc-nav-text">gulp-sass处理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据类型"><span class="toc-nav-text">数据类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#数字类型"><span class="toc-nav-text">数字类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#常用函数"><span class="toc-nav-text">常用函数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#字符串-解析"><span class="toc-nav-text">字符串(解析)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#普通字符串"><span class="toc-nav-text">普通字符串</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#空格分割的字符串"><span class="toc-nav-text">空格分割的字符串</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#逗号分割的字符串"><span class="toc-nav-text">逗号分割的字符串</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#分组的空格逗号字符串"><span class="toc-nav-text">分组的空格逗号字符串</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#常用函数-1"><span class="toc-nav-text">常用函数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#颜色"><span class="toc-nav-text">颜色</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#颜色查询"><span class="toc-nav-text">颜色查询</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#常用函数-2"><span class="toc-nav-text">常用函数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#布尔值"><span class="toc-nav-text">布尔值</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#空"><span class="toc-nav-text">空</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#列表"><span class="toc-nav-text">列表</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#普通列表"><span class="toc-nav-text">普通列表</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#分组列表"><span class="toc-nav-text">分组列表</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#映射"><span class="toc-nav-text">映射</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#函数"><span class="toc-nav-text">函数</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#变量"><span class="toc-nav-text">变量</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#全局变量"><span class="toc-nav-text">全局变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#局部变量"><span class="toc-nav-text">局部变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#优先级"><span class="toc-nav-text">优先级</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#不区分下划线和中划线"><span class="toc-nav-text">不区分下划线和中划线</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#变量能引用其它变量"><span class="toc-nav-text">变量能引用其它变量</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#变量的默认值-默认"><span class="toc-nav-text">变量的默认值(默认)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#嵌套"><span class="toc-nav-text">嵌套</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#后代嵌套"><span class="toc-nav-text">后代嵌套</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#群组嵌套"><span class="toc-nav-text">群组嵌套</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#组合嵌套"><span class="toc-nav-text">组合嵌套</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#amp-父级"><span class="toc-nav-text">&amp;父级</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#嵌套属性"><span class="toc-nav-text">嵌套属性</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#mixin与-include-混合器"><span class="toc-nav-text">@mixin与@include(混合器)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#混合器传参"><span class="toc-nav-text">混合器传参</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#混合器默认参数"><span class="toc-nav-text">混合器默认参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#混合器选择性传参"><span class="toc-nav-text">混合器选择性传参</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#注释"><span class="toc-nav-text">注释</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#extend-继承"><span class="toc-nav-text">@extend(继承%)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#专门用来继承的类"><span class="toc-nav-text">专门用来继承的类</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#其它继承的类"><span class="toc-nav-text">其它继承的类</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#if与-if"><span class="toc-nav-text">if与@if</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#循环"><span class="toc-nav-text">循环</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#for"><span class="toc-nav-text">@for</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#each"><span class="toc-nav-text">@each</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#while"><span class="toc-nav-text">@while</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#media"><span class="toc-nav-text">@media</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#name-字符串转译"><span class="toc-nav-text">#{$name}字符串转译</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#相关学习网站"><span class="toc-nav-text">相关学习网站</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#npm更换淘宝源"><span class="toc-nav-text">npm更换淘宝源</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'https://fengdo.github.io/notes-sass/index.html';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+
+
+    // gitment
+    var gitmentConfig = "";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "Sass",
+        owner: "",
+        repo: "",
+        oauth: {
+          client_id: "",
+          client_secret: ""
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+<script>
+  var disqus_shortname = '';
+  
+  var disqus_url = 'https://fengdo.github.io/notes-sass/index.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'https://unpkg.com/embed-js@5.0.3/umd/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

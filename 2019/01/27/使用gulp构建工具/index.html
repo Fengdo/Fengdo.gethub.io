@@ -10,7 +10,7 @@
   
   <title>
     
-      gulp 4.0 项目流程 | 笔记站
+      使用gulp构建工具 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,9 +134,9 @@
 </header>
 
     <div id="article-banner">
-  <h2>gulp 4.0 项目流程</h2>
+  <h2>使用gulp构建工具</h2>
   <!-- <p class="post-date">作者:Feng</p> -->
-  <!-- <p class="post-date">2019-01-22</p> -->
+  <!-- <p class="post-date">2019-01-27</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -144,46 +144,31 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p><img src="https://img.shields.io/badge/更新时间:-2019--1--22-brightgreen.svg" alt="更新时间"></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>安装gulp前要,先检查一下版本号是否是最新，防止后续出错</p>
-<h3 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h3><p>检查 <strong>nodejs</strong>、<strong>npm</strong>、<strong>gulp</strong> 和 <strong>gulp-cli</strong> 的版本是否是最新,如果不是就升级</p>
+    <section class="markdown-content"><h2 id="两种模式"><a href="#两种模式" class="headerlink" title="两种模式"></a>两种模式</h2><h3 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h3><p>创建结构目录–&gt;编译、监控、清理–&gt;本地服务器</p>
 <ul>
-<li><code>node -v</code>或者 <code>node --version</code></li>
-<li><code>npm -v</code> 或者 <code>node --version</code></li>
-<li><code>gulp -v</code> 或者 <code>node --version</code></li>
-<li><code>gulp-cli</code> 如果没有gulp-cli或者不是最新版本可以安装或者更新 <code>npm install --global gulp-cli</code></li>
+<li>创建目录树       gulp create</li>
+<li>清理 清理源文件  gulp clean</li>
+<li>编译 //sass文件  gulp generate</li>
+<li>开启本地服务器   gulp server</li>
+<li>监控</li>
 </ul>
-<h3 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h3><ul>
-<li>升级nodejs要到官网下载</li>
-<li>升级npm <code>npm install -g npm</code></li>
-<li>升级gulp 可以先删除gulp:<code>npm rm --global gulp</code>,然后再安装 <code>npm install -g gulp</code></li>
-</ul>
-<h2 id="gulp工作流程"><a href="#gulp工作流程" class="headerlink" title="gulp工作流程"></a>gulp工作流程</h2><ul>
-<li>创建项目根目录: <code>npx mkdirp myProject</code></li>
-<li>进入根目录: <code>cd myProject</code>,然后创建 <strong>package.json</strong> 配置文件 <code>npm init</code></li>
-<li>安装项目依赖插件: <code>npm install --save-dev gulp</code></li>
-<li>查看gulp版本信息: <code>gulp -v</code> ,这个时候能看到 <strong>CLI version 2.0.1</strong> 和 <strong>Local version 4.0.0</strong></li>
-<li>创建gulpfile.js文件和init.json文件 <code>touch gulpfile.js init.json</code>;</li>
-</ul>
-<blockquote>
-<p>注意: gulpfile.js文件是忽略大小写的</p>
-</blockquote>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>在gulpfile.js里面写入以下内容并运行。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">cd</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"测试成功"</span>);</span><br><span class="line">  cd();</span><br><span class="line">&#125;</span><br><span class="line">exports.test = test;</span><br></pre></td></tr></table></figure></p>
-<p>命令行运行:<code>gulp test</code>;</p>
-<h2 id="文件说明"><a href="#文件说明" class="headerlink" title="文件说明"></a>文件说明</h2><ul>
-<li>package.json npm项目插件依赖的配置文件</li>
-<li>package-lock.json 本地的依赖文件(这个不用管它)</li>
-<li>gulpfile.js 自定义的流程;比如：创建目录树，编辑文件，打包上传</li>
-<li>init.json 自定义的路径配置文件，也可以不定义</li>
-</ul>
-</section>
+<h3 id="上线模式"><a href="#上线模式" class="headerlink" title="上线模式"></a>上线模式</h3><p>压缩、打包–&gt;上传</p>
+<h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><p>|– src 源文件<br>— html文件<br>||– css<br>||– js<br>||– images</p>
+<p>|– dist 打包文件<br>— html文件<br>||– css<br>||– js<br>||– images</p>
+<p>|– support 第三方支持</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><h3 id="创建目录树"><a href="#创建目录树" class="headerlink" title="创建目录树"></a>创建目录树</h3><p>创建结构目录<br><code>gulp create</code></p>
+<h3 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h3><p>清理源文件和清理输出的文件</p>
+<p><code>gulp clean-source</code><br><code>gulp clean-dist</code></p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>编译sass文件<br><code>gulp generate</code></p>
+<h3 id="本地服务器"><a href="#本地服务器" class="headerlink" title="本地服务器"></a>本地服务器</h3><p><code>gulp server</code></p>
+<h3 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h3></section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#gulp 4.0">
-    <span class="tag-code">gulp 4.0</span>
+  <a href="/tags#gulp">
+    <span class="tag-code">gulp</span>
   </a>
 
       </div>
@@ -194,20 +179,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/01/19/使用lnmp后，免费ssl安装与全站https跳转/">
+      <a class="nav-left" href="/2019/01/22/gulp4.0项目流程/">
         <span class="nav-arrow">← </span>
         
-          使用lnmp后，免费ssl安装与全站https跳转
+          gulp 4.0 项目流程
         
       </a>
     
-    
-      <a class="nav-right" href="/2019/01/27/使用gulp构建工具/">
-        
-          使用gulp构建工具
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -242,7 +220,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#准备"><span class="toc-nav-text">准备</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#检查"><span class="toc-nav-text">检查</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#升级"><span class="toc-nav-text">升级</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#gulp工作流程"><span class="toc-nav-text">gulp工作流程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#测试"><span class="toc-nav-text">测试</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#文件说明"><span class="toc-nav-text">文件说明</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#两种模式"><span class="toc-nav-text">两种模式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#开发模式"><span class="toc-nav-text">开发模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#上线模式"><span class="toc-nav-text">上线模式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#目录结构"><span class="toc-nav-text">目录结构</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#功能"><span class="toc-nav-text">功能</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建目录树"><span class="toc-nav-text">创建目录树</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#清理"><span class="toc-nav-text">清理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#编译"><span class="toc-nav-text">编译</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#本地服务器"><span class="toc-nav-text">本地服务器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#监控"><span class="toc-nav-text">监控</span></a></li></ol></li></ol>
     
   </div>
 </aside>
@@ -252,7 +230,7 @@
 
 <script>
   (function () {
-    var url = 'https://fengdo.github.io/2019/01/22/gulp4.0项目流程/';
+    var url = 'https://fengdo.github.io/2019/01/27/使用gulp构建工具/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -304,7 +282,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "gulp 4.0 项目流程",
+        id: "使用gulp构建工具",
         owner: "",
         repo: "",
         oauth: {
@@ -332,7 +310,7 @@
 <script>
   var disqus_shortname = '';
   
-  var disqus_url = 'https://fengdo.github.io/2019/01/22/gulp4.0项目流程/';
+  var disqus_url = 'https://fengdo.github.io/2019/01/27/使用gulp构建工具/';
   
   (function(){
     var dsq = document.createElement('script');

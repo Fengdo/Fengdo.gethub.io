@@ -144,11 +144,29 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h2><ul>
+    <section class="markdown-content"><h2 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h2><p><code>rm file1 file2</code></p>
+<p>删除文件</p>
+<ul>
+<li>r 遍历子目录</li>
+<li>f 强制删除</li>
+</ul>
+<h2 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h2><p><code>mv 源文件(source) 位置(destination)</code><br>移动文件</p>
+<h2 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h2><p><code>mkdir /d/abc</code><br>创建目录</p>
+<h2 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h2><p><code>touch abc.txt bcd.txt</code></p>
+<ul>
+<li>创建文件</li>
+</ul>
+<h2 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h2><p><code>cp [-adfilprsu] 源文件(source) 目标文件(destination)</code></p>
+<ul>
+<li>复制文件</li>
+<li>r 遍历子目录</li>
+</ul>
+<h2 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h2><ul>
 <li>显示当前目录下的文件<code>ls</code></li>
 <li>显示当前目录下的文件，包括隐藏文件<code>ls -a</code></li>
+<li>只显示当前目录下的目录: <code>ls -F|grep &quot;/$&quot;</code></li>
 </ul>
-<h2 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h2><p>切换目录</p>
+<h2 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h2><p>切换目录</p>
 <ul>
 <li>进入指定目录 <code>cd dir</code></li>
 <li>进入绝对目录 <code>cd /dir/abc</code></li>
@@ -157,13 +175,13 @@
 <li>进入根目录[root] <code>cd ~</code></li>
 <li>进入上一次访问的目录 <code>cd -</code></li>
 </ul>
-<h2 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h2><p>输出路径到屏幕</p>
+<h2 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h2><p>输出路径到屏幕</p>
 <h2 id="echo的用法"><a href="#echo的用法" class="headerlink" title="echo的用法"></a>echo的用法</h2><ul>
 <li>输出到屏幕: <code>echo hello world!</code>; 输出的结果为: hello world;</li>
 <li>把内容写到文件中:<code>echo &quot;hello A&quot; &gt; tmp.txt</code>; 文件不存在则创建，存在就重写(替换掉原来的);</li>
 <li>追加到文件中: <code>echo &quot;hello B&quot; &gt;&gt; tmp.txt</code>; 不替换文本，只是在后面追加内容</li>
 </ul>
-<h2 id="yum命令"><a href="#yum命令" class="headerlink" title="yum命令"></a>yum命令</h2><ol>
+<h2 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h2><ol>
 <li>列出所有可更新的软件清单命令：yum check-update</li>
 <li>更新所有软件命令：yum update</li>
 <li>仅安装指定的软件命令：yum install &lt;package_name&gt;</li>
@@ -305,7 +323,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ls命令"><span class="toc-nav-text">ls命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#cd命令"><span class="toc-nav-text">cd命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#pwd命令"><span class="toc-nav-text">pwd命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#echo的用法"><span class="toc-nav-text">echo的用法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#yum命令"><span class="toc-nav-text">yum命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#tar命令"><span class="toc-nav-text">tar命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#压缩"><span class="toc-nav-text">压缩</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#命名为jpg-tar-gz"><span class="toc-nav-text">命名为jpg.tar.gz</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解压"><span class="toc-nav-text">解压</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#总结"><span class="toc-nav-text">总结</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#rm"><span class="toc-nav-text">rm</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#mv"><span class="toc-nav-text">mv</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#mkdir"><span class="toc-nav-text">mkdir</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#touch"><span class="toc-nav-text">touch</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#cp"><span class="toc-nav-text">cp</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ls"><span class="toc-nav-text">ls</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#cd"><span class="toc-nav-text">cd</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#pwd"><span class="toc-nav-text">pwd</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#echo的用法"><span class="toc-nav-text">echo的用法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#yum"><span class="toc-nav-text">yum</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#tar命令"><span class="toc-nav-text">tar命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#压缩"><span class="toc-nav-text">压缩</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#命名为jpg-tar-gz"><span class="toc-nav-text">命名为jpg.tar.gz</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#解压"><span class="toc-nav-text">解压</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#总结"><span class="toc-nav-text">总结</span></a></li></ol></li></ol>
     
   </div>
 </aside>

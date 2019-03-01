@@ -10,7 +10,7 @@
   
   <title>
     
-      使用hexo在github上搭建博客 | 笔记站
+      判断数据类型 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,9 +134,9 @@
 </header>
 
     <div id="article-banner">
-  <h2>使用hexo在github上搭建博客</h2>
+  <h2>判断数据类型</h2>
   <!-- <p class="post-date">作者:Feng</p> -->
-  <!-- <p class="post-date">2019-01-13</p> -->
+  <!-- <p class="post-date">2019-03-02</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -144,30 +144,22 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="本地安装hexo"><a href="#本地安装hexo" class="headerlink" title="本地安装hexo"></a>本地安装hexo</h2><p>  1.0 安装hexo<br>  1.1 创建一个[github的用户名].github.io的根目录<br>  1.2 <code>hexo init</code>初始化这个根目录</p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github上创建一个新的仓库，命名为<code>[github的用户名].github.io</code>不生成解释文件</p>
-<h2 id="配置网站"><a href="#配置网站" class="headerlink" title="配置网站"></a>配置网站</h2><h3 id="修改网站信息"><a href="#修改网站信息" class="headerlink" title="修改网站信息"></a>修改网站信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title 网站标题</span><br><span class="line">subtitle 网站副标题</span><br><span class="line">keywords 关键字</span><br><span class="line">author 作者</span><br><span class="line">language 语言  //zh</span><br><span class="line">timezone 时区</span><br></pre></td></tr></table></figure>
-<h3 id="修改网站url"><a href="#修改网站url" class="headerlink" title="修改网站url"></a>修改网站url</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: https://用户名.github.io</span><br></pre></td></tr></table></figure>
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>修改主题前要先把下载好的主题放在<code>themes</code>目录下<br>回到配置文件，把<code>theme</code>改为主题的名字</p>
-<h3 id="修改git远程服务关联"><a href="#修改git远程服务关联" class="headerlink" title="修改git远程服务关联"></a>修改git远程服务关联</h3><p>打开<code>_config.yml</code>修改<code>deploy</code>下的<code>type: git</code>;<br>在type下增加一行<code>repo: 仓库地址 //git@github.com:用户名/用户名.github.io.git</code>;<br>再增加一行<code>branch: master</code>;</p>
-<h2 id="hexo发布到远程"><a href="#hexo发布到远程" class="headerlink" title="hexo发布到远程"></a>hexo发布到远程</h2><p><code>hexo d -g</code>把本地代码发布的远程<br>进入仓库，找到设置，打开<code>githubPage</code>设置分支为主分枝</p>
-<h2 id="绑定自已的域名"><a href="#绑定自已的域名" class="headerlink" title="绑定自已的域名"></a>绑定自已的域名</h2><p>进入仓库-&gt;设置,找到<code>githubPage</code>下面的自定义域名,修改为自己的域名;<br>进入域名商提供的域名解析服务，添加<code>CNAME解析两条</code>:记录值为<code>github提供的域名二级域名</code>,<code>记录为@</code>;第二条记录值相同，<code>记录为www</code>;</p>
-<h2 id="增加CNAME文件"><a href="#增加CNAME文件" class="headerlink" title="增加CNAME文件"></a>增加CNAME文件</h2><blockquote>
-<p>不增加CNAME文件会导致每次发布页面时就要重新绑定自定义域名</p>
-</blockquote>
-<p>在根目录的source目录下新建一个CNAME文件，没有后辍，然后把你的自定义域名写在里面</p>
+    <section class="markdown-content"><h2 id="四种字面量"><a href="#四种字面量" class="headerlink" title="四种字面量"></a>四种字面量</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> number = <span class="number">10.2</span>;</span><br><span class="line"><span class="keyword">var</span> string = <span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">var</span> boolean = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> object = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;</span><br><span class="line">alert(<span class="keyword">typeof</span> number===<span class="string">"number"</span>);</span><br><span class="line">alert(<span class="keyword">typeof</span> string===<span class="string">"string"</span>);</span><br><span class="line">alert(<span class="keyword">typeof</span> boolean===<span class="string">"boolean"</span>);</span><br><span class="line">alert(<span class="keyword">typeof</span> object===<span class="string">"object"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="comment">// alert($.isArray(boolean));</span></span><br></pre></td></tr></table></figure>
+<h2 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var heading = document.getElementById(&apos;heading&apos;);</span><br><span class="line">// alert(heading.nodeType);</span><br></pre></td></tr></table></figure>
+<h2 id="null"><a href="#null" class="headerlink" title="null"></a>null</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var special1 = null;</span><br><span class="line">// alert(special1==null);</span><br><span class="line">// alert(special1===null);</span><br><span class="line"></span><br><span class="line">## undefined</span><br></pre></td></tr></table></figure>
+<p>var special2 = undefined;<br>// alert(special2==undefined);<br>// alert(special2==null);</p>
+<h2 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var special3 = NaN;</span><br><span class="line">// alert(isNaN(special3));//输出number</span><br></pre></td></tr></table></figure>
+<h2 id="function"><a href="#function" class="headerlink" title="function"></a>function</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var special4 = function()&#123;</span><br><span class="line">	alert(&apos;abc&apos;);</span><br><span class="line">&#125;</span><br><span class="line">// alert($.isFunction(special4));</span><br></pre></td></tr></table></figure>
+<h2 id="普通对象"><a href="#普通对象" class="headerlink" title="普通对象"></a>普通对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var special5 = &#123;name:&apos;张三&apos;&#125;;</span><br><span class="line">// var special6 = new Date();</span><br><span class="line">// alert($.isPlainObject(special6));</span><br><span class="line">alert(null==undefined);</span><br></pre></td></tr></table></figure>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#hexo">
-    <span class="tag-code">hexo</span>
-  </a>
-
-  <a href="/tags#git">
-    <span class="tag-code">git</span>
+  <a href="/tags#基础">
+    <span class="tag-code">基础</span>
   </a>
 
       </div>
@@ -178,17 +170,17 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/01/12/hexo学习/">
+      <a class="nav-left" href="/2019/01/30/js数组/">
         <span class="nav-arrow">← </span>
         
-          hexo学习
+          js对象
         
       </a>
     
     
-      <a class="nav-right" href="/2019/01/19/使用php5配合nginx与sqlite3配置web环境/">
+      <a class="nav-right" href="/2019/03/02/jquery/数据类型/">
         
-          使用php5配合nginx与sqlite3配置web环境
+          数据类型
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -226,7 +218,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#本地安装hexo"><span class="toc-nav-text">本地安装hexo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建仓库"><span class="toc-nav-text">创建仓库</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#配置网站"><span class="toc-nav-text">配置网站</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站信息"><span class="toc-nav-text">修改网站信息</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改网站url"><span class="toc-nav-text">修改网站url</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改主题"><span class="toc-nav-text">修改主题</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改git远程服务关联"><span class="toc-nav-text">修改git远程服务关联</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo发布到远程"><span class="toc-nav-text">hexo发布到远程</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#绑定自已的域名"><span class="toc-nav-text">绑定自已的域名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#增加CNAME文件"><span class="toc-nav-text">增加CNAME文件</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#四种字面量"><span class="toc-nav-text">四种字面量</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数组"><span class="toc-nav-text">数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#元素"><span class="toc-nav-text">元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-text">null</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NaN"><span class="toc-nav-text">NaN</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#function"><span class="toc-nav-text">function</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#普通对象"><span class="toc-nav-text">普通对象</span></a></li></ol>
     
   </div>
 </aside>
@@ -236,7 +228,7 @@
 
 <script>
   (function () {
-    var url = 'https://fengdo.github.io/2019/01/13/使用hexo在github上搭建博客/';
+    var url = 'https://fengdo.github.io/2019/03/02/jquery/判断数据类型/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -288,7 +280,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "使用hexo在github上搭建博客",
+        id: "判断数据类型",
         owner: "",
         repo: "",
         oauth: {
@@ -316,7 +308,7 @@
 <script>
   var disqus_shortname = '';
   
-  var disqus_url = 'https://fengdo.github.io/2019/01/13/使用hexo在github上搭建博客/';
+  var disqus_url = 'https://fengdo.github.io/2019/03/02/jquery/判断数据类型/';
   
   (function(){
     var dsq = document.createElement('script');

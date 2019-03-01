@@ -10,7 +10,7 @@
   
   <title>
     
-      js对象 | 笔记站
+      笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,9 +134,9 @@
 </header>
 
     <div id="article-banner">
-  <h2>js对象</h2>
+  <h2></h2>
   <!-- <p class="post-date">作者:Feng</p> -->
-  <!-- <p class="post-date">2019-01-30</p> -->
+  <!-- <p class="post-date">2019-03-01</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -144,20 +144,10 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="申明"><a href="#申明" class="headerlink" title="申明"></a>申明</h2><p><code>var abc = {}</code></p>
-<h2 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h2><p>对象采用<code>键对值</code>的方式赋值<br>对象的值可以是<code>任意类型</code>，可以字符串，数字，布尔值也可以是对象或者数组、函数</p>
-<h2 id="对象和json的不同之处"><a href="#对象和json的不同之处" class="headerlink" title="对象和json的不同之处"></a>对象和json的不同之处</h2><p>js的对象能存储变量，而json只能存储字符串和数字</p>
-</section>
+    <section class="markdown-content"><h2 id="回顾js的六种数据类型"><a href="#回顾js的六种数据类型" class="headerlink" title="回顾js的六种数据类型"></a>回顾js的六种数据类型</h2><p>数字：js中的浮点数，整数都归为数字类型<br>字符串<br>布尔值<br>对象:Object,Array,function,Date,RegExp<br>null<br>undefined</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>NaN也是number数据类型，只不过它是一个特殊的值表示非数字.<br>undefined的出现有三种情况:未申明，未赋值，不存在<br>未获取到dom对象时会出现null</p>
+<h2 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">/* 四种字面量的判断 */</span><br><span class="line">var number = 10.2;</span><br><span class="line">var string = &quot;abc&quot;;</span><br><span class="line">var boolean = true;</span><br><span class="line">var object = &#123;a:1,b:2&#125;</span><br><span class="line">// alert(typeof number===&quot;number&quot;);</span><br><span class="line">// alert(typeof string===&quot;string&quot;);</span><br><span class="line">// alert(typeof boolean===&quot;boolean&quot;);</span><br><span class="line">// alert(typeof object===&quot;object&quot;);</span><br><span class="line"></span><br><span class="line">/* 数组的判断 */</span><br><span class="line">var myArray = [1,2,3,4];</span><br><span class="line">// alert($.isArray(boolean));</span><br><span class="line"></span><br><span class="line">/* 判断元素 */</span><br><span class="line">var heading = document.getElementById(&apos;heading&apos;);</span><br><span class="line">// alert(heading.nodeType);</span><br><span class="line"></span><br><span class="line">/* 判断null */</span><br><span class="line">var special1 = null;</span><br><span class="line">// alert(special1==null);</span><br><span class="line">// alert(special1===null);</span><br><span class="line"></span><br><span class="line">/* 判断undefined */</span><br><span class="line">var special2 = undefined;</span><br><span class="line">// alert(special2==undefined);</span><br><span class="line">// alert(special2==null);</span><br><span class="line"></span><br><span class="line">/* 判断是否是NaN */</span><br><span class="line">var special3 = NaN;</span><br><span class="line">// alert(isNaN(special3));//输出number</span><br><span class="line"></span><br><span class="line">/* 判断是否是function */</span><br><span class="line">var special4 = function()&#123;</span><br><span class="line">	alert(&apos;abc&apos;);</span><br><span class="line">&#125;</span><br><span class="line">// alert($.isFunction(special4));</span><br><span class="line"></span><br><span class="line">/* 判断是否是普通的对象 */</span><br><span class="line">var special5 = &#123;name:&apos;张三&apos;&#125;;</span><br><span class="line">// var special6 = new Date();</span><br><span class="line">// alert($.isPlainObject(special6));</span><br><span class="line">alert(null==undefined);</span><br></pre></td></tr></table></figure></section>
     <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/tags#对象">
-    <span class="tag-code">对象</span>
-  </a>
-
-      </div>
     
     <!-- Tags END -->
     <!-- NAV START -->
@@ -165,20 +155,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/01/22/gulp4.0项目流程/">
+      <a class="nav-left" href="/2019/01/30/js数组/">
         <span class="nav-arrow">← </span>
         
-          gulp 4.0 项目流程
+          js对象
         
       </a>
     
-    
-      <a class="nav-right" href="/2019/03/01/juery判断数据类型/">
-        
-          (untitled)
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -213,7 +196,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#申明"><span class="toc-nav-text">申明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#赋值"><span class="toc-nav-text">赋值</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#对象和json的不同之处"><span class="toc-nav-text">对象和json的不同之处</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#回顾js的六种数据类型"><span class="toc-nav-text">回顾js的六种数据类型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#注意"><span class="toc-nav-text">注意</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#判断数据类型"><span class="toc-nav-text">判断数据类型</span></a></li></ol>
     
   </div>
 </aside>
@@ -223,7 +206,7 @@
 
 <script>
   (function () {
-    var url = 'https://fengdo.github.io/2019/01/30/js数组/';
+    var url = 'https://fengdo.github.io/2019/03/01/juery判断数据类型/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -275,7 +258,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "js对象",
+        id: "",
         owner: "",
         repo: "",
         oauth: {
@@ -303,7 +286,7 @@
 <script>
   var disqus_shortname = '';
   
-  var disqus_url = 'https://fengdo.github.io/2019/01/30/js数组/';
+  var disqus_url = 'https://fengdo.github.io/2019/03/01/juery判断数据类型/';
   
   (function(){
     var dsq = document.createElement('script');

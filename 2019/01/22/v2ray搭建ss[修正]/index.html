@@ -10,7 +10,7 @@
   
   <title>
     
-      判断数据类型 | 笔记站
+      V2ray搭建Shadowsocks[修正] | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,9 +134,9 @@
 </header>
 
     <div id="article-banner">
-  <h2>判断数据类型</h2>
+  <h2>V2ray搭建Shadowsocks[修正]</h2>
   <!-- <p class="post-date">作者:Feng</p> -->
-  <!-- <p class="post-date">2019-03-02</p> -->
+  <!-- <p class="post-date">2019-01-22</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -144,22 +144,51 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> number = <span class="number">10.2</span>;</span><br><span class="line"><span class="keyword">var</span> string = <span class="string">"abc"</span>;</span><br><span class="line"><span class="keyword">var</span> boolean = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> object = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>&#125;</span><br><span class="line">alert(<span class="keyword">typeof</span> number===<span class="string">"number"</span>);</span><br><span class="line">alert(<span class="keyword">typeof</span> string===<span class="string">"string"</span>);</span><br><span class="line">alert(<span class="keyword">typeof</span> boolean===<span class="string">"boolean"</span>);</span><br><span class="line">alert(<span class="keyword">typeof</span> object===<span class="string">"object"</span>);</span><br></pre></td></tr></table></figure>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myArray = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="comment">// alert($.isArray(boolean));</span></span><br></pre></td></tr></table></figure>
-<h2 id="元素"><a href="#元素" class="headerlink" title="元素"></a>元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var heading = document.getElementById(&apos;heading&apos;);</span><br><span class="line">// alert(heading.nodeType);</span><br></pre></td></tr></table></figure>
-<h2 id="null"><a href="#null" class="headerlink" title="null"></a>null</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var special1 = null;</span><br><span class="line">// alert(special1==null);</span><br><span class="line">// alert(special1===null);</span><br><span class="line"></span><br><span class="line">## undefined</span><br></pre></td></tr></table></figure>
-<p>var special2 = undefined;<br>// alert(special2==undefined);<br>// alert(special2==null);</p>
-<h2 id="NaN"><a href="#NaN" class="headerlink" title="NaN"></a>NaN</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var special3 = NaN;</span><br><span class="line">// alert(isNaN(special3));//输出number</span><br></pre></td></tr></table></figure>
-<h2 id="function"><a href="#function" class="headerlink" title="function"></a>function</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var special4 = function()&#123;</span><br><span class="line">	alert(&apos;abc&apos;);</span><br><span class="line">&#125;</span><br><span class="line">// alert($.isFunction(special4));</span><br></pre></td></tr></table></figure>
-<h2 id="普通对象"><a href="#普通对象" class="headerlink" title="普通对象"></a>普通对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var special5 = &#123;name:&apos;张三&apos;&#125;;</span><br><span class="line">// var special6 = new Date();</span><br><span class="line">// alert($.isPlainObject(special6));</span><br><span class="line">alert(null==undefined);</span><br></pre></td></tr></table></figure>
+    <section class="markdown-content"><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>linux服务器<br>测试系统:debain9_x64(本次测试的系统)</p>
+<h2 id="校对时间"><a href="#校对时间" class="headerlink" title="校对时间"></a>校对时间</h2><h3 id="查看时间"><a href="#查看时间" class="headerlink" title="查看时间"></a>查看时间</h3><p><code>date -R</code><br>输出：<code>Mon, 21 Jan 2019 19:53:31 -0500</code><br>如果时间和时区与本地的不一致就需要修改</p>
+<h3 id="修改时间"><a href="#修改时间" class="headerlink" title="修改时间"></a>修改时间</h3><p>1.<code>vi /etc/profile</code><br>2.<code>G</code>-&gt;<code>o</code><br>3.把<code>export TZ=&#39;Asia/Shanghai</code>粘贴到文本里面,然后按下Esc<code>:wq</code>退出文本<br>4.命令行输入:<code>source /etc/profile</code>更新全局变量</p>
+<h2 id="安装V2ray"><a href="#安装V2ray" class="headerlink" title="安装V2ray"></a>安装V2ray</h2><p>1.<code>wget https://install.direct/go.sh</code>下载脚本<br>2.<code>bash go.sh</code>或者<code>./go.sh</code> 运行go.sh脚本</p>
+<h2 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h2><p>打开<a href="https://intmainreturn0.com/v2ray-config-gen/#" target="_blank" rel="noopener">这个链接</a>进行配置</p>
+<h2 id="服务协议"><a href="#服务协议" class="headerlink" title="服务协议"></a>服务协议</h2><p>可选服务协议有两种：</p>
+<ol>
+<li>VMess</li>
+<li>Shadowsocks</li>
+</ol>
+<h3 id="Shadowsocks服务端配置"><a href="#Shadowsocks服务端配置" class="headerlink" title="Shadowsocks服务端配置"></a>Shadowsocks服务端配置</h3><ul>
+<li>服务1: 服务种类</li>
+<li>端口号： 自定义一个5位数的端口号;比如:19752</li>
+<li>加密方法： aes-256-cfb[推荐]</li>
+<li>密码： 自定义，也可以使用 <a href="https://suijimimashengcheng.51240.com/" target="_blank" rel="noopener">随机密码</a>；不开启UDP转发</li>
+<li>用户等级：私用</li>
+<li>其它的不管它</li>
+</ul>
+<h3 id="Shadowsocks客户端配置"><a href="#Shadowsocks客户端配置" class="headerlink" title="Shadowsocks客户端配置"></a>Shadowsocks客户端配置</h3><p>前面打开的链接不能配置客户端，所以需要自己新建一个文本把下面的记录下来</p>
+<ul>
+<li>记录服务器的IP地址</li>
+<li>端口号</li>
+<li>密码</li>
+<li>加密方法</li>
+</ul>
+<h2 id="相关操作"><a href="#相关操作" class="headerlink" title="相关操作"></a>相关操作</h2><h3 id="修改远程配置"><a href="#修改远程配置" class="headerlink" title="修改远程配置"></a>修改远程配置</h3><p>1.<code>vi /etc/v2ray/config.json</code> 打开文件<br>2.<code>dG</code> 删除所有内容<br>3.<code>i</code> 插入<br>4.然后把生成的服务端的内容粘贴到文件中<br>5.Esc <code>:wq</code> 保存并退出文件</p>
+<h3 id="下载与配置客户端"><a href="#下载与配置客户端" class="headerlink" title="下载与配置客户端"></a>下载与配置客户端</h3><ul>
+<li>客户端暂时不多讲</li>
+<li>把上面客户端的配置填入客户端中，本地端口可以默认</li>
+</ul>
+<h3 id="启动V2ray"><a href="#启动V2ray" class="headerlink" title="启动V2ray"></a>启动V2ray</h3><p><code>systemctl start v2ray</code></p>
+<h3 id="查看运行状态"><a href="#查看运行状态" class="headerlink" title="查看运行状态"></a>查看运行状态</h3><p><code>service v2ray status</code></p>
+<h2 id="其它操作-非必需"><a href="#其它操作-非必需" class="headerlink" title="其它操作[非必需]"></a>其它操作[非必需]</h2><p><code>systemctl restart v2ray</code> 重启</p>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#基础 jquery">
-    <span class="tag-code">基础 jquery</span>
+  <a href="/tags#ssr">
+    <span class="tag-code">ssr</span>
+  </a>
+
+  <a href="/tags#ss">
+    <span class="tag-code">ss</span>
   </a>
 
       </div>
@@ -170,17 +199,17 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/01/30/js数组/">
+      <a class="nav-left" href="/2019/01/20/v2ray搭建/">
         <span class="nav-arrow">← </span>
         
-          js对象
+          V2ray的搭建
         
       </a>
     
     
-      <a class="nav-right" href="/2019/03/02/jquery/数据类型/">
+      <a class="nav-right" href="/2019/01/22/gulp4.0项目流程/">
         
-          数据类型
+          gulp 4.0 项目流程
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -218,7 +247,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#字面量"><span class="toc-nav-text">字面量</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数组"><span class="toc-nav-text">数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#元素"><span class="toc-nav-text">元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-text">null</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NaN"><span class="toc-nav-text">NaN</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#function"><span class="toc-nav-text">function</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#普通对象"><span class="toc-nav-text">普通对象</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#准备"><span class="toc-nav-text">准备</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#校对时间"><span class="toc-nav-text">校对时间</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看时间"><span class="toc-nav-text">查看时间</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改时间"><span class="toc-nav-text">修改时间</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#安装V2ray"><span class="toc-nav-text">安装V2ray</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建配置文件"><span class="toc-nav-text">创建配置文件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#服务协议"><span class="toc-nav-text">服务协议</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Shadowsocks服务端配置"><span class="toc-nav-text">Shadowsocks服务端配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Shadowsocks客户端配置"><span class="toc-nav-text">Shadowsocks客户端配置</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#相关操作"><span class="toc-nav-text">相关操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改远程配置"><span class="toc-nav-text">修改远程配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#下载与配置客户端"><span class="toc-nav-text">下载与配置客户端</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#启动V2ray"><span class="toc-nav-text">启动V2ray</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看运行状态"><span class="toc-nav-text">查看运行状态</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其它操作-非必需"><span class="toc-nav-text">其它操作[非必需]</span></a></li></ol>
     
   </div>
 </aside>
@@ -228,7 +257,7 @@
 
 <script>
   (function () {
-    var url = 'https://fengdo.github.io/2019/03/02/jquery/判断数据类型/';
+    var url = 'https://fengdo.github.io/2019/01/22/v2ray搭建ss[修正]/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -280,7 +309,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "判断数据类型",
+        id: "V2ray搭建Shadowsocks[修正]",
         owner: "",
         repo: "",
         oauth: {
@@ -308,7 +337,7 @@
 <script>
   var disqus_shortname = '';
   
-  var disqus_url = 'https://fengdo.github.io/2019/03/02/jquery/判断数据类型/';
+  var disqus_url = 'https://fengdo.github.io/2019/01/22/v2ray搭建ss[修正]/';
   
   (function(){
     var dsq = document.createElement('script');

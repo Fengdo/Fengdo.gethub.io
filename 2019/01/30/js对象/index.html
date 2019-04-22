@@ -10,7 +10,7 @@
   
   <title>
     
-      双等号与三等号的区别 | 笔记站
+      js对象 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,9 +134,9 @@
 </header>
 
     <div id="article-banner">
-  <h2>双等号与三等号的区别</h2>
+  <h2>js对象</h2>
   <!-- <p class="post-date">作者:Feng</p> -->
-  <!-- <p class="post-date">2019-03-02</p> -->
+  <!-- <p class="post-date">2019-01-30</p> -->
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -144,17 +144,17 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><blockquote>
-<p>区别:双等号会先转换数据类型,然后再进行比较;(隐性转换)</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alert(null==undefined); //输出:ture</span><br><span class="line">alert(null===undefined); //输出:false</span><br><span class="line">alert(&apos;1&apos;==1); //输出:ture</span><br><span class="line">alert(&apos;1&apos;===1); //输出:false</span><br></pre></td></tr></table></figure></section>
+    <section class="markdown-content"><h2 id="申明"><a href="#申明" class="headerlink" title="申明"></a>申明</h2><p><code>var abc = {}</code></p>
+<h2 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h2><p>对象采用<code>键对值</code>的方式赋值<br>对象的值可以是<code>任意类型</code>，可以字符串，数字，布尔值也可以是对象或者数组、函数</p>
+<h2 id="对象和json的不同之处"><a href="#对象和json的不同之处" class="headerlink" title="对象和json的不同之处"></a>对象和json的不同之处</h2><p>js的对象能存储变量，而json只能存储字符串和数字</p>
+</section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#基础 jquery">
-    <span class="tag-code">基础 jquery</span>
+  <a href="/tags#对象">
+    <span class="tag-code">对象</span>
   </a>
 
       </div>
@@ -165,17 +165,17 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/03/02/jquery/数据类型/">
+      <a class="nav-left" href="/2019/01/22/gulp4.0项目流程/">
         <span class="nav-arrow">← </span>
         
-          数据类型
+          gulp 4.0 项目流程
         
       </a>
     
     
-      <a class="nav-right" href="/2019/03/02/jquery/字符串/">
+      <a class="nav-right" href="/2019/01/30/js数组/">
         
-          字符串
+          数组
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -213,7 +213,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="nav">none</ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#申明"><span class="toc-nav-text">申明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#赋值"><span class="toc-nav-text">赋值</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#对象和json的不同之处"><span class="toc-nav-text">对象和json的不同之处</span></a></li></ol>
     
   </div>
 </aside>
@@ -223,7 +223,7 @@
 
 <script>
   (function () {
-    var url = 'https://fengdo.github.io/2019/03/02/jquery/双等号与三等号的区别/';
+    var url = 'https://fengdo.github.io/2019/01/30/js对象/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -275,7 +275,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "双等号与三等号的区别",
+        id: "js对象",
         owner: "",
         repo: "",
         oauth: {
@@ -303,7 +303,7 @@
 <script>
   var disqus_shortname = '';
   
-  var disqus_url = 'https://fengdo.github.io/2019/03/02/jquery/双等号与三等号的区别/';
+  var disqus_url = 'https://fengdo.github.io/2019/01/30/js对象/';
   
   (function(){
     var dsq = document.createElement('script');

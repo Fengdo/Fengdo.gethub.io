@@ -10,7 +10,7 @@
   
   <title>
     
-      js对象 | 笔记站
+      数组 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -134,7 +134,7 @@
 </header>
 
     <div id="article-banner">
-  <h2>js对象</h2>
+  <h2>数组</h2>
   <!-- <p class="post-date">作者:Feng</p> -->
   <!-- <p class="post-date">2019-01-30</p> -->
   <div class="arrow-down">
@@ -144,9 +144,12 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="申明"><a href="#申明" class="headerlink" title="申明"></a>申明</h2><p><code>var abc = {}</code></p>
-<h2 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h2><p>对象采用<code>键对值</code>的方式赋值<br>对象的值可以是<code>任意类型</code>，可以字符串，数字，布尔值也可以是对象或者数组、函数</p>
-<h2 id="对象和json的不同之处"><a href="#对象和json的不同之处" class="headerlink" title="对象和json的不同之处"></a>对象和json的不同之处</h2><p>js的对象能存储变量，而json只能存储字符串和数字</p>
+    <section class="markdown-content"><h2 id="申明和赋值"><a href="#申明和赋值" class="headerlink" title="申明和赋值"></a>申明和赋值</h2><h3 id="1-new的方式"><a href="#1-new的方式" class="headerlink" title="1.new的方式"></a>1.new的方式</h3><p><code>var arr = new Array(1,2,3,100);</code>(申明和赋值)</p>
+<h3 id="2-字面量的方式"><a href="#2-字面量的方式" class="headerlink" title="2.字面量的方式"></a>2.字面量的方式</h3><p><code>var arr = [1,2,3,100];</code>(申明和赋值)</p>
+<h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><p><code>var  arr[0] = 100</code></p>
+<h2 id="数组的length"><a href="#数组的length" class="headerlink" title="数组的length"></a>数组的length</h2><p><code>arr.length</code><br><code>arr.length = 1</code> //设置数组的长度(会改变原数组)<br><code>arr.length = 0</code> //清空数组</p>
+<h2 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 遍历数组或者对象 */</span></span><br><span class="line">newArray.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item,index,array</span>)</span>&#123;</span><br><span class="line">	<span class="comment">// console.log(item);   //值(value)</span></span><br><span class="line">	<span class="comment">// console.log(index);  //数组的索引(key)</span></span><br><span class="line">	<span class="built_in">console</span>.log(array);     <span class="comment">//数组本身，包括数组的一些方法</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="相关api"><a href="#相关api" class="headerlink" title="相关api"></a>相关api</h2><h3 id="把类数组对象或者字符串转换成数组"><a href="#把类数组对象或者字符串转换成数组" class="headerlink" title="把类数组对象或者字符串转换成数组"></a>把类数组对象或者字符串转换成数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> abc = <span class="built_in">Array</span>.from(<span class="string">'abcdekjksjfksfjsl'</span>);</span><br><span class="line">alert(abc); <span class="comment">//返回[a,b,c,d,e,k,j,k,s,j,f,k,s,f,j,s,l]数组</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 类数组对象转换成真正的数组</span></span><br><span class="line"><span class="keyword">let</span> fake = &#123;</span><br><span class="line">  <span class="number">0</span>:<span class="string">'abc'</span>,</span><br><span class="line">  <span class="number">1</span>:<span class="string">'cde'</span>,</span><br><span class="line">  <span class="number">2</span>:<span class="string">'efg'</span>,</span><br><span class="line">  <span class="number">3</span>:[<span class="string">'10'</span>,<span class="string">'20'</span>,<span class="string">'30'</span>],</span><br><span class="line">  length:<span class="number">4</span></span><br><span class="line">&#125;</span><br><span class="line">alert(<span class="built_in">Array</span>.from(fake)); <span class="comment">//返回[abc,cde,efg,[10,20,30]]</span></span><br></pre></td></tr></table></figure>
 </section>
     <!-- Tags START -->
     
@@ -157,6 +160,10 @@
     <span class="tag-code">对象</span>
   </a>
 
+  <a href="/tags#数组">
+    <span class="tag-code">数组</span>
+  </a>
+
       </div>
     
     <!-- Tags END -->
@@ -165,17 +172,17 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/01/22/gulp4.0项目流程/">
+      <a class="nav-left" href="/2019/01/30/js对象/">
         <span class="nav-arrow">← </span>
         
-          gulp 4.0 项目流程
+          js对象
         
       </a>
     
     
-      <a class="nav-right" href="/2019/03/02/jquery/数据类型/">
+      <a class="nav-right" href="/2019/03/02/jquery/十进制固定小数位数/">
         
-          数据类型
+          十进制格式化小数位数
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -213,7 +220,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#申明"><span class="toc-nav-text">申明</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#赋值"><span class="toc-nav-text">赋值</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#对象和json的不同之处"><span class="toc-nav-text">对象和json的不同之处</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#申明和赋值"><span class="toc-nav-text">申明和赋值</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-new的方式"><span class="toc-nav-text">1.new的方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-字面量的方式"><span class="toc-nav-text">2.字面量的方式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#赋值"><span class="toc-nav-text">赋值</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数组的length"><span class="toc-nav-text">数组的length</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数组的遍历"><span class="toc-nav-text">数组的遍历</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#相关api"><span class="toc-nav-text">相关api</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#把类数组对象或者字符串转换成数组"><span class="toc-nav-text">把类数组对象或者字符串转换成数组</span></a></li></ol></li></ol>
     
   </div>
 </aside>
@@ -275,7 +282,7 @@
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "js对象",
+        id: "数组",
         owner: "",
         repo: "",
         oauth: {

@@ -153,29 +153,6 @@
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/03/02/jquery/双等号与三等号的区别/">双等号与三等号的区别</a>
-      </h2>
-      <p class="article-date">2019年3月2日</p>
-      
-        
-  <a href="/tags#基础 jquery">
-    <span class="tag-code">基础 jquery</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          
-区别:双等号会先转换数据类型,然后再进行比较;(隐性转换)
-
-1234alert(null==undefined); //输出:turealert(null===undefined); //输出:falsealert(&apos;1&apos;==1); //输出:turealert(&a ...
-        
-      </div>
-      <a class="more" href="/2019/03/02/jquery/双等号与三等号的区别/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
         <a href="/2019/03/02/jquery/数据类型/">数据类型</a>
       </h2>
       <p class="article-date">2019年3月2日</p>
@@ -245,6 +222,29 @@ js没有内置的10进制数据类型，但可以通过toFixed和toPrecision来�
         
       </div>
       <a class="more" href="/2019/03/02/jquery/十进制固定小数位数/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/03/02/jquery/双等号与三等号的区别/">双等号与三等号的区别</a>
+      </h2>
+      <p class="article-date">2019年3月2日</p>
+      
+        
+  <a href="/tags#基础 jquery">
+    <span class="tag-code">基础 jquery</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+区别:双等号会先转换数据类型,然后再进行比较;(隐性转换)
+
+1234alert(null==undefined); //输出:turealert(null===undefined); //输出:falsealert(&apos;1&apos;==1); //输出:turealert(&a ...
+        
+      </div>
+      <a class="more" href="/2019/03/02/jquery/双等号与三等号的区别/">Read more</a>
     </article>
   
     <article class="article-card">
@@ -325,51 +325,58 @@ gulp -v 或者 no ...
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/01/22/v2ray搭建ss[修正]/">V2ray搭建Shadowsocks[修正]</a>
+        <a href="/2019/01/19/使用lnmp后，免费ssl安装与全站https跳转/">使用lnmp后，免费ssl安装与全站https跳转</a>
       </h2>
-      <p class="article-date">2019年1月22日</p>
+      <p class="article-date">2019年1月19日</p>
       
         
-  <a href="/tags#ssr">
-    <span class="tag-code">ssr</span>
-  </a>
-
-  <a href="/tags#ss">
-    <span class="tag-code">ss</span>
+  <a href="/tags#lnmp">
+    <span class="tag-code">lnmp</span>
   </a>
 
       
       <div class="article-summary">
         
-          准备linux服务器测试系统:debain9_x64(本次测试的系统)
-校对时间查看时间date -R输出：Mon, 21 Jan 2019 19:53:31 -0500如果时间和时区与本地的不一致就需要修改
-修改时间1.vi /etc/profile2.G-&gt;o3.把export T ...
+          免费安装ssl
+输入绑定的域名:test.com
+输入别名:www.test.com
+确定网站根目录:/home/wwwroot/text.com
+设置重写规则: wordpress
+选择创建免费的ssl:2
+
+https全部跳转
+vi /usr/local/nginx/conf/vhost ...
         
       </div>
-      <a class="more" href="/2019/01/22/v2ray搭建ss[修正]/">Read more</a>
+      <a class="more" href="/2019/01/19/使用lnmp后，免费ssl安装与全站https跳转/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/01/20/v2ray搭建/">V2ray的搭建</a>
+        <a href="/2019/01/19/使用lnmp安装web服务器环境/">使用lnmp安装web服务器环境</a>
       </h2>
-      <p class="article-date">2019年1月20日</p>
+      <p class="article-date">2019年1月19日</p>
       
         
-  <a href="/tags#V2ray">
-    <span class="tag-code">V2ray</span>
+  <a href="/tags#lnmp">
+    <span class="tag-code">lnmp</span>
   </a>
 
       
       <div class="article-summary">
         
-          时间校正v2ray要求服务器时间和本地一致
-查看服务器时间xshell进入服务器
-1date -R 查看时间
-修改时间date –setdate --set=可以修改时间[cetos7x64有效]，但是debain9修改了后并没有用;1date --set=&quot;2017-01-22  ...
+          lnmp安装步骤
+如果服务器没有安装wget,那首先安装
+
+1yum install wget
+
+配置lnmp无人值守访问lnmp无人值守选择适合的版本，得到链接
+下载lnmp版本
+
+1wget http://soft.vpser.net/lnmp/lnmp1.5.tar.gz -cO ln ...
         
       </div>
-      <a class="more" href="/2019/01/20/v2ray搭建/">Read more</a>
+      <a class="more" href="/2019/01/19/使用lnmp安装web服务器环境/">Read more</a>
     </article>
   
 

@@ -144,7 +144,7 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="基本组成"><a href="#基本组成" class="headerlink" title="基本组成"></a>基本组成</h2><p>数据库<br>数据表<br>行<br>列<br>元数据</p>
+    <section class="markdown-content"><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>数据库<br>数据表<br>列<br>行<br>元数据</p>
 <h2 id="Mysql基本命令"><a href="#Mysql基本命令" class="headerlink" title="Mysql基本命令"></a>Mysql基本命令</h2><table>
 <thead>
 <tr>
@@ -155,22 +155,55 @@
 <tbody>
 <tr>
 <td><code>select user();</code></td>
-<td>显示当前正在使用数据库的用户名;</td>
+<td>显示当前正在使用数据库的用户名</td>
 </tr>
 <tr>
 <td><code>select now();</code></td>
-<td>显示当前时间;</td>
+<td>显示当前时间</td>
 </tr>
 <tr>
 <td><code>select version();</code></td>
-<td>显示当前mysql的版本号;</td>
+<td>显示当前mysql的版本号</td>
 </tr>
 <tr>
 <td><code>select * from db1\G;</code></td>
-<td>在后面加G可以用竖状显示;</td>
+<td>在后面加G可以用竖状显示</td>
+</tr>
+<tr>
+<td><code>mysql -u root -p</code></td>
+<td>连接数据库服务器;</td>
+</tr>
+<tr>
+<td><code>create database database_name;</code></td>
+<td>创建数据库</td>
+</tr>
+<tr>
+<td><code>use database_name;</code></td>
+<td>选中数据库</td>
+</tr>
+<tr>
+<td><code>show databases;</code></td>
+<td>查看数据库列表</td>
+</tr>
+<tr>
+<td><code>drop database database_name;</code></td>
+<td>删除数据库</td>
+</tr>
+<tr>
+<td><code>show tables;</code></td>
+<td>查看表的列表;(先选中数据库)</td>
+</tr>
+<tr>
+<td><code>show columns from table_name;</code></td>
+<td>查看表结构</td>
+</tr>
+<tr>
+<td><code>desc table_name;</code></td>
+<td>查看表结构</td>
 </tr>
 </tbody>
 </table>
+<p>Tip:数据库不能修改名字(改)</p>
 <h2 id="数据的｛增，删，改，查｝"><a href="#数据的｛增，删，改，查｝" class="headerlink" title="数据的｛增，删，改，查｝"></a>数据的｛增，删，改，查｝</h2><p>insert 增</p>
 <p>insert table_name(…) values(…);</p>
 <p>delete 删</p>
@@ -241,13 +274,6 @@
 <p>删除的同时增加新字段</p>
 <h2 id="数据表的更名"><a href="#数据表的更名" class="headerlink" title="数据表的更名"></a>数据表的更名</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> table_name <span class="keyword">rename</span> new_table_name;</span><br><span class="line">//只能为一个数据表更名。</span><br><span class="line"></span><br><span class="line"><span class="keyword">rename</span> <span class="keyword">table</span> table_name <span class="keyword">to</span> new_table_name;</span><br><span class="line">//可以实现多个数据表的更名。</span><br></pre></td></tr></table></figure>
 <h2 id="数据列的更名"><a href="#数据列的更名" class="headerlink" title="数据列的更名"></a>数据列的更名</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">modify</span> <span class="keyword">user</span> user_1 <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">modify</span> <span class="keyword">user</span> user_1 <span class="built_in">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> <span class="keyword">change</span> <span class="keyword">user</span> user_1 varchr(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="数据库的连接和增’删’改查"><a href="#数据库的连接和增’删’改查" class="headerlink" title="数据库的连接和增’删’改查"></a>数据库的连接和增’删’改查</h2><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> database_name //<span class="string">";"</span>可被省略</span><br><span class="line"><span class="keyword">use</span> database_name;</span><br></pre></td></tr></table></figure>
-<h3 id="连接mysql服务器"><a href="#连接mysql服务器" class="headerlink" title="连接mysql服务器"></a>连接mysql服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<h3 id="创建数据库-增"><a href="#创建数据库-增" class="headerlink" title="创建数据库(增)"></a>创建数据库(增)</h3><p>create database database_name;</p>
-<h3 id="删除数据库-删"><a href="#删除数据库-删" class="headerlink" title="删除数据库(删)"></a>删除数据库(删)</h3><p>drop database database_name;</p>
-<p>数据库不能修改名字(改)</p>
-<h3 id="查看已创建的数据库"><a href="#查看已创建的数据库" class="headerlink" title="查看已创建的数据库"></a>查看已创建的数据库</h3><p>show databases;</p>
-<h3 id="查看表格的结构"><a href="#查看表格的结构" class="headerlink" title="查看表格的结构"></a>查看表格的结构</h3><p>show columns from db1;</p>
 </section>
     <!-- Tags START -->
     
@@ -285,7 +311,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基本组成"><span class="toc-nav-text">基本组成</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mysql基本命令"><span class="toc-nav-text">Mysql基本命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据的｛增，删，改，查｝"><span class="toc-nav-text">数据的｛增，删，改，查｝</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入数据"><span class="toc-nav-text">插入数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#insert插入数据的三种方式"><span class="toc-nav-text">insert插入数据的三种方式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#modify-change的区别"><span class="toc-nav-text">modify,change的区别</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除表所有的数据"><span class="toc-nav-text">删除表所有的数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除约束"><span class="toc-nav-text">删除约束</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#修改数据"><span class="toc-nav-text">修改数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#为列增加或修改约束"><span class="toc-nav-text">为列增加或修改约束</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#字段的操作-增加和修改字段"><span class="toc-nav-text">字段的操作:增加和修改字段</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据表的更名"><span class="toc-nav-text">数据表的更名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据列的更名"><span class="toc-nav-text">数据列的更名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据库的连接和增’删’改查"><span class="toc-nav-text">数据库的连接和增’删’改查</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#连接数据库"><span class="toc-nav-text">连接数据库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#连接mysql服务器"><span class="toc-nav-text">连接mysql服务器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建数据库-增"><span class="toc-nav-text">创建数据库(增)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#删除数据库-删"><span class="toc-nav-text">删除数据库(删)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看已创建的数据库"><span class="toc-nav-text">查看已创建的数据库</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#查看表格的结构"><span class="toc-nav-text">查看表格的结构</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基本概念"><span class="toc-nav-text">基本概念</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mysql基本命令"><span class="toc-nav-text">Mysql基本命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据的｛增，删，改，查｝"><span class="toc-nav-text">数据的｛增，删，改，查｝</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入数据"><span class="toc-nav-text">插入数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#insert插入数据的三种方式"><span class="toc-nav-text">insert插入数据的三种方式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#modify-change的区别"><span class="toc-nav-text">modify,change的区别</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除表所有的数据"><span class="toc-nav-text">删除表所有的数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除约束"><span class="toc-nav-text">删除约束</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#修改数据"><span class="toc-nav-text">修改数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#为列增加或修改约束"><span class="toc-nav-text">为列增加或修改约束</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#字段的操作-增加和修改字段"><span class="toc-nav-text">字段的操作:增加和修改字段</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据表的更名"><span class="toc-nav-text">数据表的更名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据列的更名"><span class="toc-nav-text">数据列的更名</span></a></li></ol>
     
   </div>
 </aside>

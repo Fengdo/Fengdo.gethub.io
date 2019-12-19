@@ -89,6 +89,12 @@
           
         </li>
       
+        <li class="list-item">
+          
+            <a href="/categories/fnotes/" class="item-link">Fnotes</a>
+          
+        </li>
+      
     </ul>
     <div class="menu">
       <span class="icon-bar"></span>
@@ -128,6 +134,12 @@
             
           </li>
         
+          <li class="menu-item">
+            
+              <a href="/categories/fnotes/" class="menu-link">Fnotes</a>
+            
+          </li>
+        
       </ul>
     </div>
   </div>
@@ -144,7 +156,7 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h1 id="mysql笔记"><a href="#mysql笔记" class="headerlink" title="mysql笔记"></a>mysql笔记</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>数据库<br>数据表<br>列<br>行<br>元数据<br>字段</p>
+    <section class="markdown-content"><h1 id="mysql笔记"><a href="#mysql笔记" class="headerlink" title="mysql笔记"></a>mysql笔记</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>数据库<br>数据表<br>列<br>行<br>字段<br>记录</p>
 <h2 id="Mysql基本命令"><a href="#Mysql基本命令" class="headerlink" title="Mysql基本命令"></a>Mysql基本命令</h2><table>
 <thead>
 <tr>
@@ -166,8 +178,8 @@
 <td>显示当前mysql的版本号</td>
 </tr>
 <tr>
-<td><code>select * from db1\G;</code></td>
-<td>在后面加G可以用竖状显示</td>
+<td><code>select * from table_name\G;</code></td>
+<td>显示表的结构(在后面加G可以用竖状显示)</td>
 </tr>
 </tbody>
 </table>
@@ -231,6 +243,8 @@
 <h3 id="日期与时间"><a href="#日期与时间" class="headerlink" title="日期与时间"></a>日期与时间</h3><p>DATETIME<br>DATE<br>TIMESTAMP<br>TIME<br>YEAR</p>
 <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>CHAR<br>VARCHAR<br>BINARY<br>VARBINARY<br>BLOB<br>TEXT<br>ENUM<br>SET</p>
 <h2 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create talbe if not exists `table_name`(</span><br><span class="line">`id` INT UNSIGNED AUTO_INCREMENT,</span><br><span class="line">`title` VARCHAR(100) NOT NULL,</span><br><span class="line">`author` VARCHAR(40) NOT NULL,</span><br><span class="line">`date` DATE,</span><br><span class="line">PRIMARY KEY ( `id` )</span><br><span class="line">)ENGINE=InnoDB DEFAULT CHARSET=utf8;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE IF EXISTS `mytesttable`;  </span><br><span class="line">CREATE TABLE `mytesttable` (  </span><br><span class="line">  `id` int(11) NOT NULL,  </span><br><span class="line">  `name` varchar(255) DEFAULT NULL,  </span><br><span class="line">  `createtime` datetime DEFAULT CURRENT_TIMESTAMP,  </span><br><span class="line">  `updatetime` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,  </span><br><span class="line">  PRIMARY KEY (`id`)  </span><br><span class="line">) ENGINE=InnoDB DEFAULT CHARSET=gbk;</span><br></pre></td></tr></table></figure>
+<h2 id="增加记录"><a href="#增加记录" class="headerlink" title="增加记录"></a>增加记录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into table_name values(...),(...),(...);</span><br></pre></td></tr></table></figure>
 <h2 id="数据的｛增，删，改，查｝"><a href="#数据的｛增，删，改，查｝" class="headerlink" title="数据的｛增，删，改，查｝"></a>数据的｛增，删，改，查｝</h2><h3 id="insert-增"><a href="#insert-增" class="headerlink" title="insert 增"></a>insert 增</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert table_name(…) values(…);</span><br></pre></td></tr></table></figure>
 <h3 id="delete-删"><a href="#delete-删" class="headerlink" title="delete 删"></a>delete 删</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from table_name where(…);</span><br></pre></td></tr></table></figure>
 <h3 id="update-改"><a href="#update-改" class="headerlink" title="update 改"></a>update 改</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update table_name set(..)</span><br></pre></td></tr></table></figure>
@@ -334,7 +348,7 @@
     <aside class="catalog-container">
   <div class="toc-main">
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#mysql笔记"><span class="toc-nav-text">mysql笔记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基本概念"><span class="toc-nav-text">基本概念</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mysql基本命令"><span class="toc-nav-text">Mysql基本命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据类型"><span class="toc-nav-text">数据类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#整数"><span class="toc-nav-text">整数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#小数"><span class="toc-nav-text">小数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#日期与时间"><span class="toc-nav-text">日期与时间</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#字符串"><span class="toc-nav-text">字符串</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建数据表"><span class="toc-nav-text">创建数据表</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据的｛增，删，改，查｝"><span class="toc-nav-text">数据的｛增，删，改，查｝</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#insert-增"><span class="toc-nav-text">insert 增</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#delete-删"><span class="toc-nav-text">delete 删</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#update-改"><span class="toc-nav-text">update 改</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#select-查"><span class="toc-nav-text">select 查</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入数据"><span class="toc-nav-text">插入数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#insert插入数据的三种方式"><span class="toc-nav-text">insert插入数据的三种方式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#modify-change的区别"><span class="toc-nav-text">modify,change的区别</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除表所有的数据"><span class="toc-nav-text">删除表所有的数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除约束"><span class="toc-nav-text">删除约束</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#修改数据"><span class="toc-nav-text">修改数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#为列增加或修改约束"><span class="toc-nav-text">为列增加或修改约束</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#字段的操作-增加和修改字段"><span class="toc-nav-text">字段的操作:增加和修改字段</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据表的更名"><span class="toc-nav-text">数据表的更名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据列的更名"><span class="toc-nav-text">数据列的更名</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#mysql笔记"><span class="toc-nav-text">mysql笔记</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基本概念"><span class="toc-nav-text">基本概念</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Mysql基本命令"><span class="toc-nav-text">Mysql基本命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据类型"><span class="toc-nav-text">数据类型</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#整数"><span class="toc-nav-text">整数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#小数"><span class="toc-nav-text">小数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#日期与时间"><span class="toc-nav-text">日期与时间</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#字符串"><span class="toc-nav-text">字符串</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建数据表"><span class="toc-nav-text">创建数据表</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#增加记录"><span class="toc-nav-text">增加记录</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据的｛增，删，改，查｝"><span class="toc-nav-text">数据的｛增，删，改，查｝</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#insert-增"><span class="toc-nav-text">insert 增</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#delete-删"><span class="toc-nav-text">delete 删</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#update-改"><span class="toc-nav-text">update 改</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#select-查"><span class="toc-nav-text">select 查</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#插入数据"><span class="toc-nav-text">插入数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#insert插入数据的三种方式"><span class="toc-nav-text">insert插入数据的三种方式</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#modify-change的区别"><span class="toc-nav-text">modify,change的区别</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除表所有的数据"><span class="toc-nav-text">删除表所有的数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#删除约束"><span class="toc-nav-text">删除约束</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#修改数据"><span class="toc-nav-text">修改数据</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#为列增加或修改约束"><span class="toc-nav-text">为列增加或修改约束</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#字段的操作-增加和修改字段"><span class="toc-nav-text">字段的操作:增加和修改字段</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据表的更名"><span class="toc-nav-text">数据表的更名</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#数据列的更名"><span class="toc-nav-text">数据列的更名</span></a></li></ol></li></ol>
     
   </div>
 </aside>

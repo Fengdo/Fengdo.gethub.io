@@ -1078,6 +1078,11 @@ h2.article-head {
   margin: 15px 0 35px 0;
   text-align: center;
 }
+.article-summary .cover {
+  max-width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
 @media screen and (max-width: 480px) {
   .essay-banner {
     padding-top: 60px;

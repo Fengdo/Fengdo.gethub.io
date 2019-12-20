@@ -1066,9 +1066,13 @@ h2.article-head {
   font-size: 1rem;
   color: #545454;
   text-indent: 1em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   text-align: justify;
-  line-height: 1.3em;
+  line-height: 1.5em;
+}
+.post-article strong {
+  color: #ff6827;
+  font-weight: 510;
 }
 .post-article img {
   text-align: center;
@@ -1078,6 +1082,7 @@ h2.article-head {
     padding-top: 60px;
   }
   .post-article img {
+    margin: 15px 0;
     max-width: 100%;
     height: auto;
   }

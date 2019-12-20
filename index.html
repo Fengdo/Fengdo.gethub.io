@@ -155,7 +155,7 @@
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/03/02/jquery/判断数据类型/">判断数据类型</a>
+        <a href="/2019/03/02/jquery/十进制固定小数位数/">十进制格式化小数位数</a>
       </h2>
       <p class="article-date">2019年3月2日</p>
       
@@ -167,10 +167,13 @@
       
       <div class="article-summary">
         
-          字面量12345678var number = 10.2;var string = "abc";var boolean = true;var object = &#123;a:1,b:2&#125;alert(typeof number==="number");alert(typeof st ...
+          
+js没有内置的10进制数据类型，但可以通过toFixed和toPrecision来格式化小数位数
+
+123var num = 1234.123445;num.toFixed(2) //1234.12num.toPrecision(8) //1234.1234
         
       </div>
-      <a class="more" href="/2019/03/02/jquery/判断数据类型/">Read more</a>
+      <a class="more" href="/2019/03/02/jquery/十进制固定小数位数/">Read more</a>
     </article>
   
     <article class="article-card">
@@ -228,7 +231,7 @@ undefined的出现有三种情况:未申 ...
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/03/02/jquery/十进制固定小数位数/">十进制格式化小数位数</a>
+        <a href="/2019/03/02/jquery/判断数据类型/">判断数据类型</a>
       </h2>
       <p class="article-date">2019年3月2日</p>
       
@@ -240,13 +243,10 @@ undefined的出现有三种情况:未申 ...
       
       <div class="article-summary">
         
-          
-js没有内置的10进制数据类型，但可以通过toFixed和toPrecision来格式化小数位数
-
-123var num = 1234.123445;num.toFixed(2) //1234.12num.toPrecision(8) //1234.1234
+          字面量12345678var number = 10.2;var string = "abc";var boolean = true;var object = &#123;a:1,b:2&#125;alert(typeof number==="number");alert(typeof st ...
         
       </div>
-      <a class="more" href="/2019/03/02/jquery/十进制固定小数位数/">Read more</a>
+      <a class="more" href="/2019/03/02/jquery/判断数据类型/">Read more</a>
     </article>
   
     <article class="article-card">
@@ -256,12 +256,12 @@ js没有内置的10进制数据类型，但可以通过toFixed和toPrecision来�
       <p class="article-date">2019年1月30日</p>
       
         
-  <a href="/tags#对象">
-    <span class="tag-code">对象</span>
-  </a>
-
   <a href="/tags#数组">
     <span class="tag-code">数组</span>
+  </a>
+
+  <a href="/tags#对象">
+    <span class="tag-code">对象</span>
   </a>
 
       

@@ -1052,7 +1052,7 @@ h2.article-head {
   padding: 100px 20px 0 20px;
 }
 .essay-banner h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #34495e;
   text-align: center;
 }
@@ -1075,6 +1075,7 @@ h2.article-head {
   font-weight: 510;
 }
 .post-article img {
+  margin: 15px 0 35px 0;
   text-align: center;
 }
 @media screen and (max-width: 480px) {

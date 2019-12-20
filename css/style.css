@@ -1052,7 +1052,7 @@ h2.article-head {
   padding: 100px 20px 0 20px;
 }
 .essay-banner h2 {
-  font-size: 2.2em;
+  font-size: 1.4rem;
   color: #34495e;
   text-align: center;
 }
@@ -1063,14 +1063,24 @@ h2.article-head {
   overflow: hidden;
 }
 .essay-content p {
-  font-size: 18px;
+  font-size: 1rem;
   color: #545454;
   text-indent: 1em;
   margin-bottom: 0.5rem;
   text-align: justify;
+  line-height: 1.3em;
 }
 .post-article img {
   text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .essay-banner {
+    padding-top: 60px;
+  }
+  .post-article img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 @-moz-keyframes shine {
   0%, 100% {

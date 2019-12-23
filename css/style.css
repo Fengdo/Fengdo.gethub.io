@@ -59,7 +59,7 @@ pre {
   padding: 2em 1em;
   margin: 0 auto;
   height: 100%;
-  max-width: 980px;
+  max-width: 700px;
   position: relative;
   opacity: 0;
   transform: translateY(-20px);
@@ -1059,7 +1059,7 @@ h2.article-head {
 }
 .essay-content {
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 15px;
   max-width: 700px;
   overflow: hidden;
 }
@@ -1076,7 +1076,7 @@ h2.article-head {
   font-weight: 510;
 }
 .post-article img {
-  margin: 15px 0 35px 0;
+  margin: 10px 0;
   text-align: center;
 }
 .article-summary .cover {
@@ -1089,12 +1089,17 @@ h2.article-head {
     padding-top: 60px;
   }
   .post-article img {
-    margin: 15px 0;
+    margin: 0;
     max-width: 100%;
     height: auto;
   }
   .essay-summary .cover img {
     width: 100%;
+  }
+  .essay-summary {
+    text-align: justify;
+    text-align-last: justify;
+    text-justify: inter-ideograph;
   }
 }
 @-moz-keyframes shine {

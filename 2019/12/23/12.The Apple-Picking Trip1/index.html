@@ -10,7 +10,7 @@
   
   <title>
     
-      笔记站
+      12.The Apple-Picking Trip1 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -110,180 +110,28 @@
 </header>
 
     
-	<div id="article-banner">
-  <h2></h2>
-  <!-- <p class="post-date">作者:Feng</p> -->
-  <!-- <p class="post-date">2019-12-23</p> -->
-  <div class="arrow-down">
-    <a href="javascript:;"></a>
-  </div>
+	<div class="essay-banner">
+  <h2>12.The Apple-Picking Trip1</h2>
 </div>
-<main class="app-body flex-box">
-  <!-- Article START -->
-  <article class="post-article">
-    <section class="markdown-content"><p>It was fall, and that meant the apples were ripe at the farm! Julie and her family were going to the Branner’s farm outside of town to pick apples like they did every fall. This year, her father arranged for the family to get rides on the tractor, so everyone was especially excited. He usually forgot to make sure they had a seat on the tractor.</p>
+<main class="article-body flex-box">
+  <div class="essay-content">
+    <article class="post-article">
+    
+     <div class="cover">
+       <img src="https://res.cloudinary.com/dfdtw0rns/image/upload/c_fill,h_300,w_700/v1577097519/%E8%8B%B1%E8%AF%AD%E7%AB%99%E5%9B%BE%E7%89%87/12_c3e9d7.png" alt="插图">
+     </div>
+    
+      <section class="markdown-content"><p>It was fall, and that meant the apples were ripe at the farm! Julie and her family were going to the Branner’s farm outside of town to pick apples like they did every fall. This year, her father arranged for the family to get rides on the tractor, so everyone was especially excited. He usually forgot to make sure they had a seat on the tractor.</p>
 <p>Julie thought the weather would be the same as it always was, and packed a sweater and a book for the car. Then she waited for the rest of her family to get ready. Her father was busy with work, and her mother was talking on the phone. When they realized that they were late, they all jumped into the car to leave.</p>
 <p>“Honey, don’t you think we should get some gas?” asked Julie’s mother.</p>
 <p>“No, I don’t wan to be late for the tractor,” said her father as he drove quictkly through the gray day. It started to rain, and Julie wished she had packed her raincoat.</p>
 <p>They made it in time to get on the trailer behind the tractor. The rain was now coming down steadily, and it was cold, so Julie huddled in the corner of the trailer.She brought her knees up to her chest and shivered in the rain.</p>
 <p>Then the tractor got stuck in a big mud puddle. The farm workers all got together and pushed, but the tractor wouldn’t budge. It was stuck, al right. Now Julie and her parents had to get out and walk through the rain.</p>
 </section>
-    <!-- Tags START -->
-    
-    <!-- Tags END -->
-    <!-- NAV START -->
-    
-  <div class="nav-container">
-    <!-- reverse left and right to put prev and next in a more logic postition -->
-    
-      <a class="nav-left" href="/2019/12/23/11.Turboworld2-2/">
-        <span class="nav-arrow">← </span>
-        
-          (untitled)
-        
-      </a>
-    
-    
-      <a class="nav-right" href="/2019/12/23/12.The Apple-Picking Trip2/">
-        
-          (untitled)
-        
-        <span class="nav-arrow"> →</span>
-      </a>
-    
+    </article>
   </div>
-
-    <!-- NAV END -->
-    <!-- 打赏 START 
-    
-      <div class="money-like">
-        <div class="reward-btn">
-          赏
-          <span class="money-code">
-            <span class="alipay-code">
-              <div class="code-image"></div>
-              <b>使用支付宝打赏</b>
-            </span>
-            <span class="wechat-code">
-              <div class="code-image"></div>
-              <b>使用微信打赏</b>
-            </span>
-          </span>
-        </div>
-        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-      </div>
-    
-
-    
-      <!-- No Comment -->
-    
-  </article>
-  <!-- Article END -->
-  <!-- Catalog START -->
-  
-    <aside class="catalog-container">
-  <div class="toc-main">
-    
-      <ol class="nav">none</ol>
-    
-  </div>
-</aside>
-  
-  <!-- Catalog END -->
 </main>
 
-<script>
-  (function () {
-    var url = 'https://fengdo.github.io/2019/12/23/12.The Apple-Picking Trip1/';
-    var banner = ''
-    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
-      $('#article-banner').css({
-        'background-image': 'url(' + banner + ')'
-      })
-    } else {
-      $('#article-banner').geopattern(url)
-    }
-    $('.header').removeClass('fixed-header')
-
-     // error image
-    $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
-      $(this).css({
-        'cursor': 'default'
-      })
-    })
-
-    // zoom image
-    $(".markdown-content img").on('click', function() {
-      var src = $(this).attr('src')
-      if (src !== 'http://file.muyutech.com/error-img.png') {
-        var imageW = $(this).width()
-        var imageH = $(this).height()
-        
-        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
-        zoom = zoom < 1 ? 1 : zoom
-        zoom = zoom > 2 ? 2 : zoom
-        var transY = (($(window).height() - imageH) / 2).toFixed(2)
-
-        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
-        $('.image-view-wrap').addClass('wrap-active')
-        $('.image-view-wrap img').css({
-          'width': `${imageW}`,
-          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
-        })
-        $('html').css('overflow', 'hidden')
-
-        $('.image-view-wrap').on('click', function() {
-          $(this).remove()
-          $('html').attr('style', '')
-        })
-      }
-    })
-
-
-
-    // gitment
-    var gitmentConfig = "";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "",
-        owner: "",
-        repo: "",
-        oauth: {
-          client_id: "",
-          client_secret: ""
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
-  })();
-</script>
-
-<script>
-  var disqus_shortname = '';
-  
-  var disqus_url = 'https://fengdo.github.io/2019/12/23/12.The Apple-Picking Trip1/';
-  
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = 'https://unpkg.com/embed-js@5.0.3/umd/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
 
 
     <div class="scroll-top">

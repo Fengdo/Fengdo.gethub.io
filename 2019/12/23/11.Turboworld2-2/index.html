@@ -10,7 +10,7 @@
   
   <title>
     
-      笔记站
+      11.Turboworld2-2 | 笔记站
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -110,179 +110,27 @@
 </header>
 
     
-	<div id="article-banner">
-  <h2></h2>
-  <!-- <p class="post-date">作者:Feng</p> -->
-  <!-- <p class="post-date">2019-12-23</p> -->
-  <div class="arrow-down">
-    <a href="javascript:;"></a>
-  </div>
+	<div class="essay-banner">
+  <h2>11.Turboworld2-2</h2>
 </div>
-<main class="app-body flex-box">
-  <!-- Article START -->
-  <article class="post-article">
-    <section class="markdown-content"><p>The group watched as people exited the ride.<br>“How did everyone get wet?”asked Ling.<br>“The Falls of Horror are actually waterfalls that pass through caves,”explained Jeremy.”Come on Val,” he said to his sister who now looked even more unsure. “What can I do to convince you that this will be really fun?”</p>
+<main class="article-body flex-box">
+  <div class="essay-content">
+    <article class="post-article">
+    
+     <div class="cover">
+       <img src="https://res.cloudinary.com/dfdtw0rns/image/upload/c_fill,h_300,w_700/v1577097518/%E8%8B%B1%E8%AF%AD%E7%AB%99%E5%9B%BE%E7%89%87/11_fs2nxs.png" alt="插图">
+     </div>
+    
+      <section class="markdown-content"><p>The group watched as people exited the ride.<br>“How did everyone get wet?”asked Ling.<br>“The Falls of Horror are actually waterfalls that pass through caves,”explained Jeremy.”Come on Val,” he said to his sister who now looked even more unsure. “What can I do to convince you that this will be really fun?”</p>
 <p>“Alright,”she said,”but if I agree to ride the roller coaster, you have to rake the lawn for the rest of the fall.”</p>
 <p>Val was surprised when Jeremy didn’t oppose her demand. She had thought it would work for sure, but now she was stuck riding the Twisting Falls of Horror.</p>
 <p>Once she was sitting in her car, she stared up at the colossal first hil of the roller coaster. As the car inched up the hill, Val couldn’t help smiling. She knew that the slow climb up the hill was what would give the car its speed for the rest of the ride. As the car raced down the track and traveled around a triple loop, she screamed with glee. By the time they traveled around the curve into the waterfallcave, she had decided to apologize to her brother. This was the best ride of the day, and she felt bad for having been so disagreeable before. She, Ling, and her father exited the ride soaking wet and laughing.</p>
 <p>“That was awesome!”exclaimed Val, smiling at her brother and James.But when she saw Jeremys pale face, her smile turned to a frown. “Whats wrong, Jeremy?” she asked her brother.<br>“Nothing, “he said, “I just didn’t think it would be so scary.”</p>
 </section>
-    <!-- Tags START -->
-    
-    <!-- Tags END -->
-    <!-- NAV START -->
-    
-  <div class="nav-container">
-    <!-- reverse left and right to put prev and next in a more logic postition -->
-    
-      <a class="nav-left" href="/2019/12/23/11.Turboworld2-1/">
-        <span class="nav-arrow">← </span>
-        
-          (untitled)
-        
-      </a>
-    
-    
-      <a class="nav-right" href="/2019/12/23/12.The Apple-Picking Trip1/">
-        
-          (untitled)
-        
-        <span class="nav-arrow"> →</span>
-      </a>
-    
+    </article>
   </div>
-
-    <!-- NAV END -->
-    <!-- 打赏 START 
-    
-      <div class="money-like">
-        <div class="reward-btn">
-          赏
-          <span class="money-code">
-            <span class="alipay-code">
-              <div class="code-image"></div>
-              <b>使用支付宝打赏</b>
-            </span>
-            <span class="wechat-code">
-              <div class="code-image"></div>
-              <b>使用微信打赏</b>
-            </span>
-          </span>
-        </div>
-        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-      </div>
-    
-
-    
-      <!-- No Comment -->
-    
-  </article>
-  <!-- Article END -->
-  <!-- Catalog START -->
-  
-    <aside class="catalog-container">
-  <div class="toc-main">
-    
-      <ol class="nav">none</ol>
-    
-  </div>
-</aside>
-  
-  <!-- Catalog END -->
 </main>
 
-<script>
-  (function () {
-    var url = 'https://fengdo.github.io/2019/12/23/11.Turboworld2-2/';
-    var banner = ''
-    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
-      $('#article-banner').css({
-        'background-image': 'url(' + banner + ')'
-      })
-    } else {
-      $('#article-banner').geopattern(url)
-    }
-    $('.header').removeClass('fixed-header')
-
-     // error image
-    $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
-      $(this).css({
-        'cursor': 'default'
-      })
-    })
-
-    // zoom image
-    $(".markdown-content img").on('click', function() {
-      var src = $(this).attr('src')
-      if (src !== 'http://file.muyutech.com/error-img.png') {
-        var imageW = $(this).width()
-        var imageH = $(this).height()
-        
-        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
-        zoom = zoom < 1 ? 1 : zoom
-        zoom = zoom > 2 ? 2 : zoom
-        var transY = (($(window).height() - imageH) / 2).toFixed(2)
-
-        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
-        $('.image-view-wrap').addClass('wrap-active')
-        $('.image-view-wrap img').css({
-          'width': `${imageW}`,
-          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
-        })
-        $('html').css('overflow', 'hidden')
-
-        $('.image-view-wrap').on('click', function() {
-          $(this).remove()
-          $('html').attr('style', '')
-        })
-      }
-    })
-
-
-
-    // gitment
-    var gitmentConfig = "";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "",
-        owner: "",
-        repo: "",
-        oauth: {
-          client_id: "",
-          client_secret: ""
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
-  })();
-</script>
-
-<script>
-  var disqus_shortname = '';
-  
-  var disqus_url = 'https://fengdo.github.io/2019/12/23/11.Turboworld2-2/';
-  
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = 'https://unpkg.com/embed-js@5.0.3/umd/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
 
 
     <div class="scroll-top">

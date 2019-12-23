@@ -87,10 +87,11 @@ pre {
   white-space: nowrap;
 }
 .article-card {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ededed;
 }
 .article-card:first-child {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 h2.article-head {
   font-size: 1.6em;

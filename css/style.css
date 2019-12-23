@@ -1092,6 +1092,9 @@ h2.article-head {
     max-width: 100%;
     height: auto;
   }
+  .essay-summary .cover img {
+    width: 100%;
+  }
 }
 @-moz-keyframes shine {
   0%, 100% {

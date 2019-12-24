@@ -1097,6 +1097,9 @@ h2.article-head {
   margin-top: 10px;
   border-bottom: 1px solid #ededed;
 }
+.essay-card:last-child {
+  border-bottom: 0 none;
+}
 .essay-card_title {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1127,14 +1130,18 @@ h2.article-head {
   border-bottom: 1px solid #ededed;
   line-height: 0.8;
 }
+.word-card_item:last-child {
+  border-bottom: 0 none;
+}
 .word-card_title {
-  font-size: 1.2rem;
-  text-indent: 0.5em;
+  font-size: 1.1rem;
+  text-indent: 1.2em;
 }
 .word-card_title:last-child {
   border-bottom: none;
 }
 .word-card_title a {
+  display: block;
   color: #34495e;
   font-weight: normal;
 }

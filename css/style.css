@@ -1088,9 +1088,32 @@ h2.article-head {
   .essay-banner {
     padding-top: 60px;
   }
-  .essay-summary .cover img {
-    width: 100%;
-  }
+}
+.essay-card:first-child {
+  margin-top: 40px;
+  border-bottom: 1px solid #ededed;
+}
+.essay-card {
+  margin-top: 10px;
+  border-bottom: 1px solid #ededed;
+}
+.essay-card_title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.essay-card_title a {
+  color: #34495e;
+  font-size: 1.4rem;
+}
+.cover img {
+  width: 100%;
+}
+.essay-card_content {
+  padding-bottom: 10px;
+  color: #454545;
+  font-size: 16px;
+  text-indent: 1em;
+  word-wrap: break-word;
 }
 @-moz-keyframes shine {
   0%, 100% {

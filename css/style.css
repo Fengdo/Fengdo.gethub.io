@@ -1118,6 +1118,26 @@ h2.article-head {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+.word-card {
+  list-style-type: none;
+  margin-top: 40px;
+  padding: 0;
+}
+.word-card_item {
+  border-bottom: 1px solid #ededed;
+  line-height: 0.8;
+}
+.word-card_title {
+  font-size: 1.2rem;
+  text-indent: 0.5em;
+}
+.word-card_title:last-child {
+  border-bottom: none;
+}
+.word-card_title a {
+  color: #34495e;
+  font-weight: normal;
+}
 @-moz-keyframes shine {
   0%, 100% {
     opacity: 0.1;

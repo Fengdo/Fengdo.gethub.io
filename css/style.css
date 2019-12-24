@@ -1088,11 +1088,6 @@ h2.article-head {
   .essay-banner {
     padding-top: 60px;
   }
-  .post-article img {
-    margin: 0;
-    max-width: 100%;
-    height: auto;
-  }
   .essay-summary .cover img {
     width: 100%;
   }

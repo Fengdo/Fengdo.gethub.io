@@ -597,7 +597,6 @@ h2.article-head {
 .article-summary img {
   max-width: 100%;
   display: block;
-  margin: 20px auto;
   cursor: zoom-in;
 }
 .markdown-content figure,
@@ -656,7 +655,12 @@ h2.article-head {
 .article-summary hr {
   border: none;
   border-bottom: 1px dashed #e5e5e5;
-  margin: 30px 0;
+  margin: 15px 0;
+}
+.markdown-content em,
+.article-summary em {
+  font-style: normal;
+  background: rgba(68,245,68,0.361);
 }
 #tag-cloud {
   margin: 30px 0;
@@ -1075,10 +1079,6 @@ h2.article-head {
   color: #ff6827;
   font-weight: 510;
 }
-.post-article img {
-  margin: 10px 0;
-  text-align: center;
-}
 .article-summary .cover {
   max-width: 300px;
   height: 200px;
@@ -1095,11 +1095,6 @@ h2.article-head {
   }
   .essay-summary .cover img {
     width: 100%;
-  }
-  .essay-summary {
-    text-align: justify;
-    text-align-last: justify;
-    text-justify: inter-ideograph;
   }
 }
 @-moz-keyframes shine {

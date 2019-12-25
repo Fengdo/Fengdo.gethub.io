@@ -1141,6 +1141,8 @@ h2.article-head {
   border-bottom: 0 none;
 }
 .word-card_title {
+  margin: 0;
+  line-height: 2;
   font-size: 1.1rem;
   text-indent: 1.2em;
 }

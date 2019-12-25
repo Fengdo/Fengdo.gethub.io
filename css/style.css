@@ -655,7 +655,7 @@ h2.article-head {
 .article-summary hr {
   border: none;
   border-bottom: 1px dashed #e5e5e5;
-  margin: 15px 0;
+  margin: 15px 0 0px 0;
 }
 .markdown-content em,
 .article-summary em {

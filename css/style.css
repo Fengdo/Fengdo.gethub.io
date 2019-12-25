@@ -1090,12 +1090,15 @@ h2.article-head {
   }
 }
 .essay-card:first-child {
-  margin-top: 40px;
+  margin-top: 45px;
   border-bottom: 1px solid #ededed;
 }
 .essay-card {
-  margin-top: 10px;
-  border-bottom: 1px solid #ededed;
+  margin-top: 25px;
+  border: 1px solid #ededed;
+}
+.essay-summary {
+  padding: 10px;
 }
 .essay-card:last-child {
   border-bottom: 0 none;

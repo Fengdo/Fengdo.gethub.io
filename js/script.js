@@ -111,11 +111,9 @@
   $('.fa-play-circle-o').on('click',function(){
     if(playid==1){
       playid = sound.play();
-      alert("abc");
     }else{
       sound.pause(playid);
       playid = 1;
-      alert(playid);
     }
   });
 

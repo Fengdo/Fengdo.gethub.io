@@ -103,4 +103,20 @@
   threshold : 200,
   effect:"fadeIn"
   });
+
+  var sound = new Howl({
+    src: ['https://res.cloudinary.com/dfdtw0rns/video/upload/v1577355208/%E5%BD%95%E9%9F%B3/1-1_A_rooftop_garden_vixjdl.mp4']
+  });
+  var playid = 1;
+  $('.fa-play-circle-o').on('click',function(){
+    if(playid==1){
+      playid = sound.play();
+      alert("abc");
+    }else{
+      sound.pause(playid);
+      playid = 1;
+      alert(playid);
+    }
+  });
+
 })(jQuery)

@@ -1151,6 +1151,10 @@ h2.article-head {
   color: #34495e;
   font-weight: normal;
 }
+.word-banner img {
+  margin-top: 55px;
+  max-width: 100%;
+}
 @media screen and (max-width: 480px) {
   .word-banner img {
     margin-top: 55px;

@@ -64,7 +64,6 @@ pre {
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.4s;
-  overflow: hidden;
 }
 .hljs {
   background: none !important;
@@ -1102,7 +1101,6 @@ h2.article-head {
 }
 .essay-card {
   margin-top: 25px;
-  border: 1px solid #ededed;
 }
 .essay-summary {
   padding: 10px;

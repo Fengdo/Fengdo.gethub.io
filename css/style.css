@@ -1129,6 +1129,10 @@ h2.article-head {
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+.audio {
+  display: block;
+  margin: 0 auto;
+}
 .word-card {
   list-style-type: none;
   padding: 0;

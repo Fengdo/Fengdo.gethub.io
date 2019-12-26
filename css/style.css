@@ -1158,16 +1158,16 @@ h2.article-head {
   margin-top: 55px;
   max-width: 100%;
 }
-@media screen and (max-width: 480px) {
-  .word-content {
-    margin-top: 50px;
-  }
-}
 .word-content {
   margin: 0 auto;
   margin-top: 60px;
   max-width: 700px;
   overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .word-content {
+    margin-top: 50px;
+  }
 }
 @-moz-keyframes shine {
   0%, 100% {

@@ -1097,7 +1097,6 @@ h2.article-head {
 }
 .essay-card:first-child {
   margin-top: 45px;
-  border-bottom: 1px solid #ededed;
 }
 .essay-card {
   margin-top: 25px;
@@ -1129,7 +1128,7 @@ h2.article-head {
 }
 .word-card {
   list-style-type: none;
-  margin-top: 40px;
+  margin-top: 60px;
   padding: 0;
 }
 .word-card_item {

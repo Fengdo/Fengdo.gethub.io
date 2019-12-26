@@ -100,6 +100,7 @@
     }
   })
   $(".lazyload").lazyload({
-  threshold : 100
+  threshold : 200,
+  effect:"fadeIn"
   });
 })(jQuery)

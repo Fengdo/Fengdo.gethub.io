@@ -57,6 +57,7 @@ pre {
 }
 .app-body {
 /*padding: 2em 1em*/
+  padding: 0 1px;
   margin: 0 auto;
   height: 100%;
   max-width: 700px;

@@ -1074,15 +1074,13 @@ h2.article-head {
   overflow: hidden;
 }
 .essay-content p {
+  padding: 0 15px;
   font-size: 1rem;
   color: #545454;
   text-indent: 1em;
   margin-bottom: 0.8rem;
   text-align: justify;
   line-height: 1.5em;
-}
-.essay-content p+p {
-  padding: 0 15px;
 }
 .post-article strong {
   color: #ff6827;

@@ -103,6 +103,9 @@
   threshold : 200,
   effect:"fadeIn"
   });
+
+  $('.markdown-content p>img').unwrap();
+
 })(jQuery)
 
 var audios = document.getElementsByTagName('audio');

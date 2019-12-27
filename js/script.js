@@ -104,8 +104,6 @@
   effect:"fadeIn"
   });
 
-  $('.markdown-content p>img').unwrap();
-
 })(jQuery)
 
 var audios = document.getElementsByTagName('audio');
@@ -122,3 +120,9 @@ function pauseAll(index){
         if (j!=index) audios[j].pause();
     }
 };
+
+$(function(){
+  $('.markdown-content p>img').unwrap();
+  $("p:empty").remove();
+  $('br').remove();
+});

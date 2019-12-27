@@ -1129,7 +1129,7 @@ h2.article-head {
 }
 .audio {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto 10px auto;
 }
 .word-card {
   list-style-type: none;

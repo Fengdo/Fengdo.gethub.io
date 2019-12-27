@@ -103,18 +103,19 @@
   threshold : 200,
   effect:"fadeIn"
   });
-
-  var sound = new Howl({
-    src: ['https://res.cloudinary.com/dfdtw0rns/video/upload/v1577355208/%E5%BD%95%E9%9F%B3/1-1_A_rooftop_garden_vixjdl.mp4']
-  });
-  var playid = 1;
-  $('.fa-play-circle-o').on('click',function(){
-    if(playid==1){
-      playid = sound.play();
-    }else{
-      sound.pause(playid);
-      playid = 1;
-    }
-  });
-
 })(jQuery)
+
+var audios = document.getElementsByTagName('audio');
+for (var i = audios.length - 1; i >= 0; i--) {
+    (function(){
+        var p = i;
+        audios[p].addEventListener('play',function(){
+            pauseAll(p);
+        })
+    })()
+}
+function pauseAll(index){
+    for (var j = audios.length - 1; j >= 0; j--) {
+        if (j!=index) audios[j].pause();
+    }
+};

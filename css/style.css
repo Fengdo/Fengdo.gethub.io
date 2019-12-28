@@ -1063,6 +1063,7 @@ h2.article-head {
   padding: 100px 20px 0 20px;
 }
 .essay-banner h2 {
+  margin-botton: 5px;
   font-size: 1.5rem;
   color: #34495e;
   text-align: center;
@@ -1120,7 +1121,7 @@ h2.article-head {
   width: 100%;
 }
 .markdown-content img {
-  margin: 8px 0;
+  margin: 10px 0;
 }
 .essay-card_content {
   padding-bottom: 10px;

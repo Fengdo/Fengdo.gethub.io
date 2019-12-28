@@ -1095,6 +1095,9 @@ h2.article-head {
   .essay-banner {
     padding-top: 60px;
   }
+  .essay-banner h2 {
+    font-size: 1.5rem;
+  }
 }
 .essay-card:first-child {
   margin-top: 45px;

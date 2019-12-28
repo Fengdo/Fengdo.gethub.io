@@ -1118,6 +1118,8 @@ h2.article-head {
 }
 .cover img {
   width: 100%;
+}
+.markdown-content img {
   margin: 8px 0;
 }
 .essay-card_content {

@@ -1090,17 +1090,8 @@ h2.article-head {
   height: 200px;
   overflow: hidden;
 }
-@media screen and (max-width: 480px) {
-  .essay-banner {
-    padding-top: 60px;
-  }
-  .essay-banner h2 {
-    margin-bottom: 5px;
-    font-size: 1.3rem;
-  }
-}
 .essay-card:first-child {
-  margin-top: 45px;
+  margin-top: 60px;
 }
 .essay-card {
   margin-top: 10px;
@@ -1136,6 +1127,18 @@ h2.article-head {
 .audio {
   display: block;
   margin: 10px auto 10px auto;
+}
+@media screen and (max-width: 480px) {
+  .essay-banner {
+    padding-top: 60px;
+  }
+  .essay-banner h2 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+  }
+  .essay-card:first-child {
+    margin-top: 45px;
+  }
 }
 .word-card {
   list-style-type: none;

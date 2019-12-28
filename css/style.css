@@ -1063,7 +1063,6 @@ h2.article-head {
   padding: 100px 20px 0 20px;
 }
 .essay-banner h2 {
-  margin-botton: 5px;
   font-size: 1.5rem;
   color: #34495e;
   text-align: center;
@@ -1097,7 +1096,8 @@ h2.article-head {
     padding-top: 60px;
   }
   .essay-banner h2 {
-    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
   }
 }
 .essay-card:first-child {

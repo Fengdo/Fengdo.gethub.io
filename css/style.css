@@ -603,7 +603,6 @@ h2.article-head {
 .article-summary img {
   max-width: 100%;
   display: block;
-  cursor: zoom-in;
 }
 .markdown-content figure,
 .article-summary figure {

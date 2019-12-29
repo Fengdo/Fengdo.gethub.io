@@ -1081,6 +1081,9 @@ h2.article-head {
   text-align: justify;
   line-height: 1.5em;
 }
+.essay-content p.translation {
+  color: rgba(0,0,0,0.361);
+}
 .post-article strong {
   color: #ff6827;
   font-weight: 510;

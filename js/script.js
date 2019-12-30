@@ -107,10 +107,8 @@
 
     if(scrollTop<($(document).height()-$(window).height())){
       bottom.addClass('opacity')
-      document.title = scrollTop+"|"+($(document).height()-$(window).height());
     }else{
       bottom.removeClass('opacity')
-      // 7836
     }
 
   })

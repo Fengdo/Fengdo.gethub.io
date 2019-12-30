@@ -105,7 +105,7 @@
       catalog.removeClass('fixed-toc')
     }
 
-    if(scrollTop<($(document).height()-$(window).height())){
+    if(scrollTop<($(document).height()-$(window).height()-100)){
       bottom.addClass('opacity')
     }else{
       bottom.removeClass('opacity')

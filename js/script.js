@@ -4,8 +4,10 @@
   var banner = document.getElementById('article-banner') || false
   var about = document.getElementById('about-banner') || false
   var top = $('.scroll-top')
+  var bottom = $('.scroll-bottom')
   var catalog = $('.catalog-container .toc-main')
   var isOpen = false
+  var bheight = $(document).height();
 
   $(document).ready(function () {
     NProgress.start()
@@ -78,6 +80,10 @@
     $('html, body').animate({ scrollTop: 0 }, 600)
   })
 
+  bottom.on('click', function () {
+    $('html, body').animate({ scrollTop: $(document).height() }, 600)
+  })
+
   document.addEventListener('scroll', function () {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
     var headerH = header.height()
@@ -98,6 +104,15 @@
     } else {
       catalog.removeClass('fixed-toc')
     }
+
+    if(scrollTop<($(document).height()-$(window).height())){
+      bottom.addClass('opacity')
+      document.title = scrollTop+"|"+($(document).height()-$(window).height());
+    }else{
+      bottom.removeClass('opacity')
+      // 7836
+    }
+
   })
   $(".lazyload").lazyload({
   threshold : 200,

@@ -105,13 +105,15 @@
       catalog.removeClass('fixed-toc')
     }
 
+    // 到页底
     if(scrollTop<($(document).height()-$(window).height()-100)){
       bottom.addClass('opacity')
     }else{
       bottom.removeClass('opacity')
     }
-
   })
+
+  // 图片懒加载
   $(".lazyload").lazyload({
   threshold : 200,
   effect:"fadeIn"
@@ -119,6 +121,7 @@
 
 })(jQuery)
 
+// 只同时播放一个音频
 var audios = document.getElementsByTagName('audio');
 for (var i = audios.length - 1; i >= 0; i--) {
     (function(){
@@ -134,12 +137,14 @@ function pauseAll(index){
     }
 };
 
+// essay页去掉多余的p和br
 $(function(){
   $('.markdown-content p>img').unwrap();
   $("p:empty").remove();
   $('br').remove();
 });
 
+// 表格单词点击播放发音
 $(function(){
   $(".word-content tr").children('td:even').wrapInner("<a class='pro'></a>");
   $myaudio = $('<audio autoplay="" id="audio" class="audio " type="audio/ogg;codecs=opus" src="">Your browser does not support the audio element.</audio>')

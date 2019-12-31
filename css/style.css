@@ -371,7 +371,7 @@ h2.article-head {
 }
 .header {
   background: none;
-  border: none;
+  border-bottom: 1px solid rgba(237,237,237,0.38);
   position: absolute;
   top: 0;
   left: 0;
@@ -1128,6 +1128,7 @@ h2.article-head {
   line-height: 1.5em;
 }
 .essay-content p.translation {
+  display: none;
   color: rgba(0,0,0,0.361);
 }
 .post-article strong {

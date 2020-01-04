@@ -1192,6 +1192,7 @@ h2.article-head {
 }
 .word-card {
   list-style-type: none;
+  margin-top: 65px;
   padding: 0;
 }
 .word-card_item {
@@ -1228,6 +1229,9 @@ h2.article-head {
 @media screen and (max-width: 480px) {
   .word-content {
     margin-top: 50px;
+  }
+  .word-card {
+    margin-top: 55px;
   }
 }
 @-moz-keyframes shine {

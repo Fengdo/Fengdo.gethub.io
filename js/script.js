@@ -122,20 +122,20 @@
 })(jQuery)
 
 // 只同时播放一个音频
-// var audios = document.getElementsByTagName('audio');
-// for (var i = audios.length - 1; i >= 0; i--) {
-//     (function(){
-//         var p = i;
-//         audios[p].addEventListener('play',function(){
-//             pauseAll(p);
-//         })
-//     })()
-// }
-// function pauseAll(index){
-//     for (var j = audios.length - 1; j >= 0; j--) {
-//         if (j!=index) audios[j].pause();
-//     }
-// };
+var audios = document.getElementsByTagName('audio');
+for (var i = audios.length - 1; i >= 0; i--) {
+    (function(){
+        var p = i;
+        audios[p].addEventListener('play',function(){
+            pauseAll(p);
+        })
+    })()
+}
+function pauseAll(index){
+    for (var j = audios.length - 1; j >= 0; j--) {
+        if (j!=index) audios[j].pause();
+    }
+};
 
 // essay页去掉多余的p和br
 $(function(){
@@ -145,7 +145,24 @@ $(function(){
 });
 
 // 表格单词点击播放发音
+// $(function(){
+//   $(".word-content tr").children('td:even').wrapInner("<a class='pro'></a>");
+//   $myaudio = $('<audio autoplay="" id="audio" class="audio " type="audio/ogg;codecs=opus" src="">Your browser does not support the audio element.</audio>')
+//   $('.word-content').append($myaudio);
+
+//   $front = "https://text-to-speech-demo.ng.bluemix.net/api/v1/synthesize?text=";
+//   $end = "&voice=en-US_AllisonV3Voice&download=true&accept=audio%2Fmp3";
+
+//   $(".pro").click(function(){
+//     $mytext = $(this).text();
+//     $link = $front + $mytext + $end;
+//     $myaudio.attr('src',$link);
+//   });
+// });
+
+
 $(function(){
+
   $(".word-content tr").children('td:even').wrapInner("<a class='pro'></a>");
   $myaudio = $('<audio autoplay="" id="audio" class="audio " type="audio/ogg;codecs=opus" src="">Your browser does not support the audio element.</audio>')
   $('.word-content').append($myaudio);
@@ -157,23 +174,6 @@ $(function(){
     $mytext = $(this).text();
     $link = $front + $mytext + $end;
     $myaudio.attr('src',$link);
-  });
-});
-
-
-$(function(){
-
-  $(".word-content tr").children('td:even').wrapInner("<a class='pro'></a>");
-  $myaudio = $('<audio autoplay="" id="audio" class="audio " type="audio/ogg;codecs=opus" src="">Your browser does not support the audio element.</audio>')
-  $('.word-content').append($myaudio);
-
-  $front = "https://text-to-speech-demo.ng.bluemix.net/api/v1/synthesize?text=";
-  $end = "&voice=en-US_AllisonV3Voice&download=true&accept=audio%2Fmp3";
-
-  $(".pro").click(function(){
-    $mytext = $(this).text();
-    $link = $front + $mytext + $end;
-    // $myaudio.attr('src',$link);
     var sound = new Howl({
       src: $link
     });

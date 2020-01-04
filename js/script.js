@@ -145,36 +145,17 @@ $(function(){
 });
 
 // 表格单词点击播放发音
-// $(function(){
-//   $(".word-content tr").children('td:even').wrapInner("<a class='pro'></a>");
-//   $myaudio = $('<audio autoplay="" id="audio" class="audio " type="audio/ogg;codecs=opus" src="">Your browser does not support the audio element.</audio>')
-//   $('.word-content').append($myaudio);
-
-//   $front = "https://text-to-speech-demo.ng.bluemix.net/api/v1/synthesize?text=";
-//   $end = "&voice=en-US_AllisonV3Voice&download=true&accept=audio%2Fmp3";
-
-//   $(".pro").click(function(){
-//     $mytext = $(this).text();
-//     $link = $front + $mytext + $end;
-//     $myaudio.attr('src',$link);
-//   });
-// });
-
-
 $(function(){
-
   $(".word-content tr").children('td:even').wrapInner("<a class='pro'></a>");
+  $myaudio = $('<audio autoplay="" id="audio" class="audio " type="audio/ogg;codecs=opus" src="">Your browser does not support the audio element.</audio>')
+  $('.word-content').append($myaudio);
+
   $front = "https://text-to-speech-demo.ng.bluemix.net/api/v1/synthesize?text=";
   $end = "&voice=en-US_AllisonV3Voice&download=true&accept=audio%2Fmp3";
 
   $(".pro").click(function(){
     $mytext = $(this).text();
-    link = $front + $mytext + $end;
-
-    var sound = new Howl({
-      src: link
-    });
-
-    sound.play();
+    $link = $front + $mytext + $end;
+    $myaudio.attr('src',$link);
   });
 });

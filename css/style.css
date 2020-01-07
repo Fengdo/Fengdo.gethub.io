@@ -1226,6 +1226,9 @@ h2.article-head {
   max-width: 700px;
   overflow: hidden;
 }
+.word-content h2 {
+  text-align: center;
+}
 @media screen and (max-width: 480px) {
   .word-content {
     margin-top: 50px;

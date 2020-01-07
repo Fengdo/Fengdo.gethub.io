@@ -146,9 +146,13 @@ $(function(){
 
 // 表格单词点击播放发音
 $(function(){
-  $(".word-content tr").children('td:even').wrapInner("<a class='pro'></a>");
-  $myaudio = $('<audio autoplay="" id="audio" class="audio " type="audio/ogg;codecs=opus" src="">Your browser does not support the audio element.</audio>')
-  $('.word-content').append($myaudio);
+  $('td').each(function(){
+    if(CheckChinese($(this).text())==false){
+      $(this).wrapInner("<a class='pro'></a>");
+    }
+  });
+  $myaudio = $('<audio autoplay="" id="audio" class="audio " type="audio/ogg;codecs=opus" src=""></audio>')
+  $('body').append($myaudio);
 
   $front = "https://text-to-speech-demo.ng.bluemix.net/api/v1/synthesize?text=";
   $end = "&voice=en-US_AllisonV3Voice&download=true&accept=audio%2Fmp3";
@@ -159,3 +163,9 @@ $(function(){
     $myaudio.attr('src',$link);
   });
 });
+
+//检查汉字
+function CheckChinese(str){
+       var reg = new RegExp("[\\u4E00-\\u9FFF]+", "g");
+       return reg.test(str);
+}
